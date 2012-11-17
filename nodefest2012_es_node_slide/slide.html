@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+	<title>Fulltext search with Node.js and elasticsearch</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+	<link rel="stylesheet" href="themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		h2 {
+			color:#0d0;
+		}
+		#p01 h2, #p01 p {
+			text-align:center;
+		}
+		#p01 h2 {
+			font-size:70px;
+		}
+		#p01 p {
+			font-size:30px;
+		}
+		.slide ul {
+			margin: 0;
+		}
+		.slide header{
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Fulltext search with Node.js and elasticsearch</h1>
+		<p>2012 11/18 tokyo nodefest 2012 @swdyh</p>
+	</header>
+
+<div class="slide" id="p01"><div><section><header><h2>Fulltext search with Node.js and elasticsearch</h2></header>
+
+<p>2012 11/18 tokyo nodefest 2012 @swdyh</p>
+
+</section></div></div>
+<div class="slide" id="p02"><div><section><header><h2>swdyh (twitter / github / tumblr)</h2></header>
+
+<ul>
+<li>&#12502;&#12521;&#12454;&#12470;&#25313;&#24373;&#38283;&#30330;
+
+<ul>
+<li>AutoPagerize</li>
+<li>&#12506;&#12540;&#12472;&#12398;&#33258;&#21205;&#32153;&#12366;&#36275;&#12375;</li>
+<li><a href="http://autopagerize.net">http://autopagerize.net</a></li>
+</ul>
+</li>
+<li>JavaScript&#12420;Ruby&#12289;Go&#12395;&#33288;&#21619;</li>
+</ul></section></div></div>
+<div class="slide" id="p03"><div><section><header><h2>Fulltext search</h2></header>
+
+<ul>
+<li>&#12471;&#12473;&#12486;&#12512;&#38283;&#30330;&#12395;&#26908;&#32034;&#12399;&#12388;&#12365;&#12418;&#12398;</li>
+<li>&#23567;&#35215;&#27169;&#12394;&#12425;&#20840;&#20214;&#36208;&#26619; LIKE '%query%'</li>
+<li>&#12381;&#12428;&#12391;&#38291;&#12395;&#21512;&#12431;&#12394;&#12367;&#12394;&#12387;&#12390;&#12367;&#12427;&#12392;&#20840;&#25991;&#26908;&#32034;&#12456;&#12531;&#12472;&#12531;
+
+<ul>
+<li>&#12354;&#12425;&#12363;&#12376;&#12417;index&#12434;&#20316;&#12427;&#12290;&#26412;&#12398;&#26368;&#24460;&#12395;&#12354;&#12427;index</li>
+</ul>
+</li>
+<li>Namazu, Hyper Estraier, Senna, Tritonn, Groonga, Sphinx, Lucene, Solr, elasticsearch</li>
+</ul></section></div></div>
+<div class="slide" id="p04"><div><section><header><h2>elasticsearch</h2></header>
+
+<p><a href="http://www.elasticsearch.org">http://www.elasticsearch.org</a></p>
+
+<ul>
+<li>Open Souce</li>
+<li>Apache Lucene</li>
+<li>&#12471;&#12531;&#12503;&#12523;&#12394;RESTful API</li>
+<li>&#20998;&#25955;&#26908;&#32034;</li>
+<li>&#12489;&#12461;&#12517;&#12513;&#12531;&#12488;&#12473;&#12488;&#12450; (MongoDB, CouchDB)</li>
+<li>&#12373;&#12414;&#12374;&#12414;&#12394;&#35328;&#35486;&#12395;&#23550;&#24540;&#12289;&#26085;&#26412;&#35486;&#12418;&#22823;&#19976;&#22827;</li>
+</ul></section></div></div>
+<div class="slide" id="p05"><div><section><header><h2>Solr&#12392;&#12398;&#36949;&#12356;</h2></header>
+
+<ul>
+<li>Solr&#12434;&#30693;&#12425;&#12394;&#12356;&#12398;&#12391;&#20998;&#12363;&#12425;&#12394;&#12356;&#8230;
+
+<ul>
+<li>Apache Solr vs ElasticSearch <a href="http://solr-vs-elasticsearch.com/">http://solr-vs-elasticsearch.com/</a>
+</li>
+</ul>
+</li>
+<li>&#12393;&#12385;&#12425;&#12418;&#38283;&#30330;&#12364;&#27963;&#30330;
+
+<ul>
+<li>&#27231;&#33021;&#24046;&#12399;&#12394;&#12367;&#12394;&#12427;&#20670;&#21521;</li>
+</ul>
+</li>
+<li>elasticsearch&#12399;&#38283;&#30330;&#32773;&#12398;&#20351;&#12356;&#12420;&#12377;&#12373;&#12420;&#31649;&#29702;&#12375;&#12420;&#12377;&#12373;&#12434;&#37325;&#35222;
+
+<ul>
+<li>API&#12364;&#12471;&#12531;&#12503;&#12523;</li>
+<li>&#12463;&#12521;&#12473;&#12479;&#12522;&#12531;&#12464;&#12398;&#25163;&#38291;&#12434;&#23569;&#12394;&#12367;</li>
+</ul>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p06"><div><section><header><h2>elasticsearch.com</h2></header>
+
+<ul>
+<li><a href="http://www.elasticsearch.com">http://www.elasticsearch.com</a></li>
+<li>&#20250;&#31038;&#35373;&#31435;</li>
+<li>&#36039;&#37329;&#35519;&#36948;&#12375;&#12390;&#38918;&#35519;
+
+<ul>
+<li>"&#12499;&#12483;&#12464;&#12487;&#12540;&#12479;&#12434;&#12522;&#12450;&#12523;&#12479;&#12452;&#12512;&#12391;&#65288;&#12450;&#12489;&#12507;&#12483;&#12463;&#12391;&#65289;&#26908;&#32034;&#12316;&#20998;&#26512;&#12377;&#12427;Elasticsearch&#12364;$10M&#12434;&#35519;&#36948;"</li>
+<li><a href="http://jp.techcrunch.com/archives/20121108big-data-search-and-analytics-startup-elasticsearch-has-raises-10m-from-benchmark/">http://jp.techcrunch.com/archives/20121108big-data-search-and-analytics-startup-elasticsearch-has-raises-10m-from-benchmark/</a></li>
+</ul>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p07"><div><section><header><h2>&#21033;&#29992;&#20107;&#20363;</h2></header>
+
+<ul>
+<li>Mozilla Foundation, StumbleUpon, Sony Computer Entertainment, Infochimps, Assistly, Ataxo Social Insider, Bazzarvoice, Klout, Sonian Inc., IGN, InSTEDD
+
+<ul>
+<li><a href="http://www.elasticsearch.org/users">http://www.elasticsearch.org/users</a></li>
+</ul>
+</li>
+<li>Sound Cloud
+
+<ul>
+<li><a href="http://backstage.soundcloud.com/2012/08/evolution-of-soundclouds-architecture/">http://backstage.soundcloud.com/2012/08/evolution-of-soundclouds-architecture/</a></li>
+</ul>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p08"><div><section><header><h2>RESTful API 01</h2></header>
+
+<ul>
+<li>HTTP (GET / POST / PUT / DELETE)</li>
+<li>JSON (request / response)</li>
+</ul></section></div></div>
+<div class="slide" id="p09"><div><section><header><h2>RESTful API 02</h2></header>
+
+<pre><code>% curl -X PUT localhost:9200/demo-index</code><code>% curl -X PUT localhost:9200/demo-index/x/1 -d '</code><code>    {"text": "hello world" }'</code><code>% curl localhost:9200/demo-index/x/_search -d '</code><code>    { "query": { "text": { "text": "hello" } } }'</code></pre>
+
+</section></div></div>
+<div class="slide" id="p10"><div><section><header><h2>RESTful API 03</h2></header>
+
+<p>http://localhost:9200/index/type/document_id</p>
+
+<ul>
+<li>index: RDBMS&#12391;&#12356;&#12358;&#12487;&#12540;&#12479;&#12505;&#12540;&#12473;</li>
+<li>type: RDBMS&#12391;&#12356;&#12358;&#12486;&#12540;&#12502;&#12523;&#12289;type&#20869;&#12398;&#12489;&#12461;&#12517;&#12513;&#12531;&#12488;&#12399;&#21516;&#12376;mapping(&#12473;&#12461;&#12540;&#12510;&#23450;&#32681;)&#12364;&#36969;&#29992;&#12373;&#12428;&#12427;</li>
+<li>document: JSON&#12487;&#12540;&#12479;</li>
+</ul></section></div></div>
+<div class="slide" id="p11"><div><section><header><h2>DocumentStore</h2></header>
+
+<ul>
+<li>Document Oriented(MongoDB, CouchDB)</li>
+<li>JSON(object, array, string, number, boolean, null)</li>
+<li>date, geo<em>point, geo</em>shape, ip, binary(base64), attachment(base64)</li>
+<li>&#26908;&#32034;&#12456;&#12531;&#12472;&#12531;&#20596;&#12395;&#12487;&#12540;&#12479;&#12364;&#12354;&#12427;&#12392;&#12289;&#26465;&#20214;&#20184;&#12365;&#26908;&#32034;&#12420;&#12477;&#12540;&#12488;&#12364;&#12375;&#12420;&#12377;&#12356;</li>
+</ul></section></div></div>
+<div class="slide" id="p12"><div><section><header><h2>Quereis &amp; Filters</h2></header>
+
+<ul>
+<li>Queries: match, multi<em>match, bool, boosting, ids, custom</em>score, custom<em>boost</em>factor, constant<em>score, dis</em>max, field, filtered, flt, flt<em>field, fuzzy, has</em>child, has<em>parent, match</em>all, mlt, mlt<em>field, prefix, query</em>string, range, span<em>first, span</em>near, span<em>not, span</em>or, span<em>term, term, terms, top</em>children, wildcard, nested, custom<em>filters</em>score, indices, text, geo_shape</li>
+<li>Filters: and, bool, exists, ids, limit, type, geo<em>bbox, geo</em>distance, geo<em>distance</em>range, geo<em>polygon, geo</em>shape, has<em>child, has</em>parent, match<em>all, missing, not, numeric</em>range, or, prefix, query, range, script, term, terms, nested</li>
+</ul></section></div></div>
+<div class="slide" id="p13"><div><section><header><h2>&#26085;&#26412;&#35486;&#23550;&#24540;</h2></header>
+
+<p>&#25991;&#31456;&#12395;&#21306;&#20999;&#12426;&#12364;&#12394;&#12356;&#12398;&#12391;&#12381;&#12428;&#12434;&#12394;&#12435;&#12392;&#12363;&#12377;&#12427;&#24517;&#35201;&#12364;&#12354;&#12427;</p>
+
+<ul>
+<li>&#20998;&#12363;&#12385;&#26360;&#12365;: &#20170;&#26085; | &#12399; | &#22825;&#27671; | &#12364; | &#12356;&#12356;</li>
+<li>Ngram (2 gram): &#20170;&#26085; | &#26085;&#12399; | &#12399;&#22825; | &#27671;&#12364; | &#12364;&#12356; | &#12356;&#12356;</li>
+</ul></section></div></div>
+<div class="slide" id="p14"><div><section><header><h2>&#20998;&#12363;&#12385;&#26360;&#12365;&#12434;&#20351;&#12358;</h2></header>
+
+<ul>
+<li>kuromoji plugin <a href="https://github.com/elasticsearch/elasticsearch-analysis-kuromoji">https://github.com/elasticsearch/elasticsearch-analysis-kuromoji</a>
+</li>
+<li>
+<p>mappings&#12391;analyzer&#12395;kuromoji&#12434;&#25351;&#23450;</p>
+
+<p>bin/plugin -install elasticsearch/elasticsearch -analysis-kuromoji/1.0.0</p>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p15"><div><section><header><h2>Ngram&#12434;&#20351;&#12358;</h2></header>
+
+<ul>
+<li>nGgram Analyzer, nGram Tokenizer</li>
+<li>&#12487;&#12501;&#12457;&#12523;&#12488;&#12398;&#35373;&#23450;&#12364; 1 - 3 gram
+
+<ul>
+<li>1 gram&#12399;&#12498;&#12483;&#12488;&#12375;&#36942;&#12366;&#12427;</li>
+</ul>
+</li>
+<li>"ElasticSearch &#12391;&#12356;&#12429;&#12435;&#12394;&#12487;&#12540;&#12479;&#12395;&#33258;&#30001;&#12395;&#20840;&#25991;&#26908;&#32034;&#12452;&#12531;&#12487;&#12483;&#12463;&#12473;&#12434;&#24373;&#12427;"
+
+<ul>
+<li><a href="http://give-me-money.g.hatena.ne.jp/fuba/20120909/1347204261">http://give-me-money.g.hatena.ne.jp/fuba/20120909/1347204261</a></li>
+<li>nGram Tokenizer&#12398;&#35373;&#23450;&#12434;2-3 gram&#12395;</li>
+</ul>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p16"><div><section><header><h2>Cluster 01</h2></header>
+
+<ul>
+<li>elasticsearch&#12434;&#36215;&#21205;&#12375;&#12383;&#12469;&#12540;&#12496;&#12434;&#29992;&#24847;</li>
+<li>&#12381;&#12428;&#12425;&#12434;&#35211;&#12388;&#12369;&#12425;&#12428;&#12427;&#12424;&#12358;&#12395;&#12377;&#12427;
+
+<ul>
+<li>&#35211;&#12388;&#12369;&#12427;&#26041;&#27861;
+
+<ul>
+<li>&#12469;&#12540;&#12496;&#21517;&#12434;&#35373;&#23450;&#12501;&#12449;&#12452;&#12523;&#12395;&#26360;&#12367;</li>
+<li>multicast&#12391;&#36817;&#12367;&#12398;&#12493;&#12483;&#12488;&#12527;&#12540;&#12463;&#12434;&#25506;&#12377;</li>
+<li>aws-cloud plugin: AWS&#12398;&#12518;&#12540;&#12470;key&#12392;secret&#12363;&#12425;ec2&#12452;&#12531;&#12473;&#12479;&#12531;&#12473;&#12434;&#21462;&#24471;&#12289;elasticserach&#12364;&#12381;&#12371;&#12363;&#12425;&#21205;&#12356;&#12390;&#12427;&#12469;&#12540;&#12496;&#12434;&#35211;&#12388;&#12369;&#12427;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p17"><div><section><header><h2>Cluster 02</h2></header>
+
+<ul>
+<li>node: elasticsearch&#12452;&#12531;&#12473;&#12479;&#12531;&#12473;&#12289;&#12405;&#12388;&#12358;1&#12469;&#12540;&#12496;</li>
+<li>shard: &#20998;&#21106;&#12373;&#12428;&#12383;&#12487;&#12540;&#12479;&#12434;&#25345;&#12388;&#12289;Lucene&#12452;&#12531;&#12473;&#12479;&#12531;&#12473;</li>
+<li>replica: shard&#12398;&#35079;&#35069;&#12289;&#12501;&#12455;&#12452;&#12523;&#12458;&#12540;&#12496;&#12540;&#12392;&#12497;&#12501;&#12457;&#12540;&#12510;&#12531;&#12473;</li>
+</ul>
+<p><img src="images/esnode02.png" alt="elasticsearch 2 nodes"></p>
+
+</section></div></div>
+<div class="slide" id="p18"><div><section><header><h2>Cluster 03</h2></header>
+
+<p>3 shards 1 replica: 1 node&#12398;&#22580;&#21512;&#12289;replica&#12399;&#12391;&#12365;&#12394;&#12356;</p>
+
+<p><img src="images/esnode01.png" alt="elasticsearch 1 node"></p>
+
+</section></div></div>
+<div class="slide" id="p19"><div><section><header><h2>Cluster 04</h2></header>
+
+<p>3 shards 1 replica: node&#12434;&#36861;&#21152;&#12289;replica&#12364;&#20316;&#25104;&#12373;&#12428;&#12427;</p>
+
+<p><img src="images/esnode02.png" alt="elasticsearch 2 nodes"></p>
+
+</section></div></div>
+<div class="slide" id="p20"><div><section><header><h2>Cluster 05</h2></header>
+
+<p>3 shards 1 replica: &#12373;&#12425;&#12395;node&#12434;&#36861;&#21152;&#12289;shard&#12364;&#12522;&#12496;&#12521;&#12531;&#12473;&#12373;&#12428;&#12427;</p>
+
+<p><img src="images/esnode03.png" alt="elasticsearch 2 nodes"></p>
+
+</section></div></div>
+<div class="slide" id="p21"><div><section><header><h2>Cluster 06</h2></header>
+
+<p>3 shards 1 replica: node3&#12364;&#33853;&#12385;&#12427;&#12392;&#12289;2node&#12398;&#12392;&#12365;&#12398;&#12424;&#12358;&#12395;&#12394;&#12427;</p>
+
+<p><img src="images/esnode02.png" alt="elasticsearch 2 nodes"></p>
+
+</section></div></div>
+<div class="slide" id="p22"><div><section><header><h2>Cluster 07</h2></header>
+
+<ul>
+<li>Three Nodes and One Cluster (&#12487;&#12514;&#21205;&#30011;) <a href="http://www.elasticsearch.org/videos/2012/06/05/three-nodes-and-one-cluster.html">http://www.elasticsearch.org/videos/2012/06/05/three-nodes-and-one-cluster.html</a>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p23"><div><section><header><h2>Routing 01</h2></header>
+
+<ul>
+<li>&#12393;&#12398;shard&#12395;&#20445;&#23384;&#12377;&#12427;&#12363;&#12289;&#12393;&#12398;shard&#12363;&#12425;&#26908;&#32034;&#12377;&#12427;&#12363;</li>
+<li>routing&#12497;&#12521;&#12513;&#12540;&#12479;&#12391;&#12461;&#12540;&#12434;&#25351;&#23450;&#12377;&#12427;</li>
+<li>&#21516;&#12376;&#12461;&#12540;&#12394;&#12425;&#21516;&#12376;shard</li>
+</ul></section></div></div>
+<div class="slide" id="p24"><div><section><header><h2>Routing 02</h2></header>
+
+<pre><code>curl -X PUT localhost:9200/demo-index\</code><code>     /x/1?routing=201211 -d ...</code><code>curl localhost:9200/demo-index\</code><code>    /x/_search?routing=201211 -d ...</code></pre>
+
+</section></div></div>
+<div class="slide" id="p25"><div><section><header><h2>Routing 03</h2></header>
+
+<ul>
+<li>&#12405;&#12388;&#12358;&#12398;&#26908;&#32034;&#12399;&#20840;&#12390;&#12398;shard&#12434;&#26908;&#32034;&#12375;&#12390;&#32080;&#26524;&#12434;&#38598;&#12417;&#12390;&#36820;&#12377;&#12364;&#12289;routing&#12434;&#25351;&#23450;&#12375;&#12383;&#22580;&#21512;&#12399;&#12381;&#12398;&#12487;&#12540;&#12479;&#12364;&#12354;&#12427;shard&#12384;&#12369;&#12434;&#26908;&#32034;&#12377;&#12427;&#12398;&#12391;&#21177;&#29575;&#12364;&#12356;&#12356;</li>
+<li>&#12518;&#12540;&#12470;id&#12391;&#12289;&#12525;&#12464;&#12434;&#24180;&#26376;&#12391;&#12289;&#12394;&#12393;&#12290;&#12487;&#12501;&#12457;&#12523;&#12488;&#12399;&#12489;&#12461;&#12517;&#12513;&#12531;&#12488;&#12398;id</li>
+</ul></section></div></div>
+<div class="slide" id="p26"><div><section><header><h2>Routing 03</h2></header>
+
+<p><img src="images/esnode04.png" alt="search without routing"></p>
+
+</section></div></div>
+<div class="slide" id="p27"><div><section><header><h2>Routing 04</h2></header>
+
+<p><img src="images/esnode05.png" alt="search with routing"></p>
+
+</section></div></div>
+<div class="slide" id="p28"><div><section><header><h2>Node.js&#12363;&#12425;&#20351;&#12358;</h2></header>
+
+<ul>
+<li>elasticsearch&#29992;&#12514;&#12472;&#12517;&#12540;&#12523;(elastical, elasticsearchclient, es...)</li>
+<li>http client
+
+<ul>
+<li>&#27161;&#28310;&#12398;http&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;</li>
+<li>request (&#12362;&#12377;&#12377;&#12417;&#12289;JSON&#12364;&#25201;&#12356;&#12420;&#12377;&#12356;)</li>
+</ul>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p29"><div><section><header><h2>index&#20316;&#25104; 01</h2></header>
+
+<pre><code>var request = require('request')</code><code>request.put({</code><code>    uri: 'http://localhost:9200/demo-index',</code><code>    json: true</code><code>}, function(err, res, val) {</code><code>    console.log(err, val)</code><code>})</code></pre>
+
+</section></div></div>
+<div class="slide" id="p30"><div><section><header><h2>index&#20316;&#25104; 02 (mappings: schema)</h2></header>
+
+<pre><code>request.put({</code><code>    uri: 'http://localhost:9200/demo-index',</code><code>    json: { mappings: { demo: {</code><code>        properties: { text: { type: 'string',</code><code>                              analyzer: 'kuromoji' } } } } }</code><code>}, function(err, res, val) {</code><code>    console.log(err, val)</code><code>})</code></pre>
+
+</section></div></div>
+<div class="slide" id="p31"><div><section><header><h2>&#12487;&#12540;&#12479;&#36861;&#21152;(put)</h2></header>
+
+<pre><code>request.put({</code><code>    uri: 'http://localhost:9200/demo-index/demo/1',</code><code>    json: { text: '&#12371;&#12435;&#12395;&#12385;&#12399;&#19990;&#30028;' }</code><code>}, function(err, res, val) {</code><code>    console.log(err, val)</code><code>})</code></pre>
+
+</section></div></div>
+<div class="slide" id="p32"><div><section><header><h2>&#12487;&#12540;&#12479;&#36861;&#21152;(post)</h2></header>
+
+<pre><code>// id&#12364;&#33258;&#21205;&#12391;&#20184;&#21152;&#12373;&#12428;&#12427;</code><code>request.post({</code><code>    uri: 'http://localhost:9200/demo-index/demo',</code><code>    json: { text: '&#12371;&#12435;&#12395;&#12385;&#12399;&#19990;&#30028;' }</code><code>}, function(err, res, val) {</code><code>    console.log(err, val)</code><code>})</code></pre>
+
+</section></div></div>
+<div class="slide" id="p33"><div><section><header><h2>&#26908;&#32034;</h2></header>
+
+<pre><code>request({</code><code>    uri: 'http://localhost:9200/demo-index/demo/_search',</code><code>    json: {</code><code>         query: { text: { text: '&#19990;&#30028;' } }</code><code>    }</code><code>}, function(err, res, val) {</code><code>    console.log(err, val)</code><code>})</code></pre>
+
+</section></div></div>
+<div class="slide" id="p34"><div><section><header><h2>live coding</h2></header>
+
+<ul>
+<li>elasticsearch&#12399;localhost&#12391;&#36215;&#21205;&#28168;&#12415;(localhost:9200)</li>
+<li>&#32004;200&#20214;&#12398;tweets(tweets.json)&#12434;elasticsearch&#12395;&#20837;&#12428;&#12390;&#26908;&#32034;&#12377;&#12427;</li>
+<li>&#31777;&#21336;&#12394;mapping&#12434;&#29992;&#24847;&#28168;(mappings.json)
+
+<ul>
+<li>index&#12398;&#20316;&#25104;</li>
+<li>&#12487;&#12540;&#12479;&#12398;&#36861;&#21152;</li>
+<li>&#26908;&#32034;</li>
+<li>Express&#12391;&#12363;&#12435;&#12383;&#12435;&#12394;Web UI</li>
+</ul>
+</li>
+</ul></section></div></div>
+<div class="slide" id="p35"><div><section><header><h2>ya-npm-search 01</h2></header>
+
+<p>elasticsearch&#12392;Node.js&#12391;&#12388;&#12367;&#12387;&#12383;npm&#26908;&#32034; <br><a href="http://ya-npm-search.herokuapp.com/">http://ya-npm-search.herokuapp.com/</a></p>
+
+<p><img src="images/ya_sc001.png" alt="ya npm search screencapture"></p>
+
+</section></div></div>
+<div class="slide" id="p36"><div><section><header><h2>ya-npm-search 02</h2></header>
+
+<ul>
+<li>npm search
+
+<ul>
+<li>&#20840;&#12487;&#12540;&#12479;&#12434;&#21516;&#26399;&#12375;&#12390;&#12471;&#12540;&#12465;&#12531;&#12471;&#12515;&#12523;&#12394;&#25991;&#23383;&#21015;&#12510;&#12483;&#12481;&#12289;&#36933;&#12356;</li>
+<li>&#12393;&#12428;&#12434;&#36984;&#12409;&#12400;&#12356;&#12356;&#12398;&#12363;&#20998;&#12363;&#12425;&#12394;&#12356;</li>
+</ul>
+</li>
+<li>elasticearch&#12391;&#26908;&#32034;&#12289;express&#12391;Web UI&#12289;CLI</li>
+<li>github&#12398;&#12473;&#12479;&#12540;&#25968;&#12289;&#12501;&#12457;&#12540;&#12463;&#25968;&#12434;&#23646;&#24615;&#12395;&#36861;&#21152;</li>
+<li>npm&#12398;&#20381;&#23384;&#25968;&#12289;&#12473;&#12479;&#12540;&#25968;</li>
+<li>heroku&#12392;bonsai elasticsearch addon&#12391;&#36939;&#29992;</li>
+</ul>
+<!--
+# bonsai elasticsearch 01
+
+* [http://bonsai.io/](http://bonsai.io/)
+* heroku addon (public beta)
+* &#12452;&#12531;&#12473;&#12488;&#12540;&#12523;&#12420;&#35373;&#23450;&#12364;&#19981;&#35201;&#12290;
+* addon&#12434;&#36861;&#21152;&#12377;&#12427;&#12392;index&#12398;url&#12364;&#12418;&#12425;&#12360;&#12390;&#12377;&#12368;&#20351;&#12360;&#12427;
+* public beta
+  * &#12486;&#12473;&#12488;&#12503;&#12521;&#12531;&#12398;&#12415;&#12289;&#38283;&#30330;&#12420;&#12486;&#12473;&#12488;&#21521;&#12369;&#12289;&#28961;&#26009;
+
+
+# bonsai elasticsearch 02
+
+* &#12496;&#12483;&#12463;&#12450;&#12483;&#12503;&#12364;&#21462;&#12426;&#12395;&#12367;&#12356;
+  * &#12501;&#12449;&#12452;&#12523;&#33258;&#20307;&#12395;&#12450;&#12463;&#12475;&#12473;&#12391;&#12365;&#12394;&#12356;
+  * scroll&#27231;&#33021;&#12364;&#20351;&#12360;&#12394;&#12356;
+  * gateway&#12418;&#20351;&#12360;&#12394;&#12356;
+* &#35469;&#35388;&#12364;&#12422;&#12427;&#12356;
+  * url&#12364;&#31192;&#23494;&#12289; url&#12364;&#28431;&#12428;&#12427;&#12392;&#35501;&#12415;&#26360;&#12365;&#12373;&#12428;&#12390;&#12375;&#12414;&#12358;
+* &#36939;&#29992;&#12395;&#19981;&#23433;
+  * &#12488;&#12521;&#12502;&#12523;&#12290;&#33258;&#20998;&#12398;&#12392;&#12371;&#12429;&#12399;&#20840;&#12487;&#12540;&#12479;&#28040;&#22833;&#12364;&#12354;&#12387;&#12383;&#12290;
+--></section></div></div>
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- slide template https://github.com/pepelsbey/shower -->
+</body>
+</html>
