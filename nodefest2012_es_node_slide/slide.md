@@ -5,6 +5,9 @@
 
 # swdyh (twitter / github / tumblr)
 
+今日のスライド
+[http://swdyh.github.com](http://swdyh.github.com)
+
 * ブラウザ拡張開発
   * AutoPagerize
     * ページの自動継ぎ足し
@@ -29,7 +32,6 @@
 * シンプルなRESTful API
 * 分散検索
 * ドキュメントストア (MongoDB, CouchDB)
-* さまざまな言語に対応、日本語も大丈夫
 
 
 # Solrとの違い
@@ -59,11 +61,21 @@
 * Sound Cloud
   * [http://backstage.soundcloud.com/2012/08/evolution-of-soundclouds-architecture/](http://backstage.soundcloud.com/2012/08/evolution-of-soundclouds-architecture/)
 
+# 
+
+* Restful API
+* DocumentStore
+* 日本語
+* 
 
 # RESTful API 01
 
 * HTTP (GET / POST / PUT / DELETE)
 * JSON (request / response)
+* http://localhost:9200/index/type/document_id
+  * index: RDBMSでいうデータベース
+  * type: RDBMSでいうテーブル、type内のドキュメントは同じmapping(スキーマ定義)が適用される
+  * document: JSONデータ
 
 # RESTful API 02
 
@@ -74,15 +86,6 @@
         { "query": { "text": { "text": "hello" } } }'
 
 
-# RESTful API 03
-
-http://localhost:9200/index/type/document_id
-
-* index: RDBMSでいうデータベース
-* type: RDBMSでいうテーブル、type内のドキュメントは同じmapping(スキーマ定義)が適用される
-* document: JSONデータ
-
-
 # DocumentStore
 
 * Document Oriented(MongoDB, CouchDB)
@@ -90,12 +93,8 @@ http://localhost:9200/index/type/document_id
 * date, geo_point, geo_shape, ip, binary(base64), attachment(base64)
 * 検索エンジン側にデータがあると、条件付き検索やソートがしやすい
 
-# Quereis & Filters
 
-* Queries: match, multi_match, bool, boosting, ids, custom_score, custom_boost_factor, constant_score, dis_max, field, filtered, flt, flt_field, fuzzy, has_child, has_parent, match_all, mlt, mlt_field, prefix, query_string, range, span_first, span_near, span_not, span_or, span_term, term, terms, top_children, wildcard, nested, custom_filters_score, indices, text, geo_shape
-* Filters: and, bool, exists, ids, limit, type, geo_bbox, geo_distance, geo_distance_range, geo_polygon, geo_shape, has_child, has_parent, match_all, missing, not, numeric_range, or, prefix, query, range, script, term, terms, nested
-
-# 日本語対応
+# 日本語
 
 文章に区切りがないのでそれをなんとかする必要がある
 
@@ -174,6 +173,9 @@ http://localhost:9200/index/type/document_id
 * どのshardに保存するか、どのshardから検索するか
 * routingパラメータでキーを指定する
 * 同じキーなら同じshard
+* 通常の検索は全てのshardを検索して結果を集めて返すが、routingを指定した場合はそのデータがあるshardだけを検索するので効率がいい
+* ユーザidで、ログを年月で、など。デフォルトはドキュメントのid
+
 
 # Routing 02
 
@@ -181,11 +183,6 @@ http://localhost:9200/index/type/document_id
          /x/1?routing=201211 -d ...
     curl localhost:9200/demo-index\
         /x/_search?routing=201211 -d ...
-
-# Routing 03
-
-* ふつうの検索は全てのshardを検索して結果を集めて返すが、routingを指定した場合はそのデータがあるshardだけを検索するので効率がいい
-* ユーザidで、ログを年月で、など。デフォルトはドキュメントのid
 
 # Routing 03
 
@@ -258,20 +255,16 @@ http://localhost:9200/index/type/document_id
         console.log(err, val)
     })
 
-# live coding
 
-* elasticsearchはlocalhostで起動済み(localhost:9200)
-* 約200件のtweets(tweets.json)をelasticsearchに入れて検索する
-* 簡単なmappingを用意済(mappings.json)
-  * indexの作成
-  * データの追加
-  * 検索
-  * ExpressでかんたんなWeb UI
+# Quereis & Filters
+
+* Queries: match, multi_match, bool, boosting, ids, custom_score, custom_boost_factor, constant_score, dis_max, field, filtered, flt, flt_field, fuzzy, has_child, has_parent, match_all, mlt, mlt_field, prefix, query_string, range, span_first, span_near, span_not, span_or, span_term, term, terms, top_children, wildcard, nested, custom_filters_score, indices, text, geo_shape
+* Filters: and, bool, exists, ids, limit, type, geo_bbox, geo_distance, geo_distance_range, geo_polygon, geo_shape, has_child, has_parent, match_all, missing, not, numeric_range, or, prefix, query, range, script, term, terms, nested
 
 
 # ya-npm-search 01
 
-elasticsearchとNode.jsでつくったnpm検索 <br />
+Yet Another npm Search: elasticsearchとNode.jsでつくったnpm検索<br />
 [http://ya-npm-search.herokuapp.com/](http://ya-npm-search.herokuapp.com/)
 
 ![ya npm search screencapture](images/ya_sc001.png)
@@ -287,7 +280,21 @@ elasticsearchとNode.jsでつくったnpm検索 <br />
 * npmの依存数、スター数
 * herokuとbonsai elasticsearch addonで運用
 
+
+# live coding
+
+* elasticsearchはlocalhostで起動済み(localhost:9200)
+* 約200件のtweets(tweets.json)をelasticsearchに入れて検索する
+* 簡単なmappingを用意済(mappings.json)
+  * indexの作成
+  * データの追加
+  * 検索
+  * ExpressでかんたんなWeb UI
+
+
+
 <!--
+
 # bonsai elasticsearch 01
 
 * [http://bonsai.io/](http://bonsai.io/)
@@ -308,4 +315,9 @@ elasticsearchとNode.jsでつくったnpm検索 <br />
   * urlが秘密、 urlが漏れると読み書きされてしまう
 * 運用に不安
   * トラブル。自分のところは全データ消失があった。
+
+# slide url
+
+http://swdyh.github.com/nodefest2012_es_node_slide/slide.html
+
 -->
