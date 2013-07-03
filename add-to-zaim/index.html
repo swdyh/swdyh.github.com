@@ -10,24 +10,45 @@
       div.click { text-align: center; width: 60%; }
       a.install { font-size: 2em; background-color: #48a322; color: white; border-radius: 5px; padding: 0.2em 0.5em; text-decoration:none; }
       div.footer { margin: 5em 0; }
+      img.icon { vertical-align: bottom; }
     </style>
   </head>
   <body>
     <h1>Add To Zaim</h1>
     <div>Chrome Extension for Zaim.</div>
+
     <div>
       <a href="javascript:chrome.webstore.install()" id="install-button" class="install">インストール</a>
       <br />
       <a href="https://chrome.google.com/webstore/detail/addtozaim/gmpeocdhococckaihcgbhhikchcmpfjg">chrome web store</a>
     </div>
 
+    <br />
+
+    <div>ECサイトの注文履歴ページ、オンラインバンキングの取引明細、クレジットカードのオンライン利用明細などから、ワンクリックで、金額、日付、お店、メモが入力された状態のZaimWeb版の入力画面を開くことができます。</div>
+
     <br /><br />
 
     <div>
+      動作例: Amazon 注文履歴ページ <br />
+      <img class="sc" src="ss_ex_003.png" />
+    </div>
+    <div class="click">
+      <img src="zaim_icon.png" class="icon" />をクリック<br />
+      ↓
+    </div>
+    <div>
+      <img class="sc" src="ss_ex_004.png" />
+    </div>
+
+    <br /><br />
+
+    <div>
+      動作例: UFJダイレクト 入出金明細ページ<br />
       <img class="sc" src="ss_ex_001.png" />
     </div>
     <div class="click">
-      Click <img src="zaim_icon.png" /><br />
+      <img src="zaim_icon.png" class="icon" />をクリック<br />
       ↓
     </div>
     <div>
@@ -46,8 +67,8 @@
     </div>
 
     <div class="footer">
-      <a href="https://twitter.com/swdyh/" />@swdyh</a>
-      <a href="https://github.com/swdyh/add-to-zaim" />https://github.com/swdyh/add-to-zaim</a>
+      Github: <a href="https://github.com/swdyh/add-to-zaim">https://github.com/swdyh/add-to-zaim</a><br />
+      <a href="https://twitter.com/swdyh">@swdyh</a>
     </div>
   </body>
 </html>
