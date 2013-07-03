@@ -1,12 +1,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/gmpeocdhococckaihcgbhhikchcmpfjg">
     <style>
       body { margin: 1em 10%; }
       h1 { font-size: 5em; padding: 0; margin: 0}
       img.sc { border: 1px solid #ccc; margin: 1em 0; }
       div.click { text-align: center; width: 60%; }
       span.install { font-size: 2em; background-color: #48a322; color: white; border-radius: 5px; padding: 0.2em 0.5em; }
+      span.install:hover { cursor: pointer; }
       div.footer { margin: 5em 0; }
     </style>
   </head>
@@ -14,7 +16,7 @@
     <h1>Add To Zaim</h1>
     <div>Chrome Extension for Zaim.</div>
     <div>
-      <span class="install">インストール</span>
+      <span onclick="chrome.webstore.install()" id="install-button" class="install">インストール</span>
     </div>
 
     <br /><br />
@@ -26,7 +28,7 @@
       Click <img src="zaim_icon.png" /><br />
       ↓
     </div>
-p    <div>
+    <div>
       <img class="sc" src="ss_ex_002.png" />
     </div>
 
