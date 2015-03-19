@@ -1,24 +1,30 @@
 <html>
   <head>
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/gmpeocdhococckaihcgbhhikchcmpfjg">
     <title>Add To Zaim</title>
     <style>
-      body { margin: 1em 10%; }
-      h1 { font-size: 5em; padding: 0; margin: 0}
-      img.sc { border: 1px solid #ccc; margin: 1em 0; }
-      div.click { text-align: center; width: 60%; }
+      body { margin: 0; }
+      #content { margin: 20px; }
+      h1 { font-size: 48px; padding: 0; margin: 0}
+      img.sc { border: 1px solid #ccc; margin: 1em auto; max-width: 100%; }
+      div.click { text-align: center; width: 100%; }
       a.install { font-size: 2em; background-color: #48a322; color: white; border-radius: 5px; padding: 0.2em 0.5em; text-decoration:none; }
-      div.footer { margin: 5em 0; }
+      div.footer { margin: 5em 0; clear: both;}
       img.icon { vertical-align: bottom; }
+      div.site_images img { float: left; display:block; max-width: 100%; }
     </style>
   </head>
   <body>
+  <div id="content">
     <h1>Add To Zaim</h1>
     <div>Chrome Extension for Zaim.</div>
+    <br />
 
     <div>
       <a href="javascript:chrome.webstore.install()" id="install-button" class="install">インストール</a>
+      <br />
       <br />
       <a href="https://chrome.google.com/webstore/detail/addtozaim/gmpeocdhococckaihcgbhhikchcmpfjg">chrome web store</a>
     </div>
@@ -59,7 +65,7 @@
     <div>
       Amazon 注文履歴, 楽天 購入履歴, UFJ Direct 入出金明細, MyJCB カードご利用明細照会
     </div>
-    <div>
+    <div class="site_images">
       <img src="ss_amazon_001_.png" />
       <img src="ss_rakuten_001_.png" />
       <img src="ss_ufj_001_.png" />
@@ -67,8 +73,11 @@
     </div>
 
     <div class="footer">
-      Github: <a href="https://github.com/swdyh/add-to-zaim">https://github.com/swdyh/add-to-zaim</a><br />
+      Github: <a href="https://github.com/swdyh/add-to-zaim">https://github.com/swdyh/add-to-zaim</a>
+      <br />
+      <br />
       <a href="https://twitter.com/swdyh">@swdyh</a>
     </div>
+  </div>
   </body>
 </html>
