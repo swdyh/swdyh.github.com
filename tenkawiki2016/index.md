@@ -42,11 +42,11 @@ Aaron Swartzっていうひとがいて、Jottitっていうシンプルでか�
 
 
 # Jottit
-![](./pictures/top.jpg)  
+![](./pictures/jottit_top.png)  
 www.jottit.com 2007/09 (Simon Carstensen and Aaron Swartz)
 
 # Jottit
-![](http://cnet2.cbsistatic.com/hub/i/r/2007/09/16/2476f644-f4d7-11e2-8c7c-d4ae52e62bcc/resize/570xauto/d5f47ba0695a903c06e4368f8c031810/jottit-page.jpg)
+![](./pictures/jottit_ap.png)  
 
 # Jottit
 * 手軽でシンプル
