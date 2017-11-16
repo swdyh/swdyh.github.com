@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>スタートアップでのRails開発/運用でやってよかったこと</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport"  content="width=device-width, initial-scale=1">
+  <meta name="generator"  content="Slide Show (S9) v4.0.1 on Ruby 2.4.2 (2017-09-14) [x86_64-linux-musl]">
+	<meta name="author"     content="@swdyh">
+	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>スタートアップでのRails開発/運用でやってよかったこと</h1>
+		<p>@swdyh</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>スタートアップでのRails開発/運用でやってよかったこと</h2>
+		<p>by @swdyh</p><div style="color: white;margin-top: 30px;text-align: center;">Rails Developer Meetup #7 2017-11-16</div>
+		<img src="pictures/cover.png" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+					}
+		</style>
+	</section>
+
+
+
+<section class="slide " id="1"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  
+<!-- _S9SLIDE_ -->
+<h2 id="自己紹介">自己紹介</h2>
+<ul>
+  <li><a href="https://github.com/swdyh">github/swdyh</a>, <a href="https://twitter.com/swdyh">twitter/swdyh</a></li>
+  <li>ブラウザ拡張 <a href="http://autopagerize.net/">AutoPagarize</a> 作者</li>
+  <li>Rails使いはじめて10年くらい</li>
+  <li>株式会社トレタ サーバサイドエンジニア</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="2"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="トレタ">トレタ</h2>
+<ul>
+  <li>2013/07に会社設立したスタートアップ</li>
+  <li>飲食店向けの予約管理サービス
+    <ul>
+      <li>飲食店の方が電話で予約を受けたときに入力するiPadアプリ</li>
+      <li>予約から顧客データベースをつくり接客に利用</li>
+      <li>飲食店の裏側をささえるサービス</li>
+    </ul>
+  </li>
+  <li>4年、導入店舗9000店</li>
+  <li>くわしくは <a href="https://toreta.in/jp/feature/">https://toreta.in/jp/feature/</a></li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="3"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="スタートアップ">スタートアップ</h2>
+<ul>
+  <li><strong>プロダクト開発に集中</strong></li>
+  <li>プロダクトにばかり集中しているとまわらなくなる</li>
+  <li>プロダクト開発の合間に地道に運用面を整備していく</li>
+  <li>あまり手間をかけずにそこそこ便利な仕組みをつくれるといい</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="4"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="リクエストのログ">リクエストのログ</h2>
+<ul>
+  <li>Railsのログ、構造化されてなくて検索性が低い
+    <ul>
+      <li>開発には便利だけど運用には別のログが必要</li>
+    </ul>
+  </li>
+  <li>アプリケーション固有のリクエストのログをつくる
+    <ul>
+      <li>HTTPの情報、URI, UA, IP, HTTPメソッド, レスポンスコード、処理時間</li>
+      <li>リクエストID</li>
+      <li><strong>アプリケーション固有のデータ</strong>
+        <ul>
+          <li>トレタの例、ユーザID, 店舗ID, 予約ID, OAuthClientID</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="5"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="リクエストid">リクエストID</h2>
+<ul>
+  <li>リクエストを一意に示すID
+    <ul>
+      <li>nginx(1.11.0以降)、X-Request-Idに<a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#var_request_id">$request_id</a></li>
+      <li><a href="http://api.rubyonrails.org/classes/ActionDispatch/RequestId.html">ActionDispatch::RequestId</a> (Railsに入ってるRackMiddleware)</li>
+    </ul>
+  </li>
+  <li>利用例
+    <ul>
+      <li>SQLのコメントに埋め込んでいる(<a href="https://github.com/cookpad/arproxy">Arproxy</a>)。スロークエリーがどこで発生したかがすぐ分かる</li>
+    </ul>
+  </li>
+  <li>ちゃんと分散システムのトレーシングをしたいなら<a href="https://aws.amazon.com/jp/xray/">X-Ray</a>/<a href="http://zipkin.io/">Zipkin</a>とか
+    <ul>
+      <li>リクエストIDはもう少し手軽な追跡用途に</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="6"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="ログの例">ログの例</h2>
+<pre><code>{
+    "datetime":1510729796,
+    "request_id":"ea196883-7f5a-4cb7-8133-8db73ca1f544",
+    "request_uri":"/v1/restaurants.json",
+    "account_id":1,
+    "user_agent":"Staging1/15.0 (iPad; iOS 9.3.5; Scale/2.00)",
+    "response_code":200,
+    "response_time":0.10239052772521973 ....
+</code></pre>
+
+
+
+</section>
+
+<section class="slide " id="7"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="リクエストのログをどう作っているか">リクエストのログをどう作っているか</h2>
+<ul>
+  <li>かんたんなRackのミドルウェアで1行1JSONのログをファイルに出力
+    <ul>
+      <li>標準のLoggerをフォーマットだけ変えて使用</li>
+    </ul>
+  </li>
+  <li>↓から必要な情報を抜き出している
+    <ul>
+      <li>HTTPヘッダー</li>
+      <li>パラメータ</li>
+      <li>セッション</li>
+      <li>controllerインスタンスの変数</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="8"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="リクエストのログを集めてためる">リクエストのログを集めてためる</h2>
+<ul>
+  <li>たんにログをファイルに書いても使いにくいので集める</li>
+  <li>SaaS(<a href="https://papertrailapp.com/">PaperTrail</a>, <a href="https://logdna.com/">LogDNA</a>とか)は、おおむねリテンション長いプランは高い
+    <ul>
+      <li>リテンションが短いと不便</li>
+    </ul>
+  </li>
+  <li>SaaSに比べれると少し手間はかかるけど、BigQueryがおすすめ</li>
+  <li>BigQueryはログのためのものではないけれど、だからといって困ることもない</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="9"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="bigqueryのいいところ">BigQueryのいいところ</h2>
+<ul>
+  <li><a href="https://github.com/kaizenplatform/fluent-plugin-bigquery">fluent-plugin-bigquery</a></li>
+  <li>従量課金、サービス成長に応じた料金</li>
+  <li>日付ごとにテーブルを分割しておいて、検索時に範囲指定できる</li>
+  <li>index気にせず検索できる。正規表現、JSON関数、JavaScriptのUDF</li>
+  <li>できるだけカラムと期間を絞る、それを心がけていれば、そんなに値段はいかない</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="10"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="ジョブキューのログ1sidekiq">ジョブキューのログ1(Sidekiq)</h2>
+<ul>
+  <li>Railsのリクエストは基本的に同期処理なので、ジョブキュー処理が必須</li>
+  <li>ジョブキューの処理ログもリクエストのログと同じくらい大事</li>
+  <li>ジョブキューもいろいろあるけれど、RailsだとSidekiqがやっぱり便利</li>
+  <li>これも同じように1行1JSONのログをファイルに書いて、fluentdでBQへ</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="11"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="ジョブキューのログ2sidekiq">ジョブキューのログ2(Sidekiq)</h2>
+<ul>
+  <li>処理時間を集計したり、抜けがないか確認したり</li>
+  <li>Sidekiqのダッシュボードは便利だけど、処理が終わったものに関しては情報はほとんどない</li>
+  <li>リクエストに比べて処理時間がユーザ体験の直結しないので見過ごしがち</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="12"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="定期処理">定期処理</h2>
+<ul>
+  <li>最初はcron -&gt; <a href="https://github.com/ondrejbartas/sidekiq-cron">Sidekiq-Cron</a></li>
+  <li><strong>リトライとかログとか複数台で動かすとか、全部Sidekiqまかせにできる</strong></li>
+  <li>定期処理になにを使っていても、実行もれに注意する</li>
+  <li>定期処理の処理開始/終了時にCloudWatchにping、pingの数をチェックしてアラート</li>
+  <li>ジョブスケジューラ(<a href="https://github.com/cookpad/kuroko2">kuroko2</a>, <a href="http://rundeck.org/">rundeck</a>とか)も考えているが、Sidekiqが便利なのでしばらくはSidekiq-Cronの予定</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="13"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="bigquery活用">BigQuery活用</h2>
+<ul>
+  <li>DBの個人情報以外のカラムをBQへコピー
+    <ul>
+      <li>社内用の分析、顧客用の分析、調査とか。</li>
+      <li>調査時、ログの店舗IDやユーザIDとジョインしたりできて便利</li>
+    </ul>
+  </li>
+  <li>コピー方法は、自社ツールとembulk
+    <ul>
+      <li>自社ツールはメモリ効率いい、メンテがちょっと面倒</li>
+    </ul>
+  </li>
+  <li>テーブルによっては、日毎のテーブルをコピーして残している
+    <ul>
+      <li>分析用途で、日々変わってしまうデータをとっておきたかったりする</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="14"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="ありがとうございました">ありがとうございました</h2>
+<ul>
+  <li>もっといい方法あるよとか、こんな工夫してるよ、とかおしえてください</li>
+</ul>
+
+</section>
+
+
+
+<!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
