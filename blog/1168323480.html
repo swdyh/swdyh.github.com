@@ -1,0 +1,37 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: href</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>href</h2>
+  <div>2007-01-09 15:18:00</div>
+  <div class="content">
+    <p>hrefという<a class="keyword" href="http://d.hatena.ne.jp/keyword/ruby">ruby</a>のrefeみたいなリファレンスツールがあるみたいなのでインストールしてみた。<br />
+<a href="http://i.loveruby.net/ja/projects/href/">http://i.loveruby.net/ja/projects/href/</a></p><br />
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/hugs">hugs</a>という<a class="keyword" href="http://d.hatena.ne.jp/keyword/Haskell">Haskell</a>の処理系を使っていて、今のとこ特に不都合もなかったのだけど、<br />
+hrefは<a class="keyword" href="http://d.hatena.ne.jp/keyword/ghc">ghc</a>で<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%EB">コンパイル</a>しろと書いてあったので<a class="keyword" href="http://d.hatena.ne.jp/keyword/ghc">ghc</a>をインストールした。(昨日の日記）</p><br />
+<p>hrefのインストールはREADMEどおりにmakeとmake install。<br />
+.zshrcにexport HREF_DATADIR=/...を追加してsourceして、mkhrefを実行で完了。</p><br />
+<p>ここに<a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>用の補完関数があったので、これも.zshrcにコピペ。<br />
+<a href="http://d.hatena.ne.jp/secondlife/20060331/1143733552">http://d.hatena.ne.jp/secondlife/20060331/1143733552</a></p><br />
+<p>あと表示されるテキストが<a class="keyword" href="http://d.hatena.ne.jp/keyword/EUC">EUC</a>らしくて、<a class="keyword" href="http://d.hatena.ne.jp/keyword/UTF-8">UTF-8</a>の環境だと文字化けするので、<br />
+HREF_DATADIRのファイルを全部<a class="keyword" href="http://d.hatena.ne.jp/keyword/UTF-8">UTF-8</a>に変換しておいた。</p>
+<pre class="code" data-lang="" data-unlink> nkf -w --overwrite **/*</pre><p>ってやったら、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>にも対象になってしまって変なファイルができてしまった。<br />
+変換はできたので、変なファイルは消しておいた。</p><br />
+<p>こうすればよかったっぽい。</p>
+<pre class="code" data-lang="" data-unlink> nkf -w --overwrite **/*(.)</pre><p>メモ<br />
+<a href="http://www.ayu.ics.keio.ac.jp/~mukai/tips/zshfiles.html">http://www.ayu.ics.keio.ac.jp/~mukai/tips/zshfiles.html</a></p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

@@ -1,0 +1,116 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Jepack SDKがリリースされたので使ってみる</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Jepack SDKがリリースされたので使ってみる</h2>
+  <div>2010-03-11 10:36:56</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Mozilla">Mozilla</a> Labs &#187; <a class="keyword" href="http://d.hatena.ne.jp/keyword/jetpack">jetpack</a> &#187; Blog Archive &#187; Announcing the <a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>: First Milestone Release<br />
+<a href="http://mozillalabs.com/jetpack/2010/03/09/announcing-the-jetpack-sdk/">http://mozillalabs.com/jetpack/2010/03/09/announcing-the-jetpack-sdk/</a></p><p>環境は、<a class="keyword" href="http://d.hatena.ne.jp/keyword/MacOS">MacOS</a> 10.5.8、python2.5(<a class="keyword" href="http://d.hatena.ne.jp/keyword/macports">macports</a>で入れたやつ、もとから入ってるのでもいいと思う)</p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>をダウンロードして解凍</p>
+<pre class="code ?" data-lang="?" data-unlink> % wget https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/jetpack-sdk-0.1.tar.gz
+ % tar zxvf jetpack-sdk-0.1.tar.gz
+ % cd jetpack-sdk-0.1</pre><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>の環境をロード</p>
+<pre class="code ?" data-lang="?" data-unlink> % source bin/activate</pre><p>ドキュメントの説明通りにパッケージをつくってみる</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% mkdir packages/my-first-package
+ (jetpack-sdk-0.1)% cd packages/my-first-package
+ (jetpack-sdk-0.1)% vim package.json</pre><pre class="code lang-json" data-lang="json" data-unlink> <span class="synSpecial">{</span>
+   &quot;<span class="synStatement">description</span>&quot;: &quot;<span class="synConstant">This is my first package, it's tiny.</span>&quot;,
+   &quot;<span class="synStatement">author</span>&quot;: &quot;<span class="synConstant">Me (http://me.org)</span>&quot;
+ <span class="synSpecial">}</span>
+</pre><p>モジュールをつくる。モジュールはCommonJSスタイル。exportのプロパティに追加しておくと、他のファイルからrequireしたときに呼び出せる。</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% mkdir lib
+ (jetpack-sdk-0.1)% vim lib/my-module.js</pre><pre class="code lang-javascript" data-lang="javascript" data-unlink> exports.add = <span class="synIdentifier">function</span> add(a, b) <span class="synIdentifier">{</span>
+   <span class="synStatement">return</span> a + b;
+ <span class="synIdentifier">}</span>
+</pre><p>モジュールのテストを書く</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% mkdir tests
+ (jetpack-sdk-0.1)% vim tests/test-my-module.js</pre><pre class="code lang-javascript" data-lang="javascript" data-unlink> <span class="synIdentifier">var</span> myModule = require(<span class="synConstant">'my-module'</span>)
+ exports.ensureAdditionWorks = <span class="synIdentifier">function</span>(test) <span class="synIdentifier">{</span>
+     test.assertEqual(myModule.add(1, 1), 2, <span class="synConstant">'1 + 1 = 2'</span>)
+ <span class="synIdentifier">}</span>
+</pre><p>テストの実行。</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% cfx test -v
+ info: executing &#39;test-my-module.ensureAdditionWorks&#39;
+ info: pass: 1 + 1 = 2
+
+ Malloc bytes allocated (in use by application): 6436928
+ Malloc bytes mapped (not necessarily committed): 14262272
+ Malloc bytes committed (r/w) in default zone: 6446624
+ Malloc bytes allocated (in use) in default zone: 13213696
+ Tracked memory objects in testing sandbox: 2
+
+ 1 of 1 tests passed.
+ OK
+ Total time: 1.215288 seconds
+ Program terminated successfully.</pre><p>ドキュメントを書く。<a class="keyword" href="http://d.hatena.ne.jp/keyword/Markdown">Markdown</a>形式。</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% vim README.md</pre><pre class="code lang-markdown" data-lang="markdown" data-unlink> This is my *first* package. It contains:
+
+<span class="synStatement"> *</span> A tiny module.
+<span class="synStatement"> *</span> A tiny test suite.
+<span class="synStatement"> *</span> Some meager documentation.
+</pre><p>モジュールのドキュメントを書く。</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% mkdir docs
+ (jetpack-sdk-0.1)% vim docs/my-module.md</pre><pre class="code lang-markdown" data-lang="markdown" data-unlink> # my-module documentation!!
+</pre><p>ドキュメントを開く</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% cfx docs</pre><p>ブラウザに<a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>のドキュメントが表示される。左下のへんを見ると、自分のパッケージも追加されていて、ドキュメントも表示される。</p><p>起動部分を書く</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% vim lib/main.js</pre><pre class="code lang-javascript" data-lang="javascript" data-unlink> exports.main = <span class="synIdentifier">function</span>(options, callbacks) <span class="synIdentifier">{</span>
+     console.log(<span class="synConstant">&quot;Hello World!&quot;</span>)
+     callbacks.quit()
+ <span class="synIdentifier">}</span>
+</pre><p>動かしてみる</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% cfx run
+ info: Hello World!
+ OK
+ Total time: 0.559730 seconds
+ Program terminated successfully.</pre><p>モジュールを使ってみる</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink> <span class="synIdentifier">var</span> myModule = require(<span class="synConstant">'my-module'</span>)
+ 
+ exports.main = <span class="synIdentifier">function</span>(options, callbacks) <span class="synIdentifier">{</span>
+     console.log(<span class="synConstant">&quot;Hello World!&quot;</span>)
+     console.log(myModule.add(1,2))
+     callbacks.quit()
+ <span class="synIdentifier">}</span>
+</pre><pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% cfx run
+ info: Hello World!
+ info: 3
+ OK
+ Total time: 0.562395 seconds
+ Program terminated successfully.</pre><p>もうちょっと書いてみる</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink> exports.add = <span class="synIdentifier">function</span> add(a, b) <span class="synIdentifier">{</span>
+     <span class="synStatement">return</span> a + b;
+ <span class="synIdentifier">}</span>
+ exports.notify = <span class="synIdentifier">function</span> notify(options) <span class="synIdentifier">{</span>
+     Cc<span class="synIdentifier">[</span><span class="synConstant">&quot;@mozilla.org/alerts-service;1&quot;</span><span class="synIdentifier">]</span>.getService(Ci.nsIAlertsService).
+     showAlertNotification(options<span class="synIdentifier">[</span><span class="synConstant">'icon'</span><span class="synIdentifier">]</span>, options<span class="synIdentifier">[</span><span class="synConstant">'title'</span><span class="synIdentifier">]</span>, options<span class="synIdentifier">[</span><span class="synConstant">'body'</span><span class="synIdentifier">]</span>)
+ <span class="synIdentifier">}</span>
+</pre><p>CcやCiは定義されていて使える。(セキュリティ関係で扱い方がかわるかも。)</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink> <span class="synIdentifier">var</span> myModule = require(<span class="synConstant">'my-module'</span>)
+
+ exports.main = <span class="synIdentifier">function</span>(options, callbacks) <span class="synIdentifier">{</span>
+     myModule.notify(<span class="synIdentifier">{</span>title: <span class="synConstant">'Run'</span>, body: <span class="synConstant">'This is my first Jetpack SDK app.'</span><span class="synIdentifier">}</span>)
+     callbacks.quit()
+ <span class="synIdentifier">}</span>
+</pre><p>xpiにしてみる</p>
+<pre class="code ?" data-lang="?" data-unlink> (jetpack-sdk-0.1)% cfx xpi
+ Exporting extension to my-first-package.xpi.</pre><p>my-first-package.xpiをブラウザにドロップして、再起動。通知が出てきたら、成功</p><p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20100311095706" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20100311/20100311095706.png" alt="f:id:swdyh:20100311095706p:image" title="f:id:swdyh:20100311095706p:image" class="hatena-fotolife" itemprop="image"></a></span></p><p></p>
+
+<div class="section">
+    <h4>雑感</h4>
+    <p>けっこう良い気がする。<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>がそろってくれば、もっと書きやすくなるだろうし、<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>が足りない部分はCcとかCi使って、ごりごり書けばなんとかなりそうだし。やっぱりそこが、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Chrome">Chrome</a>の拡張に対するアドバンテージだろうなあ。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a>から入るひとにCcとかCi使え、というのは酷だけど、もとから拡張書いてるひとが、そのへんをラップしたライブラリ書けばいいと思う。</p><p>今までだって、そういうラップしたライブラリは書こうと思えば書けたし、書いてるひとももちろんいるんだけど、そのへんが共有されてない感じがあって、結局、再発明したりMDCからコピペしたりとかになっちゃってたから、<a class="keyword" href="http://d.hatena.ne.jp/keyword/CPAN">CPAN</a>とかGem的なライブラリを共有する仕組みがあると<a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a>はもう一歩先に進めるんじゃないかと思う。</p>
+
+</div>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

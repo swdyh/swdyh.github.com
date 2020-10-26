@@ -1,0 +1,76 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: usericons</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>usericons</h2>
+  <div>2008-10-12 03:58:20</div>
+  <div class="content">
+    <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20081013030543" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20081013/20081013030543.png" alt="f:id:swdyh:20081013030543p:image" title="f:id:swdyh:20081013030543p:image" class="hatena-fotolife" itemprop="image"></a></span></p><p><a href="http://usericons.relucks.org/">http://usericons.relucks.org/</a></p><p>いろんな<a class="keyword" href="http://d.hatena.ne.jp/keyword/Web%A5%B5%A1%BC%A5%D3%A5%B9">Webサービス</a>のユーザーアイコンを手軽に取得できるサービスをつくりました。<br />
+<br />
+</p>
+
+<div class="section">
+    <h4>使い方</h4>
+    <p>例えば、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Twitter">Twitter</a>のアイコンがほしい場合、以下のアドレスにアクセスします。<br />
+<a href="http://usericons.relucks.org/twitter/swdyh">http://usericons.relucks.org/twitter/swdyh</a><br />
+そうすると、ユーザーアイコンのURLにリダイレクトされます。<br />
+画像を表示したいときは、以下のようにします。</p>
+<pre class="code lang-html" data-lang="html" data-unlink><span class="synIdentifier">&lt;</span><span class="synStatement">img</span><span class="synIdentifier"> </span><span class="synType">src</span><span class="synIdentifier">=</span><span class="synConstant">&quot;http://usericons.relucks.org/twitter/swdyh&quot;</span><span class="synIdentifier"> /&gt;</span>
+</pre><p>→ <img src="http://usericons.relucks.org/twitter/swdyh" /></p><br />
+<p>同じように、</p>
+<pre class="code lang-html" data-lang="html" data-unlink><span class="synIdentifier">&lt;</span><span class="synStatement">img</span><span class="synIdentifier"> </span><span class="synType">src</span><span class="synIdentifier">=</span><span class="synConstant">&quot;http://usericons.relucks.org/wassr/kotoriko&quot;</span><span class="synIdentifier"> /&gt;</span>
+</pre><p>→ <img src="http://usericons.relucks.org/wassr/kotoriko" /></p><p>とか</p>
+<pre class="code lang-html" data-lang="html" data-unlink><span class="synIdentifier">&lt;</span><span class="synStatement">img</span><span class="synIdentifier"> </span><span class="synType">src</span><span class="synIdentifier">=</span><span class="synConstant">&quot;http://usericons.relucks.org/flickr/youpy&quot;</span><span class="synIdentifier"> /&gt;</span>
+</pre><p>→ <img src="http://usericons.relucks.org/flickr/youpy" /></p><p>とか</p>
+<pre class="code lang-html" data-lang="html" data-unlink><span class="synIdentifier">&lt;</span><span class="synStatement">img</span><span class="synIdentifier"> </span><span class="synType">src</span><span class="synIdentifier">=</span><span class="synConstant">&quot;http://usericons.relucks.org/najimi/kzys&quot;</span><span class="synIdentifier"> /&gt;</span>
+</pre><p>→ <img src="http://usericons.relucks.org/najimi/kzys" /></p><p>という感じにすれば、各サービスのユーザーアイコンを簡単に得ることができます。</p><br />
+<p>あとurlからでも、引けるようになっています。</p>
+<pre class="code lang-html" data-lang="html" data-unlink><span class="synIdentifier">&lt;</span><span class="synStatement">img</span><span class="synIdentifier"> </span><span class="synType">src</span><span class="synIdentifier">=</span><span class="synConstant">&quot;http://usericons.relucks.org/?url=http://twitter.com/swdyh&quot;</span><span class="synIdentifier"> /&gt;</span>
+</pre><p>→ <img src="http://usericons.relucks.org/?url=http://twitter.com/swdyh" /></p><p></p>
+
+</div>
+<div class="section">
+    <h4>対応サービス</h4>
+    <p>今対応している<a class="keyword" href="http://d.hatena.ne.jp/keyword/Web%A5%B5%A1%BC%A5%D3%A5%B9">Webサービス</a>は以下の8つです。</p>
+
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/flickr">flickr</a></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/github">github</a></li>
+<li>hatena</li>
+<li>lastfm</li>
+<li>najimi</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/nowa">nowa</a></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/twitter">twitter</a></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/wassr">wassr</a></li>
+</ul><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EC%A5%A4%A5%D4%A5%F3%A5%B0">スクレイピング</a>で画像のURLを取ってきているので、サービス側のHTMLの変更があると使えなくなることがあります。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/Web%A5%B5%A1%BC%A5%D3%A5%B9">Webサービス</a>ごとの対応データは、<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>のSITEINFOのようにwedataので管理しているので、<br />
+使えなくなっている場合の修正や、別のサービスを追加は、wedataで行うことができます。</p><br />
+<p>usericons - wedata<br />
+<a href="http://wedata.net/databases/usericons/items">http://wedata.net/databases/usericons/items</a></p><p>usericonsでは15分ごとに、wedataから対応データを取ってきて更新してます。<br />
+<br />
+</p>
+
+</div>
+<div class="section">
+    <h4>利用例</h4>
+    <p>usericonsを利用して、<a class="keyword" href="http://d.hatena.ne.jp/keyword/livedoor%20Reader">livedoor Reader</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/Twitter">Twitter</a>のフィードに画像を付ける<a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>を書きました。</p><br />
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/LDR">LDR</a> - twittericon &#8211; Userscripts.org<br />
+<a href="http://userscripts.org/scripts/show/35359">http://userscripts.org/scripts/show/35359</a></p><br />
+<p>こんな感じに画像がつきます。<br />
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20081013030544" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20081013/20081013030544.png" alt="f:id:swdyh:20081013030544p:image" title="f:id:swdyh:20081013030544p:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+
+</div>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

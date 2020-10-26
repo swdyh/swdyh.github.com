@@ -1,0 +1,64 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Direcory Index Image Viewer で徐々に画像を開くようにする実験</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Direcory Index Image Viewer で徐々に画像を開くようにする実験</h2>
+  <div>2008-02-01 20:58:45</div>
+  <div class="content">
+    <p>Direcory Index Image Viewer &#8211; Userscripts.org<br />
+<a href="http://userscripts.org/scripts/show/9601">http://userscripts.org/scripts/show/9601</a></p><br />
+<p>Directory Indexの画像を展開してくれるyoupyさんの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>。<br />
+便利だけど数が多いときに<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%E9%A5%AF%A5%E9">ブラクラ</a>状態になる。<br />
+徐々に開くようにして、そうならないようにするのを考えてみた。<br />
+<br />
+</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink>
+<span class="synIdentifier">var</span> title = $t(<span class="synConstant">'title'</span>)<span class="synIdentifier">[</span>0<span class="synIdentifier">]</span>;
+<span class="synStatement">if</span> (!!title &amp;&amp; title.innerHTML.match(<span class="synConstant">/Index of \//</span>)) <span class="synIdentifier">{</span>
+    <span class="synIdentifier">var</span> l = <span class="synType">Array</span>.prototype.filter.apply($t(<span class="synConstant">'a'</span>), <span class="synIdentifier">[function</span>(e) <span class="synIdentifier">{</span> <span class="synStatement">return</span> e.href.match(<span class="synConstant">/png|gif|jpe?g/i</span>) <span class="synIdentifier">}]</span>);
+    stepEachGen(10, 10000)(l, link2img);
+<span class="synIdentifier">}</span>
+
+<span class="synIdentifier">function</span> stepEachGen(step, interval) <span class="synIdentifier">{</span>
+    <span class="synStatement">return</span> <span class="synIdentifier">function</span>(list, f) <span class="synIdentifier">{</span>
+        list.slice(0, step).forEach(f);
+        <span class="synStatement">if</span> (list.length &gt; step) <span class="synIdentifier">{</span>
+            <span class="synIdentifier">var</span> c = <span class="synIdentifier">arguments</span>.callee;
+            setTimeout(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span> c(list.slice(step), f) <span class="synIdentifier">}</span>, interval);
+        <span class="synIdentifier">}</span>
+    <span class="synIdentifier">}</span>
+<span class="synIdentifier">}</span>
+
+<span class="synIdentifier">function</span> $t(tagname) <span class="synIdentifier">{</span>
+    <span class="synStatement">return</span> <span class="synStatement">document</span>.getElementsByTagName(tagname);
+<span class="synIdentifier">}</span>
+
+<span class="synIdentifier">function</span> link2img(e) <span class="synIdentifier">{</span>
+    <span class="synIdentifier">var</span> img = <span class="synStatement">document</span>.createElement(<span class="synConstant">'img'</span>);
+    img.src = e.href;
+    e.innerHTML = <span class="synConstant">''</span>;
+    e.appendChild(img);
+    <span class="synStatement">return</span> e;
+<span class="synIdentifier">}</span>
+</pre><p><br />
+それでもまあ重くなるときは重くなるし、ベンチとかしてないから本当に軽くなってるかは不明。<br />
+あと<a class="keyword" href="http://d.hatena.ne.jp/keyword/%BA%C6%B5%A2">再帰</a>が深くなるとブラウザに止められるかもしれないし、setTimeoutだからそうでもないのかもしれない。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/%BA%C6%B5%A2">再帰</a>じゃなくて、setTimeoutを秒数増やしながら最初に全部やっちゃうとかのがいいのかも。<br />
+あと待つ秒と開く画像の個数を調整がむずかしい。そのへんはネットワーク回線とかCPUとかメモリ次第な気もする。<br />
+抽象化しようとして<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AF%A5%ED%A1%BC%A5%B8%A5%E3">クロージャ</a>を使ってみたら、なんだかよく分らなくなった。</p><br />
+<p>今気がついたけど、ディレコリーになってるね。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

@@ -1,0 +1,54 @@
+h1 {
+  font-size: 60px;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin: 0;
+}
+
+h1 > a,
+h1 > a:link {
+  color: black;
+  text-decoration: none;
+}
+.content {
+  margin-bottom: 7vh;
+}
+.back {
+  text-decoration: none;
+  color: black;
+}
+li.index {
+  list-style-type: none;
+  margin: 1vh 0;
+}
+body {
+  width: 85%;
+  margin: 0 auto 200px auto;
+  font-family: sans-serif;
+}
+
+pre.code,
+code {
+  font-family: menlo, "andale mono", monospace;
+  background-color: rgba(240, 240, 240, 0.2);
+  border: 1px solid rgba(220, 220, 220, 0.8);
+  display: block;
+  overflow: auto;
+  padding: 1vh;
+  margin-bottom: 1em;
+  white-space: pre;
+}
+
+@media (min-width: 1000px) {
+  html {
+    /* font-size: 1.6vw; */
+  }
+  h1 {
+    font-size: 100px;
+  }
+  body {
+    width: 70%;
+  }
+}

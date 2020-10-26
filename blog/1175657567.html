@@ -1,0 +1,38 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: rails-modeのキーバインドとテキストメニュー化</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>rails-modeのキーバインドとテキストメニュー化</h2>
+  <div>2007-04-04 12:32:47</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/rails">rails</a>-modeを使うとcontrollerとviewの切り替えがすぐできる。<br />
+ふつう<a class="keyword" href="http://d.hatena.ne.jp/keyword/Emacs">Emacs</a>使いはカーソルキー使わないと思うんだけど、<br />
+デフォルトだとC-c upとかC-c downになってるから変更。</p>
+<pre class="code lang-lisp" data-lang="lisp" data-unlink><span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-p&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-lib:run-primary-switch</span><span class="synSpecial">)</span>
+<span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-n&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-lib:run-secondary-switch</span><span class="synSpecial">)</span>
+</pre><p>それから<a class="keyword" href="http://d.hatena.ne.jp/keyword/rails">rails</a>-nav:goto系もちょっと押しにくいので変更。</p>
+<pre class="code lang-lisp" data-lang="lisp" data-unlink><span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-gc&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-nav:goto-controllers</span><span class="synSpecial">)</span>
+<span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-gh&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-nav:goto-helpers</span><span class="synSpecial">)</span>
+<span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-gj&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-nav:goto-javascripts</span><span class="synSpecial">)</span>
+<span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-gl&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-nav:goto-layouts</span><span class="synSpecial">)</span>
+<span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-gm&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-nav:goto-models</span><span class="synSpecial">)</span>
+<span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-gi&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-nav:goto-migrate</span><span class="synSpecial">)</span>
+<span class="synSpecial">(</span>define-key rails-minor-mode-map <span class="synConstant">&quot;\C-c\C-gs&quot;</span> <span class="synSpecial">'</span><span class="synIdentifier">rails-nav:goto-stylesheets</span><span class="synSpecial">)</span>
+</pre><p>あと、メニューのCustomizeってところから、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a> Always Use Text Menus<br />
+をonにしておくと、<a class="keyword" href="http://d.hatena.ne.jp/keyword/rails">rails</a>-nav:goto-xxxとかしたときに出るメニューが<br />
+グラフィカルなやつからテキストに変わる。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

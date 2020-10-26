@@ -1,0 +1,34 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: go-enumerable golangでスライスにmapとかfilter</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>go-enumerable golangでスライスにmapとかfilter</h2>
+  <div>2013-07-09 16:50:00</div>
+  <div class="content">
+    <p>Golangでスライスに対して、 map, filter(select), some(any), every(all), reduce(inject, foldl), reduceRight(foldr)を作る関数を書いてみました。</p>
+
+<p>静的型言語でジェネリックがないGoだと、それらの関数そのものは書けない、もしくは書けても特定の型に専用か、interface{}を使うことになって使いにくくなってしまうのでリフレクションを使って動的に関数を作ってみることにしました。そのせいで静的チェックがあまり効かないので、堅牢なものを書きたいときにはふつうにforとrangeを使うのがいいと思います。リフレクションを使った例としては面白い気がしました。</p>
+
+<pre><code>var twiceInt func([]int) []int
+enumerable.MakeMap(&amp;twiceInt, func(i int) int { return i * 2 })
+fmt.Println(twiceInt([]int{1, 2, 3})) // [2 4 6]
+
+var filterOdd func([]int) []int
+enumerable.MakeFilter(&amp;filterOdd, func(i int) bool { return i%2 == 1 })
+fmt.Println(filterOdd([]int{1, 2, 3})) // [1 3]
+</code></pre>
+
+<p>Github <a href="https://github.com/swdyh/go-enumerable">https://github.com/swdyh/go-enumerable</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

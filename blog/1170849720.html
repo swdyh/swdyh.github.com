@@ -1,0 +1,42 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: MacOSXのzshで日本語を使う</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>MacOSXのzshで日本語を使う</h2>
+  <div>2007-02-07 21:02:00</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>で日本語を使えるようにしてみた<br />
+参考にしたのはこのへん<br />
+<a href="http://www.hasta-pronto.org/archives/2006/10/03-0158.php">http://www.hasta-pronto.org/archives/2006/10/03-0158.php</a><br />
+<a href="http://d.hatena.ne.jp/awada3/20070113#1168701404">http://d.hatena.ne.jp/awada3/20070113#1168701404</a><br />
+</p>
+<pre class="code" data-lang="" data-unlink> sudo port install zsh-devel +dp_completion +utf8
+ sudo port deactivate zsh
+ sudo port activate zsh-devel @4.3.2_0+darwin_8+dp_completion+utf8</pre><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>をインストールしていない場合はdeactivateはいらない<br />
+あとは、ターミナルの環境設定で<a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>がちゃんと起動するようになってるかを確認すればオッケー</p><br />
+<p>ポイント</p>
+
+<ul>
+<li>現時点でport install <a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>すると、4.2系がインストールされる</li>
+<li>4.3系をインストールするには<a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>-devel</li>
+<li>4.3系でも日本語を使うには--enable-multibyteというconfigureオプションが必要</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/ports">ports</a> install時に+utf8とすると--enable-multibyteオプションが付けられる</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>と<a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>-develは競合するので、どっちかしかactiveにできない</li>
+<li>port activateとport deactivateを使う</li>
+</ul><p><br />
+port variantsとport dirを初めて知った</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

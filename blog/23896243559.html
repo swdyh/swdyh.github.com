@@ -1,0 +1,124 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Firefox拡張 Add-on SDK simple-prefsを使って設定画面を作る</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Firefox拡張 Add-on SDK simple-prefsを使って設定画面を作る</h2>
+  <div>2012-05-28 09:13:00</div>
+  <div class="content">
+    <p>Add-on SDKのsimple-prefsモジュールを使って簡易な設定画面を作ってみる。SDKのドキュメントは情報が少ないので、Add-ons Blogの記事も見るわかりやすい。</p>
+
+<p>Just Landed: Simple Prefs API | Mozilla Add-ons Blog<br>
+<a href="http://blog.mozilla.org/addons/2011/12/08/just-landed-simple-prefs-api/">http://blog.mozilla.org/addons/2011/12/08/just-landed-simple-prefs-api/</a></p>
+
+<p>simple-prefs-on SDK Documentation<br>
+<a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/packages/addon-kit/simple-prefs.html">https://addons.mozilla.org/en-US/developers/docs/sdk/latest/packages/addon-kit/simple-prefs.html</a></p>
+
+<p>設定画面の作り方は、package.jsonに設定項目の情報を書いておくだけ。アドオンの詳細画面に設定項目が追加される。</p>
+
+<p>package.json</p>
+
+<pre><code>{
+    "id": "jid1-7wBt2LagLajA6Q",
+    "name": "fx-addon-prefs-example",
+    "fullName": "fx-addon-prefs-example",
+    "author": "swdyh",
+    "version": "0.0.1",
+    "preferences": [{
+        "name": "somePreference",
+        "title": "Some preference title",
+        "description": "Some short description for the preference",
+        "type": "string",
+        "value": "this is the default string value"
+    }]
+}
+</code></pre>
+
+<p><br></p>
+
+<p><img src="https://64.media.tumblr.com/tumblr_m4phf9mZTM1r3sayi.png" alt=""></p>
+
+<p>この設定画面で設定された値はユーザが変更するたびに自動でFirefoxに保存されるので、あとは設定が変更されたときの処理をイベントリスナーで書いておけば終わり。</p>
+
+<p>main.js</p>
+
+<pre><code>var prefs = require('simple-prefs')
+exports.main = function() {
+    prefs.on('stringPreference', function(name) {
+        console.log('pref changed.', name, prefs.prefs[name])
+    })
+}
+</code></pre>
+
+<p><br></p>
+
+<p>integerやboolでも使い方はstringと同じ。boolはチェックボックスになる。</p>
+
+<pre><code>{
+    "type": "bool",
+    "name": "boolPreference",
+    "value": true,
+    "title": "Boolean Pref"
+},
+{
+    "type": "integer",
+    "name": "intPreference",
+    "value": 42,
+    "title": "Integer Pref"
+},
+</code></pre>
+
+<p><br></p>
+
+<p><img src="https://64.media.tumblr.com/tumblr_m4phetzsrv1r3sayi.png" alt=""></p>
+
+<p>ドキュメントには今のところ、integer、bool、stringの3種類と書いてあるけれど、ソースを見るとさらにいくつかtypeが利用できそうだった。ファイルやディレクトリの選択、色の選択など。</p>
+
+<pre><code>VALID_PREF_TYPES = ['bool', 'boolint', 'integer', 'string', 'color', 'file',
+                    'directory', 'control']
+</code></pre>
+
+<p><a href="https://github.com/mozilla/addon-sdk/blob/master/python-lib/cuddlefish/options_xul.py">https://github.com/mozilla/addon-sdk/blob/master/python-lib/cuddlefish/options_xul.py</a>
+<br></p>
+
+<p>それからcontrolというのは、ボタンが配置されるだけで、他のもののように設定値が保存されることはないけれど、そのボタンが押された時になにか処理を実行するということができる。</p>
+
+<pre><code>{
+    "type": "control",
+    "name": "controlPreference",
+    "label": "controlPref",
+    "title": "Control Pref"
+}
+</code></pre>
+
+<p><br></p>
+
+<p><img src="https://64.media.tumblr.com/tumblr_m4phcwIayH1r3sayi.png" alt=""></p>
+
+<p>ボタンが押されたときの処理を追加するのは、設定値の変更と同じようにイベントリスナーを追加しておけばいい。</p>
+
+<p>main.js</p>
+
+<pre><code>var prefs = require('simple-prefs')
+exports.main = function() {
+    prefs.on('controlPreference', function(name) {
+        console.log('pressed controlPreference')
+    })
+}
+</code></pre>
+
+<p><br></p>
+
+<p>simple-prefsという名前の通り、単純な設定であればこれを使うとすごく楽にできる。これでできない範囲のものは、自分でhtmlなりxulなりで書くことになると思う。AutoPagerizeはすでにHTMLで設定画面を作ってあったのとtextareaを使いたいので、controlを使ってそれを表示するボタンだけを設置することにした。</p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

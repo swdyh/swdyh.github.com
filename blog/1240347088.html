@@ -1,0 +1,59 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: MacでChromiumをビルド</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>MacでChromiumをビルド</h2>
+  <div>2009-04-22 05:51:28</div>
+  <div class="content">
+    <p>MacBuildInstructions - <a class="keyword" href="http://d.hatena.ne.jp/keyword/chromium">chromium</a> - Build instructions for <a class="keyword" href="http://d.hatena.ne.jp/keyword/Chromium">Chromium</a> on <a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac%20OS%20X">Mac OS X</a> - <a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a> Code<br />
+<a href="http://code.google.com/p/chromium/wiki/MacBuildInstructions">http://code.google.com/p/chromium/wiki/MacBuildInstructions</a></p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Intel%20Mac">Intel Mac</a>で<a class="keyword" href="http://d.hatena.ne.jp/keyword/Leopard">Leopard</a>じゃないとダメみたい。だいたいここに書いてある通りにやった。</p>
+
+<div class="section">
+    <h4>XCode3.1.2のインストール</h4>
+    <p>Tools - <a class="keyword" href="http://d.hatena.ne.jp/keyword/Xcode">Xcode</a><br />
+<a href="http://developer.apple.com/tools/xcode/">http://developer.apple.com/tools/xcode/</a></p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/IPhone">IPhone</a>は関係ないので、ふつう(無料)のでいいんだけど登録してないと落せない。ログインしてから、<a class="keyword" href="http://d.hatena.ne.jp/keyword/dmg">dmg</a>をダウンロード。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%E9">インストーラ</a>ーでそのままインストール。</p>
+
+</div>
+<div class="section">
+    <h4>gclientのインストール</h4>
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/svn">svn</a>のラッパー+α的なもの</p>
+<pre class="code lang-sh" data-lang="sh" data-unlink> svn co http://src.chromium.org/svn/trunk/depot_tools/mac depot_tools
+ <span class="synStatement">export</span><span class="synIdentifier"> PATH=</span><span class="synSpecial">`</span><span class="synStatement">pwd</span><span class="synSpecial">`</span>/depot_tools:<span class="synStatement">&quot;</span><span class="synPreProc">$PATH</span><span class="synStatement">&quot;</span>
+</pre>
+</div>
+<div class="section">
+    <h4>ソース取得</h4>
+    <pre class="code lang-sh" data-lang="sh" data-unlink> <span class="synStatement">mkdir</span> chromium
+ <span class="synStatement">cd</span> chromium
+ gclient config http://src.chromium.org/svn/trunk/src
+ gclient sync <span class="synSpecial">--revision</span> src@<span class="synConstant">13980</span>
+</pre><p>最初リビジョンを指定しないでやったら、いつまで経っても終わらないので、一旦止めてリビジョン指定してやりなおした。リビジョンを指定しないと履歴ごと全部取得するのかもしれない。</p><p>13980は、ここのページを見て、できるだけグリーンになってるのを選んだ。<br />
+<a href="http://build.chromium.org/buildbot/waterfall/">http://build.chromium.org/buildbot/waterfall/</a><br />
+</p>
+
+</div>
+<div class="section">
+    <h4>ビルド</h4>
+    <p>src/build/all.xcodeprojを開いて、<a class="keyword" href="http://d.hatena.ne.jp/keyword/XCode">XCode</a>が起動したら「ビルド」ボタンを押す。けっこう時間かかる。2年前くらいの<a class="keyword" href="http://d.hatena.ne.jp/keyword/MacBook">MacBook</a>、30分くらい。</p><p>src/xcodebuild/Debug/<a class="keyword" href="http://d.hatena.ne.jp/keyword/Chromium">Chromium</a>.app ができてる</p><p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20090422052939" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20090422/20090422052939.png" alt="f:id:swdyh:20090422052939p:image" title="f:id:swdyh:20090422052939p:image" class="hatena-fotolife" itemprop="image"></a></span><br />
+</p>
+
+</div>
+<div class="section">
+    <h4>使ってみる</h4>
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Chromium">Chromium</a>.appを開く。青くない。右上に設定ボタンがなくて、メニューからたどってもえもない…。まだっぽい。</p><p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20090422052938" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20090422/20090422052938.png" alt="f:id:swdyh:20090422052938p:image:w500" title="f:id:swdyh:20090422052938p:image:w500" class="hatena-fotolife" style="width:500px" itemprop="image"></a></span></p><p>適当に使ってたら、強制終了でも止らない感じにフリーズ…。<a class="keyword" href="http://d.hatena.ne.jp/keyword/Chromium">Chromium</a>とCrashReportのプロセスをkillして止めた。とりあえず動くけど、ふつうに使うにもまだ厳しい状態。</p>
+
+</div>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

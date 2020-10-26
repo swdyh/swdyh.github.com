@@ -1,0 +1,54 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: AutoPagerizeをFirefox3で動かそうとしたときにつまったポイント</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>AutoPagerizeをFirefox3で動かそうとしたときにつまったポイント</h2>
+  <div>2007-12-19 19:48:54</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>を書くひとはこのへんを注意するといいと思います。<br />
+ほとんどDOM関連なので<a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>に限った話じゃないかも。<br />
+<br />
+</p>
+
+<ul>
+<li>異るドキュメントのノードをappendChildしたりinsertBeforeしたい場合は、一旦importNodeをしてから実行する </li>
+</ul><pre class="code" data-lang="" data-unlink>htmlDoc.documentElement.appendChild(fragment)</pre><p>↓</p>
+<pre class="code" data-lang="" data-unlink>htmlDoc.documentElement.appendChild(htmlDoc.importNode(fragment, true))</pre><p>fragmentがhtmlDocに属していなかったので、htmlDocにimportNodeしてからappendChildするようにした。<br />
+参考: Textノードを追加できない - DOSEI日記 <a href="http://d.hatena.ne.jp/DOSEI/20071013/p1">http://d.hatena.ne.jp/DOSEI/20071013/p1</a></p><p></p>
+
+<ul>
+<li>document.evaluateのdocumentは第2引数のノードが属しているドキュメントを使わないとエラーになる。</li>
+</ul><pre class="code" data-lang="" data-unlink>var node = node || document
+var nodesSnapshot = document.evaluate(xpath, node, null,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)</pre><p>↓</p>
+<pre class="code" data-lang="" data-unlink>var node = node || document
+var doc = node.ownerDocument ? node.ownerDocument : node
+var nodesSnapshot = doc.evaluate(xpath, node, null,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)</pre><p>第2引数のnodeのownerDocumentを確認して、それが取れた場合はそれのevaluateを使うようにした。<br />
+<br />
+</p>
+
+<ul>
+<li>document.implementation.createDocumentの挙動がちょっと変ったっぽい
+<ul>
+<li>Firefox2のときはDOMでaのhrefを取ったときにURLが取得できていた</li>
+<li>Firefox3だと属性値がそのまま返ってきて、URLになっていない</li>
+<li>htmlのドキュメントとして扱われていない?</li>
+<li>Firefox2のときのようにする方法は分ってない。createDocumentType?</li>
+<li>とりあえず、AutpPagerizeではlocationからURLを適当に取ってURLを作った</li>
+</ul></li>
+</ul>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

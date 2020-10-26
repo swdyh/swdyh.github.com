@@ -1,0 +1,77 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: AWS S3でmultipart uploadした場合のetagを計算する</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>AWS S3でmultipart uploadした場合のetagを計算する</h2>
+  <div>2012-06-26 21:03:00</div>
+  <div class="content">
+    <p>Rubyのaws-sdkを使って、定期的にディレクトリごとs3にアップロードしていて、手元のファイルとs3のファイルが同じかどうかをetagでチェックしていたら、etagがファイルのmd5の場合とそうじゃない場合があって困ったので調べてみた。</p>
+
+<blockquote>
+  <p>Generally the ETAG is the MD5 of the object. If the object was uploaded using multipart upload then this is the MD5 all of the upload-part-md5s.</p>
+</blockquote>
+
+<p><a href="http://docs.amazonwebservices.com/AWSRubySDK/latest/AWS/S3/S3Object.html#etag-instance_method">http://docs.amazonwebservices.com/AWSRubySDK/latest/AWS/S3/S3Object.html#etag-instance_method</a></p>
+
+<p>ふつうはアップロードしたもののmd5になるけれど、multipart uploadを使ったときは部分ごとのmd5を合わせたもののmd5になる、ということだった。</p>
+
+<p>自分の場合でファイルのmd5とそうじゃないのがあったのは、アップロードするときに使っていたaws-sdkのS3Object#writeが16MBより大きい場合、5MBごとにmultipart uploadをするからだった。この16MBや5MB、それからmultipart uploadをするかどうかはオプションで指定できた。それでmultipart uploadをしなければ一応解決なんだけどmultipart uploadのが速いので、multipart uploadの場合のetagを実際に計算してみた。</p>
+
+<p><strong>分割したデータのmd5(hex表記じゃないそのままのもの)を全部つなげたデータのmd5のhex表記-分割数</strong></p>
+
+<p>こんな感じに計算すればよかった。分割部のmd5はhexじゃないのを使わないといけなくて、ここが分からなくてはまった。Rubyのコードだとこんな感じ。</p>
+
+<pre><code>    md5s = []
+    while !io.eof?
+      md5s &lt;&lt; Digest::MD5.digest(io.read(part_size))
+    end
+    r = Digest::MD5.hexdigest(md5s.join('')) + '-' + md5s.size.to_s
+</code></pre>
+
+<p>gemにしてコマンドラインで使えたり、Rubyのライブラリとして使えるようにしものを作っておいた。</p>
+
+<p>swdyh/s3etag GitHub
+<a href="https://github.com/swdyh/s3etag">https://github.com/swdyh/s3etag</a></p>
+
+<p>インストール</p>
+
+<pre><code>% gem install s3etag
+</code></pre>
+
+<p>コマンドラインで使う</p>
+
+<pre><code>% s3etag
+s3etag file
+    -t, --threshold threshold
+    -p, --max-parts max-parts
+    -s, --min_part_size min_part_size
+
+% s3etag text.txt
+91fdac689d4861c9ae7a0afa21a1f6b8-18
+
+% s3etag -s 10000000 text.text
+32aafcd9748824e559b4dbd6b908f6fa-10
+</code></pre>
+
+<p>Rubyのライブラリとして使う</p>
+
+<pre><code>require 's3etag'
+
+p S3Etag.calc(:data =&gt; 'a' * 1000)
+p S3Etag.calc(:data =&gt; 'a' * 1000, :threshold =&gt; 100, :min_part_size =&gt; 100)
+p S3Etag.calc(:file =&gt; 'test.txt')
+p S3Etag.calc(:file =&gt; '.text.text', :threshold =&gt; 100, :min_part_size =&gt; 100)
+</code></pre>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

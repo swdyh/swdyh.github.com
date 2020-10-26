@@ -1,0 +1,36 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: JSAN.jsからMochiKitをつかってみる</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>JSAN.jsからMochiKitをつかってみる</h2>
+  <div>2007-01-02 17:17:51</div>
+  <div class="content">
+    
+<pre><script type="text/javascript" src="js/JSAN.js"></script>
+<script type="text/javascript">
+JSAN.use('MochiKit.MochiKit')
+JSAN.exporter(MochiKit.Base, MochiKit.Base.EXPORT)
+JSAN.exporter(MochiKit.Logging, ['log'])
+
+var a = [1, 2, 3, 4, 5]
+var f = function(x) {return x * 3}
+log(map(f, a))
+</script>
+
+</pre><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/JSAN">JSAN</a>も<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>も使い始めたばかりなので、このやり方が正しいのかはよくわからない。とりあえず<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSAN">JSAN</a>.use('<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>.<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>')すると、<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>のファイルが全部ロードされる。これだけだと、エクスポートされていないので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>.Logging.log('aa')みたいに全部書く必要がある。それは面倒なので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSAN">JSAN</a>.exporterでグローバルで使いたいものをエクスポートしてくる。</p><p>参考<br />
+<a href="http://d.hatena.ne.jp/brazil/20050911/1126388204">http://d.hatena.ne.jp/brazil/20050911/1126388204</a></p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

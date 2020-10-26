@@ -1,0 +1,45 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: MacPorts(旧DarwinPorts)でGHCをインストールする。(Intel版)</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>MacPorts(旧DarwinPorts)でGHCをインストールする。(Intel版)</h2>
+  <div>2007-01-08 02:38:40</div>
+  <div class="content">
+    <p>前に試したときは、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Intel">Intel</a>版はまだないよ、と言われたのだけれど、<br />
+ここによると、もう<a class="keyword" href="http://d.hatena.ne.jp/keyword/MacPorts">MacPorts</a>でインストールできるようになったらしい。<br />
+<a href="http://hackage.haskell.org/trac/ghc/wiki/X86OSXGhc">http://hackage.haskell.org/trac/ghc/wiki/X86OSXGhc</a><br />
+</p>
+
+<ol>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Xcode">Xcode</a>の新しいのが必要らしいのでインストール。<a href="http://developer.apple.com/tools/xcode">http://developer.apple.com/tools/xcode</a>
+<ol>
+<li>ダウンロードするには<a class="keyword" href="http://d.hatena.ne.jp/keyword/Apple">Apple</a>のなんとかメンバーの登録をしないといけないらしい</li>
+<li>住所とかまで書かないといけないちょっとめんどい登録をする</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Xcode">Xcode</a>の最新版をダウンロード。1G近くもあるのでわりと時間がかかった。</li>
+<li>落とし終わったらXcodeTool.mpkgを実行。インストール済みの場合は、勝手にアップグレードになる。</li>
+</ol></li>
+<li>sudo port clean <a class="keyword" href="http://d.hatena.ne.jp/keyword/ghc">ghc</a></li>
+<li>sudo port install <a class="keyword" href="http://d.hatena.ne.jp/keyword/ghc">ghc</a></li>
+</ol><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/ghc">ghc</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%EB">コンパイル</a>には<a class="keyword" href="http://d.hatena.ne.jp/keyword/ghc">ghc</a>がいるからややこしいわけなんだけど、<br />
+bootstrapバイナリというのを使って<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%EB">コンパイル</a>するらしい。</p><br />
+<p>だだ今<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%D1%A5%A4%A5%EB">コンパイル</a>中。もう1時間くらい経ってるけど、終わらない。。<br />
+少し不安になってきた。</p><br />
+<p>※追記<br />
+２時間かかった。<br />
+ちなみにマシンは6月くらいに買った<a class="keyword" href="http://d.hatena.ne.jp/keyword/MacBook">MacBook</a>で、2じゃないCoreDuo 2GHzのCPUと2Gのメモリです。</p><br />
+<p>とりあえず無事にインストールできたっぽい。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

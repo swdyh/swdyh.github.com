@@ -1,0 +1,32 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: AutoPagerizeのFirefox拡張をJetpack SDKで書き直した</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>AutoPagerizeのFirefox拡張をJetpack SDKで書き直した</h2>
+  <div>2010-10-08 12:48:44</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>が0.8になってpage-mod <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>(content script)がついたので、それを使ってAutPagerizeの<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firefox">Firefox</a>拡張をつくり直しました。</p><p>前に作っていた<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firefox">Firefox</a>拡張とは別の拡張になるので(<a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a>の制約のため)、以前の<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firefox">Firefox</a>拡張を使っている場合は、それをアンインストールしてからこちらをインストールしてください。</p><p>インストール<br />
+<a href="https://relucks-org.appspot.com/autopagerize/autopagerize.xpi">https://relucks-org.appspot.com/autopagerize/autopagerize.xpi</a></p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BD%A1%BC%A5%B9%A5%B3%A1%BC%A5%C9">ソースコード</a><br />
+<a href="http://github.com/swdyh/autopagerize_for_firefox">http://github.com/swdyh/autopagerize_for_firefox</a></p><br />
+<p>page-mod <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>はけっこういい感じにできていて、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>が使えるmain.jsとcontent scriptの間をpostMessageでやりとりできるようになっていて、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Chrome">Chrome</a>や<a class="keyword" href="http://d.hatena.ne.jp/keyword/Safari">Safari</a>の拡張と同じような感じで使えます。</p><p>ただpage-mod <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>は、content scriptを文字列で指定するようになっているのが難点で、これはselfモジュールを使って読み込むようにするといいと思います。</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink>    pageMod.add(<span class="synStatement">new</span> pageMod.PageMod(<span class="synIdentifier">{</span>
+        include: <span class="synIdentifier">[</span><span class="synConstant">'http://*'</span>, <span class="synConstant">'https://*'</span><span class="synIdentifier">]</span>,
+        contentScriptWhen: <span class="synConstant">'ready'</span>,
+        contentScript: <span class="synStatement">self</span>.data.load(<span class="synConstant">'autopagerize.user.js'</span>),
+        onAttach: onAttach
+    <span class="synIdentifier">}</span>))
+</pre>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

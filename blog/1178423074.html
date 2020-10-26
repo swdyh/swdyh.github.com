@@ -1,0 +1,59 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: はてなキーワードリンク削除Greasemonkey</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>はてなキーワードリンク削除Greasemonkey</h2>
+  <div>2007-05-06 12:44:34</div>
+  <div class="content">
+    <p>だれかつくってるだろうでけど、てきとうに書いてみた。<br />
+辞書のような意味での<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA%A5%AD%A1%BC%A5%EF%A1%BC%A5%C9">はてなキーワード</a>は価値があると思うけど、<br />
+日記が自動で<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DE%A1%BC%A5%AF%A5%A2%A5%C3%A5%D7">マークアップ</a>されるのはけっこう不快。<br />
+手動のリンクと自動のリンクが区別しにいし、<br />
+アンダーラインのせいで重要な部分に見えたりする。<br />
+この逆バージョンの<a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>とか拡張とかがあって、<br />
+リンクされてたほうがうれしい人が使えばいいんじゃないかと思う。</p><br />
+<p>自分は少数派で、リンクされてたほうがうれしい人のが多いんだろうか。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/SEO">SEO</a>のメリットが<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA">はてな</a>や<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA%A5%E6%A1%BC%A5%B6%A1%BC">はてなユーザー</a>にはあるだろうけど、<br />
+それがまわりまわって、見るひとの価値にまでつながているんだろうか。</p>
+<pre class="code" data-lang="" data-unlink>// ==UserScript==
+// @name           hatena keyword link deletion
+// @namespace      http://d.hatena.ne.jp/swdyh/
+// @include        http://d.hatena.ne.jp/*
+// ==/UserScript==
+// 2007/5/6 12:15:09 version 0.0.1 (swdyh)
+(function() {
+    var keywords = getElementsByXPath(&#39;//a[@class=&#34;keyword&#34;]&#39;)
+    var del = function(i) {
+        var text = document.createTextNode(i.innerHTML)
+        i.parentNode.replaceChild(text, i)
+    }
+    if (keywords) { keywords.forEach(del) }
+
+    function getElementsByXPath(xpath, node) {
+        var node = node || document
+        var nodesSnapshot = document.evaluate(xpath, node, null,
+            XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+        var data = []
+        for (var i = 0; i &lt; nodesSnapshot.snapshotLength; i++) {
+            data.push(nodesSnapshot.snapshotItem(i))
+        }
+        return (data.length &gt;= 1) ? data : null
+    }
+})()</pre><p><br />
+getElementsByXPath、見つからないときは、<br />
+素直に空の配列を返した方がいいのかもなあ。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

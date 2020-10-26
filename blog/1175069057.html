@@ -1,0 +1,67 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: rubygems</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>rubygems</h2>
+  <div>2007-03-28 17:04:17</div>
+  <div class="content">
+    <pre class="code" data-lang="" data-unlink>% gem help commands 
+
+GEM commands are:
+
+    build            Build a gem from a gemspec
+    cert             Adjust RubyGems certificate settings
+    check            Check installed gems
+    cleanup          Clean up old versions of installed gems in the local
+                     repository
+    contents         Display the contents of the installed gems
+    dependency       Show the dependencies of an installed gem
+    environment      Display information about the RubyGems environment
+    help             Provide help on the &#39;gem&#39; command
+    install          Install a gem into the local repository
+    list             Display all gems whose name starts with STRING
+    outdated         Display all gems that need updates
+    pristine         Restores gem directories to pristine condition from files
+                     located in the gem cache
+    query            Query gem information in local or remote repositories
+    rdoc             Generates RDoc for pre-installed gems
+    search           Display all gems whose name contains STRING
+    sources          Manage the sources RubyGems will search forgems
+    specification    Display gem specification (in yaml)
+    uninstall        Uninstall gems from the local repository
+    unpack           Unpack an installed gem to the current directory
+    update           Update the named gem (or all installed gems) in the local
+                     repository
+
+For help on a particular command, use &#39;gem help COMMAND&#39;.
+
+Commands may be abbreviated, so long as they are unambiguous.
+e.g. &#39;gem i rake&#39; is short for &#39;gem install rake&#39;.
+</pre><p>意外といっぱいある。<br />
+とりあえず、cleanupしたら古いファイルがたくさん消えていい感じだった。<br />
+searchはデフォルトで-rのがいいなあ。</p><br />
+<p>gem_lock、gemwhich<br />
+<a href="http://docs.rubygems.org/read/chapter/17">http://docs.rubygems.org/read/chapter/17</a></p><br />
+<p>gem_server<br />
+<a href="http://docs.rubygems.org/read/chapter/18#page80">http://docs.rubygems.org/read/chapter/18#page80</a><br />
+gem用のサーバーとしてじゃなくて、<br />
+ローカルでrdocを読むために使ってる。<br />
+これがあるとさらに便利。<br />
+<a href="http://d.hatena.ne.jp/secondlife/20070126/1169806683">http://d.hatena.ne.jp/secondlife/20070126/1169806683</a></p><br />
+<p>あと使ってないけど、<br />
+gemriとかgem_mirrorってコマンドもあるみたい。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

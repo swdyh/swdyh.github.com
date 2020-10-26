@@ -1,0 +1,56 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: AutoPagerize0.0.12</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>AutoPagerize0.0.12</h2>
+  <div>2007-07-10 06:46:19</div>
+  <div class="content">
+    <p>変更点</p>
+
+<ul>
+<li>バグ修正
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/typo">typo</a>、@relが@refになってた</li>
+<li>スクロール位置の取得を修正</li>
+</ul></li>
+<li>他の<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>からの処理をはさめるように</li>
+</ul><p>window.xxxとやれば他の<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>から<br />
+参照できるよというのを聞いたので試しに実装してみました。</p><br />
+<p>window.<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>.addFilterという関数で、処理させる関数を登録します。<br />
+処理させる関数の引数はマッチしたpageElementの要素の配列です。<br />
+まだかなり適当なので、ご意見募集中です。<br />
+サンプルはこんな感じ。</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink>
+(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>
+    <span class="synIdentifier">var</span> f = <span class="synIdentifier">function</span>(pageElements) <span class="synIdentifier">{</span>
+        pageElements<span class="synIdentifier">[</span>0<span class="synIdentifier">]</span>.style.border = <span class="synConstant">'2px solid #0f0'</span>
+    <span class="synIdentifier">}</span>
+    addFilter(f)
+
+    <span class="synIdentifier">function</span> addFilter(filter, i) <span class="synIdentifier">{</span>
+        i = i || 4
+        <span class="synStatement">if</span> (<span class="synStatement">window</span>.AutoPagerize &amp;&amp; <span class="synStatement">window</span>.AutoPagerize.addFilter) <span class="synIdentifier">{</span>
+            <span class="synStatement">window</span>.AutoPagerize.addFilter(filter)
+        <span class="synIdentifier">}</span>
+        <span class="synStatement">else</span> <span class="synStatement">if</span> (i &gt; 1) <span class="synIdentifier">{</span>
+            setTimeout(<span class="synIdentifier">arguments</span>.callee, 1000, filter, i - 1)
+        <span class="synIdentifier">}</span>
+    <span class="synIdentifier">}</span>
+<span class="synIdentifier">}</span>)()
+</pre><p>window.xxxがあるかは<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>の実行順序に関係するので1秒おきに確認してます。<br />
+もっといいやり方がありそうだし、ページを開いた瞬間に継ぎ足しされると間にあわないかも。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

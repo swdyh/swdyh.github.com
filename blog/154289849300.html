@@ -1,0 +1,61 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: 複数の仮想環境を立ち上げてWeb開発するときに便利なmDNS</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>複数の仮想環境を立ち上げてWeb開発するときに便利なmDNS</h2>
+  <div>2016-12-11 00:48:00</div>
+  <div class="content">
+    <p>トレタアドベントカレンダー11日目です。</p>
+
+<p>アドベントカレンダーを書くのは二年ぶりです。そのときは、<a href="http://www.adventar.org/calendars/595">家庭を支える技術アドベントカレンダー</a>で、い<a href="http://swdyh.tumblr.com/post/104763974010/kaeruyo">まから帰るよという連絡をYOでするサービスをつくった話</a>を書きました。いつのまにかあれから二年たちますが、今もほぼ毎日YOでkaeruyoしています。ここ最近AmazonのIoTボタンが盛り上がってますが、ボタンを押すだけの操作はYOに通じるものがありますね。YOのAPIで遊んでみるもおすすめです。</p>
+
+<p>今回は最近知ったWeb開発のTipsを紹介しようと思います。VagrantやDockerを使ってウェブアプリを開発してるんですが、いつくかのアプリ同時にたときに、複数のVMを立ち上げたりすると、そのときポートフォワードしてるポートが被ってこけたり、別のポートに設定しなおしたりしていると、どのVMがどのポートにポートフォワードされてるのか分からなくなってしまい困ってました。最近いい解決策があるのを知ったので紹介します。</p>
+
+<p>そもそもポートフォワードしてるのが面倒もの元凶で、たんにそれぞれのサーバにアクセスすればよいだけでした。IPだと結局どれがどれだかわからなくなるので、DNSを使って名前でアクセスできるようにします。ふつうにDNSで名前をふっていのはけっこう面倒ですが、mDNS(Multicast DNS )という仕組みを使えば、かんたんに済みます。</p>
+
+<p>Vagrantfile</p>
+
+<pre><code>Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.hostname = 'vm1'
+  config.vm.network "private_network", type: "dhcp"
+  config.vm.provision "shell", inline: 'apt-get update &amp;&amp; apt-get install -y avahi-daemon'
+end
+</code></pre>
+
+<p>vm1でWebサーバを立ち上げてアクセスできるか確認します。</p>
+
+<pre><code>echo '&lt;html&gt;&lt;body style="font-size:15em"&gt;VM1 da Yo&lt;/body&gt;&lt;/html&gt;' &gt; index.html
+ruby -run -e httpd . -p 3000
+</code></pre>
+
+<p>ブラウザでhttp://vm1.local:3000/にアクセスしてみます。</p>
+
+<p><img src="https://64.media.tumblr.com/88fc6739e1c4a68856692a2e7b4d6816/tumblr_inline_ohz75iIiKI1r3sayi_500.png" alt=""></p>
+
+<p>みれました。</p>
+
+<p>あとは別のVMを使うときには、別のhostnameをふってあげればポートフォワード地獄からおさらばできます。avahi-daemonの設定で別の名前にしたり、ポートを変えたりとかもできます。</p>
+
+<p>手元の環境のホストマシンはMacですが、Windowsの場合iTunes(Bonjour)をインストールすればよいらしいのと、LLMNRというmDNSに似た別の仕組みもあるそうです。</p>
+
+<p>あとDockerの場合も書きたかったですが、ちょっとまだ調査中なので、また別の機会に。</p>
+
+<hr><p>参考URL</p>
+
+<p>Multicast DNS <a href="http://www.multicastdns.org">http://www.multicastdns.org</a></p>
+
+<p>mDNS を使いローカルマシン内の仮想環境に接続する <a href="http://hateda.hatenadiary.jp/entry/mdns-and-vagrant">http://hateda.hatenadiary.jp/entry/mdns-and-vagrant</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

@@ -1,0 +1,49 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: AutoPagerize0.0.4</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>AutoPagerize0.0.4</h2>
+  <div>2007-01-16 07:52:14</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a> 0.0.4<br />
+<a href="http://swdyh.yu.to/autopagerize004.user.js">http://swdyh.yu.to/autopagerize004.user.js</a><br />
+</p>
+
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%D0%A5%C3%A5%B0">デバッグ</a>モードを追加
+<ul>
+<li>マッチした<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>の要素のボーダーを赤くして、その<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>を後ろに表示する。</li>
+</ul></li>
+<li>サイトの追加
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CB%A5%B3%A5%CB%A5%B3%C6%B0%B2%E8">ニコニコ動画</a></li>
+<li>UP板＠おっちゃんねるのサムネイル</li>
+<li>この日記</li>
+</ul></li>
+</ul><p>画像系の場合、テキスト系のものよりさっと見れるからかなり心地いい。<br />
+調子のって読み込みすぎると、メモリがいっぱいになりそう。</p><br />
+<br />
+<p>かなり強引な方法でDOMツリーを作っている<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%AB%A4%E9%A4%B7">からし</a>ょうがないのだけれど、<br />
+もともとのDOMツリーとDocumentFragmentから作ったDOMツリー(2ページ目以降)、<br />
+がやっぱり同じじゃない。<br />
+ルートのへんは最初から気づいていたけど、well-formedじゃないのを読み込んだときの中身も結構違う気がした。<br />
+DOMツリーを作る方法を手探りでいろいろ変えてみたけれど、結局うまくいかなかった。</p><br />
+<p>DOMParserのparserFromStringというメソッドの第2引数はcontentTypeになってる。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/text/xml">text/xml</a>、application/<a class="keyword" href="http://d.hatena.ne.jp/keyword/xml">xml</a>、application/<a class="keyword" href="http://d.hatena.ne.jp/keyword/xhtml">xhtml</a>+<a class="keyword" href="http://d.hatena.ne.jp/keyword/xml">xml</a>、<br />
+しかとれなくて、well-formedじゃないと駄目なんだけれど、<br />
+これにtext/htmlをいれるとHTMLとしてパースするようになってくれるといいなあ。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

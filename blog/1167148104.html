@@ -1,0 +1,61 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: effects.js(script.aculo.us)のAppearとFadeをちょっとカッコ良く</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>effects.js(script.aculo.us)のAppearとFadeをちょっとカッコ良く</h2>
+  <div>2006-12-27 00:48:24</div>
+  <div class="content">
+    <p>ここではJSを動かせないので、あとでデモをどこかに置く。</p><p>※追記 デモはここ。<br />
+<a href="http://swdyh.infogami.com/slideapepar_and_slidefade">http://swdyh.infogami.com/slideapepar_and_slidefade</a><br />
+</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink>Effect.SlideAppear = <span class="synIdentifier">function</span>(element) <span class="synIdentifier">{</span>
+    element = $(element);
+    <span class="synIdentifier">var</span> options = <span class="synIdentifier">arguments[</span>1<span class="synIdentifier">]</span> || <span class="synIdentifier">{}</span>;
+    options.duration = options.duration || 0.5
+    <span class="synIdentifier">var</span> x = options.slideX || 0;
+    <span class="synIdentifier">var</span> y = options.slideY || 15;
+    <span class="synIdentifier">var</span> beforeOpt = <span class="synIdentifier">{</span>
+        transition: Effect.Transitions.full,
+        duration: 0.05,
+        afterFinishInternal:<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>
+        <span class="synStatement">new</span> Effect.Parallel(
+            <span class="synIdentifier">[</span><span class="synStatement">new</span> Effect.MoveBy(element, y, x),
+             <span class="synStatement">new</span> Effect.Appear(element)<span class="synIdentifier">]</span>, 
+            options);<span class="synIdentifier">}</span>
+    <span class="synIdentifier">}</span>
+    <span class="synStatement">return</span> <span class="synStatement">new</span> Effect.MoveBy(element, -y, -x, beforeOpt)
+<span class="synIdentifier">}</span>
+
+Effect.SlideFade = <span class="synIdentifier">function</span>(element) <span class="synIdentifier">{</span>
+    element = $(element);
+    <span class="synIdentifier">var</span> options = <span class="synIdentifier">arguments[</span>1<span class="synIdentifier">]</span> || <span class="synIdentifier">{}</span>;
+    options.duration = options.duration || 0.5
+    <span class="synIdentifier">var</span> x = options.slideX || 0;
+    <span class="synIdentifier">var</span> y = options.slideY || 15;
+    options.afterFinishInternal = <span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>
+        <span class="synIdentifier">var</span> opt = <span class="synIdentifier">{</span>
+          transition: Effect.Transitions.full,
+          duration: 0.05
+        <span class="synIdentifier">}</span>
+        <span class="synStatement">new</span> Effect.MoveBy(element, y, x, opt)
+    <span class="synIdentifier">}</span>
+    <span class="synStatement">return</span> <span class="synStatement">new</span> Effect.Parallel(
+        <span class="synIdentifier">[</span><span class="synStatement">new</span> Effect.Fade(element),
+         <span class="synStatement">new</span> Effect.MoveBy(element, -y, -x)<span class="synIdentifier">]</span>,
+        options);
+<span class="synIdentifier">}</span>
+</pre>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

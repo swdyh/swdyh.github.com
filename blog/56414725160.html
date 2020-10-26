@@ -1,0 +1,77 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: go-enumerable 並行版関数を追加</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>go-enumerable 並行版関数を追加</h2>
+  <div>2013-07-25 18:49:00</div>
+  <div class="content">
+    <p>Golangでスライスに対してmapやfilter処理をするgo-enumerableに、複数のGoroutineを使って実行するバージョンの関数を追加しました。</p>
+
+<pre><code>func ExampleMakeMapC() {
+    var twiceInt func([]int) []int
+    f := func(i int) int {
+        time.Sleep(10 * time.Millisecond)
+        return i * 2
+    }
+    enumerable.MakeMapC(&amp;twiceInt, f, 2)
+    fmt.Println(twiceInt([]int{1, 2, 3}))
+    // Output:
+    // [2 4 6]
+}
+</code></pre>
+
+<p>MakeMapCではGoroutineの数を指定すると、その数のGoroutineを動かして計算を実行します。この例のようにスリープがあっても、別々のGoroutineで実行されるので逐次実行に比べて速く終わります。</p>
+
+<p>MakeMapCの他にも、FilterとSomeとEvery用のMakeFilterC、MakeSomeC、MakeEveryCがあります。Reduceは前の計算結果に依存するのでありません。</p>
+
+<p>それとMakeFirstというのも追加しました。これはGo Concurrency Patterns <a href="http://talks.golang.org/2012/concurrency.slide#48">http://talks.golang.org/2012/concurrency.slide#48</a> にでてくるFirstを真似たもので、全部をGroutineで実行して、最初に結果を返した値を返します。複数のサーバにアクセスして最初に帰ってきた値を使うという用途に使えます。</p>
+
+<pre><code>package main
+
+import (
+    "fmt"
+    "github.com/swdyh/go-enumerable/src/enumerable"
+    "io/ioutil"
+    "net/http"
+)
+
+func main() {
+    urls := []string{
+        "http://www.google.co.jp",
+        "http://www.yahoo.co.jp"}
+    var getAll func([]string) []string
+    enumerable.MakeMapC(&amp;getAll, func(url string) string {
+        res, _ := http.Get(url)
+        b, _ := ioutil.ReadAll(res.Body)
+        return res.Status + " " + string(b)[0:50]
+    }, 2)
+    for _, v := range getAll(urls) {
+        fmt.Println(v)
+    }
+
+    var getFirst func([]string) string
+    enumerable.MakeFirst(&amp;getFirst, func(url string) string {
+        res, _ := http.Get(url)
+        b, _ := ioutil.ReadAll(res.Body)
+        return url + " " + res.Status + " " + string(b)[0:50]
+    })
+    fmt.Println(getFirst(urls))
+}
+</code></pre>
+
+<p>MakeMapCで作ったgetAllは同時にアクセスしてそれぞれの結果を表示します。MakeFirstで作ったgetFirstは最初に返ってきた結果を表示します。</p>
+
+<p>Github <a href="https://github.com/swdyh/go-enumerable">https://github.com/swdyh/go-enumerable</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

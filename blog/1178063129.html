@@ -1,0 +1,26 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: uniq_by</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>uniq_by</h2>
+  <div>2007-05-02 08:45:29</div>
+  <div class="content">
+    <pre class="code lang-ruby" data-lang="ruby" data-unlink><span class="synPreProc">def</span> <span class="synIdentifier">uniq_by</span> <span class="synComment">#:yield:</span>
+  h = {}; inject([]) {|<span class="synIdentifier">a</span>,<span class="synIdentifier">x</span>| h[<span class="synStatement">yield</span>(x)] ||= a &lt;&lt; x}
+<span class="synPreProc">end</span>
+</pre><p><a href="http://facets.rubyforge.org/src/doc/rdoc/core/classes/Enumerable.html#M001321">http://facets.rubyforge.org/src/doc/rdoc/core/classes/Enumerable.html#M001321</a></p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

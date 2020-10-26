@@ -1,0 +1,40 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: アニメーションgifを止める/アニメーションgifから任意のコマを取り出すWeb APIを作った</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>アニメーションgifを止める/アニメーションgifから任意のコマを取り出すWeb APIを作った</h2>
+  <div>2012-07-19 16:42:00</div>
+  <div class="content">
+    <p>urlパラメータにgifのurlを渡す</p>
+
+<pre><code><a href="http://stopgif.herokuapp.com/?url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FSorting_quicksort_anim.gif">http://stopgif.herokuapp.com/?url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FSorting_quicksort_anim.gif</a>
+</code></pre>
+
+<p>indexパラメータでコマを指定</p>
+
+<pre><code><a href="http://stopgif.herokuapp.com/?url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FSorting_quicksort_anim.gif&amp;index=20">http://stopgif.herokuapp.com/?url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FSorting_quicksort_anim.gif&amp;index=20</a>
+</code></pre>
+
+<p>altパラメータでエラー時に出す画像を指定(リダイレクト)</p>
+
+<pre><code><a href="http://stopgif.herokuapp.com/?url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FSorting_quicksort_anim.gif&amp;alt=http%3A%2F%2Fexample.com%2Fbar.gif">http://stopgif.herokuapp.com/?url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FSorting_quicksort_anim.gif&amp;alt=http%3A%2F%2Fexample.com%2Fbar.gif</a>
+</code></pre>
+
+<p>Rubyで書いていて、gifの処理はRMagick、Web API部分はsinatra、サーバはheroku ceder。とりあえず動く状態にした段階で遅いんだけど、open-uriの部分をEventMachineのにしたり、キャッシュをちゃんとすればもっと速くなると思う。</p>
+
+<p>swdyh/stopgif GitHub <a href="https://github.com/swdyh/stopgif">https://github.com/swdyh/stopgif</a></p>
+
+<p>HTMLのimgタグでアニメーションを禁止にできたら、自分の問題は解決なんだけど、そういうのはないんだろうか。jsgifを使ってなんとかするというのも解決方法のひとつだったと思うけど、外部の画像を処理するときにsame origin policyに引っかかって面倒そうだったのでやらなかった。</p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

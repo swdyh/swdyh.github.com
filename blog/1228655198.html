@@ -1,0 +1,76 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: gistコマンドよりちょっと便利なgisty</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>gistコマンドよりちょっと便利なgisty</h2>
+  <div>2008-12-07 22:06:38</div>
+  <div class="content">
+    <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20081207214314" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20081207/20081207214314.png" alt="f:id:swdyh:20081207214314p:image:w600" title="f:id:swdyh:20081207214314p:image:w600" class="hatena-fotolife" style="width:600px" itemprop="image"></a></span></p><p>メモやちょっとした<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>などをペーストするとgitの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%DD%A5%B8%A5%C8%A5%EA">リポジトリ</a>として管理してくれるgistというサービスがあります。そのgistに<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%DE%A5%F3%A5%C9%A5%E9%A5%A4%A5%F3">コマンドライン</a>から投稿するツールがあって、それは前に少し紹介したんですが、それをもうちょっと便利にしたものを作りました。</p><p>swdyh's gisty at master ― <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br />
+<a href="http://github.com/swdyh/gisty/tree/master">http://github.com/swdyh/gisty/tree/master</a></p><p>gistコマンドとの違いはこんな感じです。</p>
+
+<ul>
+<li>ポストするときにファイルを指定。ファイル名、拡張子つきでアップされる。</li>
+<li>ポスト時に複数ファイルを指定できる。</li>
+<li>ポスト後、ブラウザで開く。(<a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac">Mac</a>のみ)</li>
+<li>ポスト後、ローカルにcloneする。</li>
+<li>過去のgistにアップしたのを全部のclone、またはpullする機能</li>
+</ul><p>gistyを使うと簡単にファイル名と拡張子つきでポストできて、そのままローカルにcloneされるので、変更したい場合も、そのファイルを編集してpushすれば済みます。なので、Webのフォームを全く使わずにgist使えるようになります。ただメモをペーストする場合ファイル名はあんまり意味がないけれど、cloneしてあとで編集しようとすると、ファイル名があった方がずっと分りやすいです。あと拡張子をつけておくと<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B7%A5%F3%A5%BF%A5%C3%A5%AF%A5%B9">シンタックス</a>ハイライトが有効になります。あと、gistyでは<a class="keyword" href="http://d.hatena.ne.jp/keyword/github">github</a>のアカウントで投稿することを前提にしていて、無名の投稿は想定してません。<br />
+<br />
+</p>
+
+<div class="section">
+    <h4>インストール方法</h4>
+    <pre class="code lang-sh" data-lang="sh" data-unlink> gem install gisty
+</pre>
+</div>
+<div class="section">
+    <h4>初期設定</h4>
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>のGISTY_DIRで、アップしたgistをcloneしてくる<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リを指定します。自分の場合は、.zshrcでこんな感じに指定してます。</p>
+<pre class="code lang-sh" data-lang="sh" data-unlink> <span class="synStatement">export</span><span class="synIdentifier"> GISTY_DIR=</span><span class="synStatement">&quot;</span><span class="synPreProc">$HOME</span><span class="synConstant">/dev/gists</span><span class="synStatement">&quot;</span>
+</pre><p>gistコマンドと同じく、git configでユーザIDと<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A1%BC%A5%AF">トーク</a>ンを設定します。</p>
+<pre class="code lang-sh" data-lang="sh" data-unlink> git config <span class="synSpecial">--global</span> github.user your_id
+ git config <span class="synSpecial">--global</span> github.token your_token
+</pre><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/github">github</a>のアカウントページ(<a href="https://github.com/account">https://github.com/account</a>)の、"Global Git Config"というところを押すと、やり方が表示されます。</p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>を使っているひとは、ここから_gistyというファイルを落として、$fpathの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リに入れおくと、コマンドが補完されてより便利です。</p><p><a href="http://github.com/swdyh/gisty/raw/master/_gisty">http://github.com/swdyh/gisty/raw/master/_gisty</a></p><p></p>
+
+</div>
+<div class="section">
+    <h4>使い方</h4>
+    
+<dl>
+<dt>gisty post file1 file2 ...</dt>
+<dd> ファイルをgistにポストします。</dd>
+<dt>gisty private_post file1 file2 ...</dt>
+<dd> ファイルをプライベートな状態でgistにポストします。</dd>
+<dt>gisty sync</dt>
+<dd> gistにアップされたものを全てcloneしてきます。</dd>
+<dt>gisty sync_delete</dt>
+<dd> ローカルの方にしかないgistを削除して、syncします。</dd>
+<dt>gisty pull_all</dt>
+<dd> ローカルのgistでpullを実行します。</dd>
+<dt>gisty list</dt>
+<dd> ローカルにcloneしてきたgistの一覧を表示します。</dd>
+<dt>gisty help</dt>
+<dd> ヘルプを表示します。</dd>
+<dt>gisty about</dt>
+<dd> gistyに関する情報を表示します。</dd>
+</dl>
+</div>
+<div class="section">
+    <h4>実装の話</h4>
+    <p>gistへのポストはgistコマンドを参考にしながら、複数ファイルもいけるようにしました。ポスト後は、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AF%A5%EA%A5%C3%A5%D7%A5%DC%A1%BC%A5%C9">クリップボード</a>にURLを入れるよりブラウザで開いた方がいいなあと思ったのでそうしました。ただ<a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac">Mac</a>以外の環境でのやり方がわからなかったので、とりあえず<a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac">Mac</a>のみです。gist syncは、自分の一覧が必要なのでmineのページをnokogiriで<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EC%A5%A4%A5%D4%A5%F3%A5%B0">スクレイピング</a>してます。件数が多いと取得するページ数が増えて時間がかかるかもしれません。Webページを取ってきたり、gitのコマンドを実行したりと、いろいろ外部に依存していてるので、テストはrrというモック<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D5%A5%EC%A1%BC%A5%E0%A5%EF%A1%BC%A5%AF">フレームワーク</a>を使って、open_<a class="keyword" href="http://d.hatena.ne.jp/keyword/uri">uri</a>やsystemコマンドを差し替えるようにして書きました。</p>
+
+</div>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

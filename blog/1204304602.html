@@ -1,0 +1,45 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: LDRの左の部分を消したり戻したりする</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>LDRの左の部分を消したり戻したりする</h2>
+  <div>2008-03-01 02:03:22</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/livedoor%20Reader">livedoor Reader</a> をより快適にするかもしれない、ちょい「不良(ワル)」 <a class="keyword" href="http://d.hatena.ne.jp/keyword/greasemonkey">greasemonkey</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a> - antipop<br />
+<a href="http://d.hatena.ne.jp/antipop/20060430/1146343265">http://d.hatena.ne.jp/antipop/20060430/1146343265</a></p><br />
+<p>これを少し改造したやつを使っていて、そこにつけたしてみた。<br />
+大きい画像とかがあるときにちょっと切り換えたりする。<br />
+<br />
+</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink><span class="synIdentifier">var</span> rc = $(<span class="synConstant">'right_container'</span>);
+<span class="synIdentifier">var</span> lc = $(<span class="synConstant">'left_container'</span>);
+<span class="synIdentifier">var</span> rc_w = rc.offsetWidth;
+Keybind.add(<span class="synConstant">&quot;h&quot;</span>, <span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>
+    <span class="synStatement">if</span> (lc.style.display == <span class="synConstant">'none'</span>) <span class="synIdentifier">{</span>
+        lc.style.display = <span class="synConstant">'block'</span>;
+        rc.style.width = rc_w + <span class="synConstant">'px'</span>;
+    <span class="synIdentifier">}</span>
+    <span class="synStatement">else</span> <span class="synIdentifier">{</span>
+        lc.style.display = <span class="synConstant">'none'</span>;
+        rc.style.width = <span class="synConstant">'auto'</span>;
+    <span class="synIdentifier">}</span>
+<span class="synIdentifier">}</span>);
+</pre><p><br />
+※追記</p><p>zでできました…。いらないですね。</p><br />
+<p>でもよく見るとほんの少し挙動が違っていて、どちらかといえば自分の方のが好みなので、<br />
+自分はこっちを使おうと思います。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

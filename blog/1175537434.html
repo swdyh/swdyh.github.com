@@ -1,0 +1,60 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Wingdings 3</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Wingdings 3</h2>
+  <div>2007-04-03 03:10:34</div>
+  <div class="content">
+    <p>右上の方にある矢印。<br />
+最初は<a class="keyword" href="http://d.hatena.ne.jp/keyword/css">css</a>でfont指定したんだけれど、あー、できたと思ってたら、<br />
+ブラウザとかOSが違うと全然違う文字が出てくる。<br />
+<a href="http://www.relief.jp/itnote/archives/001274.php">http://www.relief.jp/itnote/archives/001274.php</a><br />
+このページをいろんなブラウザで開いてみて、<br />
+これは全然ダメだなあと思って、画像にすることにした。</p><br />
+<p>久しぶりにExpressionを起動。<br />
+文字の画像をつくるだけなのになかなかうまくいかない。<br />
+あー、もう、ってなってたときに、RMagickでいいじゃんっ思った。<br />
+さっそく<a class="keyword" href="http://d.hatena.ne.jp/keyword/ruby">ruby</a>を書きだしたら、すぐできた。<br />
+<br />
+</p>
+<pre class="code lang-ruby" data-lang="ruby" data-unlink><span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">rubygems</span><span class="synSpecial">'</span>
+<span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">RMagick</span><span class="synSpecial">'</span>
+<span class="synPreProc">include</span> <span class="synType">Magick</span>
+
+<span class="synPreProc">def</span> <span class="synIdentifier">arrow</span> out, text, color, bg
+  f = <span class="synType">Image</span>.new(<span class="synConstant">100</span>, <span class="synConstant">100</span>) <span class="synStatement">do</span>
+    <span class="synConstant">self</span>.background_color = bg
+    <span class="synConstant">self</span>.format = <span class="synSpecial">'</span><span class="synConstant">PNG</span><span class="synSpecial">'</span>
+  <span class="synStatement">end</span>
+  gc = <span class="synType">Draw</span>.new
+  gc.font = <span class="synSpecial">'</span><span class="synConstant">/Users/youhei/Library/Fonts/Wingdings 3</span><span class="synSpecial">'</span>
+  gc.fill = color
+  gc.stroke = <span class="synSpecial">'</span><span class="synConstant">none</span><span class="synSpecial">'</span>
+  gc.pointsize = <span class="synConstant">100</span>
+  gc.gravity = <span class="synType">CenterGravity</span>
+  gc.annotate(f, <span class="synConstant">0</span>, <span class="synConstant">0</span>, <span class="synConstant">0</span>, <span class="synConstant">0</span>, text)
+  f.write out
+<span class="synPreProc">end</span>
+
+d = [[<span class="synSpecial">'</span><span class="synConstant">arrows/ue_link.png</span><span class="synSpecial">'</span>, <span class="synConstant">212</span>.chr , <span class="synSpecial">'</span><span class="synConstant">#332e2c</span><span class="synSpecial">'</span>, <span class="synSpecial">'</span><span class="synConstant">#ffffff</span><span class="synSpecial">'</span>],
+     [<span class="synSpecial">'</span><span class="synConstant">arrows/sita_link.png</span><span class="synSpecial">'</span>, <span class="synConstant">211</span>.chr, <span class="synSpecial">'</span><span class="synConstant">#332e2c</span><span class="synSpecial">'</span>, <span class="synSpecial">'</span><span class="synConstant">#ffffff</span><span class="synSpecial">'</span>]]
+d.each { |<span class="synIdentifier">i</span>| arrow *i }
+<span class="synStatement">exit</span>
+</pre><p>できあがり<br />
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20070404020744" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20070404/20070404020744.png" alt="f:id:swdyh:20070404020744p:image" title="f:id:swdyh:20070404020744p:image" class="hatena-fotolife" itemprop="image"></a></span><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20070404020743" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20070404/20070404020743.png" alt="f:id:swdyh:20070404020743p:image" title="f:id:swdyh:20070404020743p:image" class="hatena-fotolife" itemprop="image"></a></span></p><p>Wingdings系のフォントってけっこう<br />
+いろんな図柄があるからわりと便利かも。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

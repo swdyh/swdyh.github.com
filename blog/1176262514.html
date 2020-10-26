@@ -1,0 +1,47 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Rails Graphviz用のER図を生成するプラグイン</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Rails Graphviz用のER図を生成するプラグイン</h2>
+  <div>2007-04-11 12:35:14</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Graphviz">Graphviz</a>でER図を書く方法(その2)<br />
+<a href="http://d.hatena.ne.jp/T-ABYSS/20070302/1172815082">http://d.hatena.ne.jp/T-ABYSS/20070302/1172815082</a></p><br />
+<p>どうもしっくりくるER図を書くツールがないので、<br />
+ここを参考に<a class="keyword" href="http://d.hatena.ne.jp/keyword/Graphviz">Graphviz</a>で書いていました。</p><br />
+<p>なかなかいいなあと、思ってたんだけど、<br />
+やっぱり全部手で書くのはめんどいので、<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/ActiveRecord">ActiveRecord</a>::SchemaDumperを改造して、<br />
+dotファイルを生成する<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3">プラグイン</a>を作ってみました。<br />
+<a href="http://youhei.s276.xrea.com/er_diagram.tar.gz">http://youhei.s276.xrea.com/er_diagram.tar.gz</a></p><br />
+<p>出力はこんな感じ。<a class="keyword" href="http://d.hatena.ne.jp/keyword/Flickr">Flickr</a>ぽい色にしてみました。<br />
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20070411120434" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20070411/20070411120434.png" alt="f:id:swdyh:20070411120434p:image" title="f:id:swdyh:20070411120434p:image" class="hatena-fotolife" itemprop="image"></a></span></p><br />
+<p>使い方はvendor/plugins以下にファイルを置いて、</p>
+<pre class="code" data-lang="" data-unlink>% rake doc:er_diagram</pre><p>とするだけです。doc以下に<a class="keyword" href="http://d.hatena.ne.jp/keyword/Graphviz">Graphviz</a>用のdotファイルがつくられます。</p><br />
+<p>注意!<br />
+かなり適当につくってます。<br />
+とくに関連はmodelもforegin keyも一切見てなくて、<br />
+xxxx_idっていうのがあったら、xxxをpluralizeして、<br />
+その名前のテーブルがあったら関連にしてます。<br />
+テストも書いてません。</p><br />
+<p>そんなんでも一応それっぽいのがつくれるので、試してみてください。</p><br />
+<p>あと<a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac">Mac</a>でも使えるいい感じのER図を書くツールを知っているひとは、<br />
+せひ教えてください。</p><br />
+<p>※ 追記<br />
+<a href="http://railroad.rubyforge.org/">http://railroad.rubyforge.org/</a><br />
+もう、なんかすごいのあるんじゃん。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

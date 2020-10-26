@@ -1,0 +1,45 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Ohacan ジョブカンのコマンドラインクライアントをつくりました</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Ohacan ジョブカンのコマンドラインクライアントをつくりました</h2>
+  <div>2017-01-29 16:00:00</div>
+  <div class="content">
+    <p><img src="https://64.media.tumblr.com/10e66bfab4a5d75e975df9a00b830128/tumblr_inline_okj4b04jHA1r3sayi_540.png" alt="Ohacan screen capture"></p>
+
+<p>出勤と退勤しかできませんが、ジョブカンのコマンドラインクライアントをつくりました。</p>
+
+<p>Ohacan
+<a href="https://github.com/swdyh/ohacan">https://github.com/swdyh/ohacan</a></p>
+
+<p>ここからバイナリがダウンロードできます
+<a href="https://github.com/swdyh/ohacan/releases">https://github.com/swdyh/ohacan/releases</a></p>
+
+<pre><code>JOBCAN_GROUP_ID=111
+JOBCAN_CODE=xxx
+</code></pre>
+
+<p>ふたつの環境変数を設定してください。GROUP_IDは出退勤のフォームのグループ選択のセレクトタグの値です。CODEのほうは、個人専用URLのうしろのについている値を使ってください。(CODEのほうは認証情報なので、envchainを使うのがおすすめです。)</p>
+
+<p>出勤</p>
+
+<pre><code>$ ohacan in
+</code></pre>
+
+<p>退勤</p>
+
+<pre><code>$ ohacan out
+</code></pre>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

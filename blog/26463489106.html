@@ -1,0 +1,59 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: node_redisのエラーハンドリング</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>node_redisのエラーハンドリング</h2>
+  <div>2012-07-04 11:22:00</div>
+  <div class="content">
+    <p>node_redisを使うときにエラーをハンドリングしていないと、接続に失敗したときにプロセスごと死んでしまう。このときのエラーはtry catchだと補足できないので、onメソッドでerrorイベントを補足するようにしないといけない。errorイベントは特殊なイベントで、このイベントを補足しておくと、他になにもしなくてもプロセスが死ぬことがなくなって再接続まで自動でやってくれる。</p>
+
+<pre><code>var util = require('util')
+var redis = require('redis')
+
+var c = redis.createClient()
+c.on('error', function(err) {
+    util.log('redis_err ' + String(err))
+})
+</code></pre>
+
+<p>connect-redisを使ってセッションをredisに保存する場合、RedisStoreのclientがredisクライアントなので、そこにエラー処理を書いておく。</p>
+
+<pre><code>var util = require('util')
+var express = require('express')
+var RedisStore = require('connect-redis')(express)
+
+var rs = new RedisStore()
+rs.client.on('error', function(err) {
+    util.log('redis_err ' + String(err))
+})
+
+var app = express.createServer()
+app.use(express.cookieParser())
+app.use(express.session({ secret: 'xxx', store: rs }))
+
+app.get('/', function(req, res) {
+    req.session.count = req.session.count || 1
+    res.send(String(req.session.count++))
+})
+app.listen(9999)
+</code></pre>
+
+<p>nodeのプロセスを動かしてからredis-serverを再起動してみると、エラーが補足さることと再接続されることが確認できる。</p>
+
+<p>サーバ起動時にredis-serverもnodeも動かすようにしていたら、redis-serverのが起動が遅くてnodeの方が死んでいたみたいなことがあった。redisを使うときはいつでもエラーイベントを補足するようにした方がいい。</p>
+
+<p>mranney/node_redis GitHub
+<a href="https://github.com/mranney/node_redis">https://github.com/mranney/node_redis</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

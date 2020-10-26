@@ -1,0 +1,164 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: GoのExampleテストが便利</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>GoのExampleテストが便利</h2>
+  <div>2013-07-18 19:28:00</div>
+  <div class="content">
+    <p>Goでは、Example用のコードをgodocに表示させたり、テストとして実行して結果をチェックをすることができます。Example用のコードを書いて、それをドキュメントにコピペする作業や、その内容が古くなって動かないということから開放してくれます。</p>
+
+<p>この仕組についてはtestingパッケージに説明があります。</p>
+
+<p>testing - The Go Programming Language<br>
+<a href="http://golang.org/pkg/testing/">http://golang.org/pkg/testing/</a></p>
+
+<p>実際に適当なパッケージを作って試してみます。パッケージ名をexexとします。</p>
+
+<pre><code>$ mkdir -p go-example-example/src/exex
+$ cd go-example-example
+$ export GOPATH=`pwd`
+</code></pre>
+
+<p>適当に関数や構造体を用意します。<br>
+go-example-example/src/exex/hello.go</p>
+
+<pre><code>package exex
+
+func Hello() string {
+    return "hello"
+}
+
+type Foo struct {
+    Name string
+}
+
+func (f *Foo) Hello() string {
+    return "hello " + f.Name
+}
+</code></pre>
+
+<p>まずHello関数についてのExampleを書いてみます。<br>
+go-example-example/src/exex/example_test.go</p>
+
+<pre><code>package exex_test
+
+import (
+    "fmt"
+    "exex"
+)
+
+func ExampleHello() {
+    fmt.Println(exex.Hello())
+    // Output:
+    // foo
+}
+</code></pre>
+
+<p>パッケージをexexとは違うものにします。これは対象のパッケージをインポートして使うようなコード例にするためだと思います。Hello関数にはExampleHelloという名前の関数名を作り、// Output:というコメントとともに出力結果を書きます。この場合出力結果が異なるのでテストでエラーになります。</p>
+
+<pre><code>$ go test exex
+--- FAIL: ExampleHello (17.087us)
+got:
+hello
+want:
+foo
+FAIL
+FAIL    exex    0.041s
+</code></pre>
+
+<p>// Output:の部分を修正します。</p>
+
+<pre><code>func ExampleHello() {
+    fmt.Println(exex.Hello())
+    // Output:
+    // hello
+}
+</code></pre>
+
+<p>これで実行すると、テストが成功します。またちゃんと実行されているかを確認したい場合は-vをつけて実行します。</p>
+
+<pre><code>$ go test exex
+ok      exex    0.036s
+
+$ go test -v exex
+=== RUN: ExampleHello
+--- PASS: ExampleHello (7.933us)
+PASS
+ok      exex    0.035s
+</code></pre>
+
+<p>パッケージ全体用の例はExampleという名前の関数として書きます。FooのHelloメソッド用はExampleFoo_Helloという名前の関数として書きます。ある関数について複数の例を書く場合はアンダースコアをつけて、そのあとにその例の名前を書きます。</p>
+
+<pre><code>package exex_test
+
+import (
+    "exex"
+    "fmt"
+)
+
+func ExampleHello() {
+    fmt.Println(exex.Hello())
+    // Output:
+    // hello
+}
+
+func Example() {
+    fmt.Println(exex.Hello())
+    f := exex.Foo{"world"}
+    fmt.Println(f.Hello())
+    // Output:
+    // hello
+    // hello world
+}
+
+func ExampleFoo_Hello() {
+    f := exex.Foo{Name: "world"}
+    fmt.Println(f.Hello())
+    // Output:
+    // hello world
+}
+
+func ExampleFoo_Hello_example() {
+    f := exex.Foo{Name: "example!"}
+    fmt.Println(f.Hello())
+    // Output:
+    // hello example!
+}
+</code></pre>
+
+<p>これもテストしてみます。</p>
+
+<pre><code>$ go test -v exex
+=== RUN: ExampleHello
+--- PASS: ExampleHello (8.31us)
+=== RUN: Example
+--- PASS: Example (9.447us)
+=== RUN: ExampleFoo_Hello
+--- PASS: ExampleFoo_Hello (5.993us)
+=== RUN: ExampleFoo_Hello_example
+--- PASS: ExampleFoo_Hello_example (6.257us)
+</code></pre>
+
+<p>godocでExampleが表示されているかを確認してみます。</p>
+
+<pre><code>$ godoc -http=:6060
+</code></pre>
+
+<p>http://localhost:6060/pkg/exex/ を開きます。</p>
+
+<p><img src="https://64.media.tumblr.com/eb75ff31823168ad9d24e01e42e7a7e8/tumblr_inline_mq4nh4XYhC1qz4rgp.png" alt="go example screentshot 01"></p>
+
+<p>それぞれの部分にExampleが表示されます。</p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

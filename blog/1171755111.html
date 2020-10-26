@@ -1,0 +1,52 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Railsのでのフィード生成</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Railsのでのフィード生成</h2>
+  <div>2007-02-18 08:31:51</div>
+  <div class="content">
+    <p>まだ良い結論に達していない<br />
+とりあえず、現状のメモ</p>
+
+<ul>
+<li>FeedToolsというライブラリがある
+<ul>
+<li>これを使うとフィードの読み出しや生成ができる</li>
+<li>日本語とかが数値参照になってしまう
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/activesupport">activesupport</a>のBuilderというやつのせいっぽい</li>
+<li>そこが問題ないならかなり良さそう</li>
+</ul></li>
+<li>さらにDBを使ったキャッシュ機能がついている
+<ul>
+<li>このキャッシュ機能は外部のフィードをaggregateしたやつをキャッシュする感じ</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D5%A5%A3%A1%BC%A5%C9%A5%EA%A1%BC%A5%C0%A1%BC">フィードリーダー</a>とか<a class="keyword" href="http://d.hatena.ne.jp/keyword/Plagger">Plagger</a>みたいのつくるのに最適</li>
+<li>だけどふつうに自分のデータからフィードを作るときには使いにくい</li>
+<li>自分のデータをURLから取りにいく作戦を試してみたけど、うまく動かなかった（<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BF%A5%A4%A5%E0%A5%A2%A5%A6%A5%C8">タイムアウト</a>）</li>
+</ul></li>
+</ul></li>
+</ul><p>もう<a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a>のキャッシュでいいかあ<br />
+だとすると、cache_pageかcache_action<br />
+cache_actionだと、memory_store、file_store、drb_store、memcache_store</p><br />
+<p>Mephistoは自力でDBにキャッシュしてるみたい<br />
+アプリサーバがたくさんある場合を考えると、DBか<a class="keyword" href="http://d.hatena.ne.jp/keyword/Memcached">Memcached</a>がいいよなあ<br />
+DBにキャッシュする<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3">プラグイン</a>みたいのはないのかなあ</p><br />
+<p><a href="http://sporkmonger.com/projects/feedtools/">http://sporkmonger.com/projects/feedtools/</a><br />
+<a href="http://sporkmonger.com/projects/feedtools/api/">http://sporkmonger.com/projects/feedtools/api/</a><br />
+<a href="http://dekstop.de/weblog/2005/12/feedtools_cache_in_ruby_scripts/">http://dekstop.de/weblog/2005/12/feedtools_cache_in_ruby_scripts/</a><br />
+<a href="http://wota.jp/ac/?date=20050713">http://wota.jp/ac/?date=20050713</a></p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

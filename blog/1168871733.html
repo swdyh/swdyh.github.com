@@ -1,0 +1,62 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: 結果を待って実行</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>結果を待って実行</h2>
+  <div>2007-01-15 23:35:33</div>
+  <div class="content">
+    <p>Deferrdはまだ見てないんだけど、適当に作ってみた。</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink><span class="synIdentifier">function</span> execWhen(cond, proc, opt) <span class="synIdentifier">{</span>
+    <span class="synIdentifier">var</span> opt = opt ? opt: <span class="synIdentifier">{}</span>
+    <span class="synIdentifier">var</span> limit    = opt.limit || 10000
+    <span class="synIdentifier">var</span> interval = opt.interval || 500
+    <span class="synIdentifier">var</span> current  = 0
+    <span class="synIdentifier">var</span> timer    = <span class="synStatement">null</span>
+    intervalProc()
+
+    <span class="synIdentifier">function</span> intervalProc() <span class="synIdentifier">{</span>
+        <span class="synStatement">if</span> (cond()) <span class="synIdentifier">{</span>
+            proc()
+	    clearTimeout(timer)
+        <span class="synIdentifier">}</span>
+        <span class="synStatement">else</span> <span class="synStatement">if</span> (current &lt; limit) <span class="synIdentifier">{</span>
+	    timer = setTimeout(intervalProc, interval)
+	    current += interval
+	<span class="synIdentifier">}</span>
+	<span class="synStatement">else</span> <span class="synIdentifier">{</span>
+	    clearTimeout(timer)
+            <span class="synStatement">throw</span> <span class="synStatement">new</span> Error(<span class="synConstant">'timeout'</span>)
+	<span class="synIdentifier">}</span>
+    <span class="synIdentifier">}</span>
+<span class="synIdentifier">}</span>
+</pre><p>こんな感じに使う。</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink><span class="synIdentifier">var</span> list = <span class="synIdentifier">[]</span>
+setTimeout(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>list.push(<span class="synConstant">'A'</span>)<span class="synIdentifier">}</span>, 500)
+setTimeout(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>list.push(<span class="synConstant">'B'</span>)<span class="synIdentifier">}</span>, 1000)
+setTimeout(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>list.push(<span class="synConstant">'C'</span>)<span class="synIdentifier">}</span>, 2000)
+
+<span class="synIdentifier">var</span> cond = <span class="synIdentifier">function</span>() <span class="synIdentifier">{</span><span class="synStatement">return</span> list.length &gt;= 3<span class="synIdentifier">}</span>
+execWhen(cond, <span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>
+    <span class="synComment">// ここに処理を書く</span>
+    console.log(list)
+    list.forEach(<span class="synIdentifier">function</span>(i) <span class="synIdentifier">{</span>
+        console.log(i)
+    <span class="synIdentifier">}</span>)
+<span class="synIdentifier">}</span>)
+</pre><p>もっとスマートな方法もありそうだけど、まあいいや。</p><br />
+<p>これで非同期オンリーな<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_<a class="keyword" href="http://d.hatena.ne.jp/keyword/xmlhttpRequest">xmlhttpRequest</a>だって、へっちゃらのはず。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

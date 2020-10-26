@@ -1,0 +1,40 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: rails2.2のi18nでAccept-Languageを見て振り分けをする</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>rails2.2のi18nでAccept-Languageを見て振り分けをする</h2>
+  <div>2009-01-11 01:11:03</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/ruby">ruby</a>-gettextだとAccept-Language見て、それに応じた表示をしてくれるようになっていたんだけど、今のとこ<a class="keyword" href="http://d.hatena.ne.jp/keyword/i18n">i18n</a>だとそこまでやってくれないっぽい。どうしようかなと思って調べていたら、http_accept_languageという<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%E9%A5%B0%A5%A4%A5%F3">プラグイン</a>がありました。</p><p>iain's http_accept_language at master ― <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br />
+<a href="http://github.com/iain/http_accept_language/tree/master">http://github.com/iain/http_accept_language/tree/master</a></p><p>vendor/plugins以下にhttp_accept_languageのファイルを置いて、app/controllers/application.rbを修正。</p>
+<pre class="code lang-ruby" data-lang="ruby" data-unlink>  before_filter <span class="synConstant">:set_locale</span>
+
+  <span class="synStatement">private</span>
+  <span class="synPreProc">def</span> <span class="synIdentifier">set_locale</span>
+    available = <span class="synSpecial">%w{</span><span class="synConstant">ja en</span><span class="synSpecial">}</span>
+
+    <span class="synStatement">if</span> params[<span class="synConstant">:locale</span>]
+      cookies[<span class="synConstant">:locale</span>] = {
+        <span class="synConstant">:value</span> =&gt; params[<span class="synConstant">:locale</span>],
+        <span class="synConstant">:expires</span> =&gt; <span class="synConstant">1</span>.year.from_now
+      }
+    <span class="synStatement">end</span>
+
+    <span class="synType">I18n</span>.locale = params[<span class="synConstant">:locale</span>] || cookies[<span class="synConstant">:locale</span>] || request.compatible_language_from(available)
+  <span class="synPreProc">end</span>
+</pre><p>availableは用意してあるlocale用のファイルから取ってこれるといいけど、とりあえベタ書き。compatible_language_fromがavailableとAccept-Languageを見て、良さそうなのを返してくれる。en-USとかen-UKとか、言語だけじゃなくて国まで厳密に区別したい場合は、preferred_language_from。</p><p>あと、パラメータでlocaleが来たときは、それを優先して、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Cookie">Cookie</a>も設定しておくようにしてみた。</p><p>ソースは30行くらいなので、本気で使うひとは一応ソースも確認しておくといいと思います。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

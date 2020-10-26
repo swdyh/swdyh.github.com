@@ -1,0 +1,53 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: X-Content-Type-Options: nosniff の効果</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>X-Content-Type-Options: nosniff の効果</h2>
+  <div>2013-05-11 18:21:00</div>
+  <div class="content">
+    <p>Heads up: nosniff header support coming to Chrome and Firefox
+<a href="https://github.com/blog/1482-heads-up-nosniff-header-support-coming-to-chrome-and-firefox">https://github.com/blog/1482-heads-up-nosniff-header-support-coming-to-chrome-and-firefox</a></p>
+
+<p>ChromeとFirefoxでnosniffってどういうことなんだろうと思って少し調べた。</p>
+
+<p>IE8から、X-Content-Type-Options: nosniff があった場合は、ファイルの中身を自動判別する機能が無効になる。htmlじゃないものが自動判別でhtmlだと誤判別されて表示されることで起こるXSSを防ぐことができる。</p>
+
+<p>Internet Explorer 8 のセキュリティ Part VI: Beta 2 の更新項目
+<a href="http://msdn.microsoft.com/ja-jp/ie/dd218497.aspx">http://msdn.microsoft.com/ja-jp/ie/dd218497.aspx</a></p>
+
+<p>IE9から、X-Content-Type-Options: nosniff があった場合は、scriptが参照する応答でContent-Typeが以下の場合でない場合に読み込まない。</p>
+
+<pre><code>application/ecmascript
+application/javascript
+application/x-javascript
+text/ecmascript
+text/javascript
+text/jscript
+text/x-javascript
+text/vbs
+text/vbscript
+</code></pre>
+
+<p>スタイルシートはtext/cssでない場合に読み込まない。</p>
+
+<p>MIME 処理の変更: X-Content-Type-Options: nosniff
+<a href="http://msdn.microsoft.com/ja-jp/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/ja-jp/library/ie/gg622941%28v=vs.85%29.aspx</a></p>
+
+<p>ChromeとFirefoxのnosniffサポートという話は、IE9から加わった効果のことだった。GithubやGistのrawはtext/plainでnoniffをつけるから、Githubのアドレスを直接参照するスクリプトやスタイルシートは、ブラウザによっては動かなくなるよという話。</p>
+
+<p>手元のChrome(28.0.1500.6 dev)だとjsはブロックするけど、cssはブロックしなかった。Firefox(Firefox 21 beta)はまだどちらもブロックしなかった。</p>
+
+<p>GithubやGistのjsやらcssを直接参照するのは、ブラウザ次第で動かなくなるし、そもそもGithubの負荷になって迷惑になるのでやめましょう。</p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

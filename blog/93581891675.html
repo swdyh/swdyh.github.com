@@ -1,0 +1,45 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: チャットワークのチャットログと添付ファイルをまるっとダウンロード</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>チャットワークのチャットログと添付ファイルをまるっとダウンロード</h2>
+  <div>2014-08-02 19:59:00</div>
+  <div class="content">
+    <p>チャットワークのチャットログと添付ファイルをまるっとダウンロードするツールをつくりました。最近チャットワークからSlackに移行して、過去ログを一応とっておこうと思ったらエクスポート機能がなかったのでつくることにしました。公式なAPIが一部ユーザに提供されているみたいですが、自分のアカウントでは使えなかったので、しかたなくふつうにパスワードを使ってブラウザがアクセスしているAPIを使っています。バックアップやオフライン時に参照したい、という用途等に使えると思います。</p>
+
+<p>インストール</p>
+
+<pre><code>$ gem install goodbye_chatwork
+</code></pre>
+
+<p>チャットの一覧を表示</p>
+
+<pre><code>$ goodbye_chatwork -i example@example.com -p password
+11111 チャットルーム1 35
+22222 チャットルーム2 80
+</code></pre>
+
+<p>チャット名の前の数字がチャットルームのIDで、後ろの数字は件数です。ダウンロードはチャットルームのidを指定します。ログだけでいい場合は-eで、添付ファイルも一緒にダウンロードする場合は-xです。</p>
+
+<pre><code>$ goodbye_chatwork -i example@example.com -p password -e 11111
+....
+
+$ goodbye_chatwork -i example@example.com -p password -x 11111
+....
+</code></pre>
+
+<p>Github swdyh/goodbye_chatwork
+<a href="https://github.com/swdyh/goodbye_chatwork">https://github.com/swdyh/goodbye_chatwork</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

@@ -1,0 +1,152 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Rails勉強会 東京</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Rails勉強会 東京</h2>
+  <div>2007-01-22 13:38:51</div>
+  <div class="content">
+    <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20030824200304" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20030824/20030824200304.jpg" alt="f:id:swdyh:20030824200304j:image:w200" title="f:id:swdyh:20030824200304j:image:w200" class="hatena-fotolife" style="width:200px" itemprop="image"></a></span></p><p><a href="http://wiki.fdiary.net/rails/?RailsMeetingTokyo-0014">http://wiki.fdiary.net/rails/?RailsMeetingTokyo-0014</a><br />
+なんかドタキャンが多かった。べつにいいんだけど、ちょっとひどい。<br />
+<br />
+</p>
+
+<div class="section">
+    <h4>前半 テーブル設計と<a class="keyword" href="http://d.hatena.ne.jp/keyword/ActiveRecord">ActiveRecord</a>(<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C9%F1%C7%C8">舞波</a>)</h4>
+    
+<ul>
+<li>1:Nでも関連テーブルつくったほうがいいよ</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%D4%A1%BC%A5%C0%A5%F3%A5%B9">インピーダンス</a>ミスマッチ
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>のオブジェクトのモデルと<a class="keyword" href="http://d.hatena.ne.jp/keyword/RDB">RDB</a>のモデルはそもそもマッチしない。</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/ActiveRecord">ActiveRecord</a>は頑張ってるけど、別の方法を考える</li>
+</ul></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A6%A5%A3%A5%C8%A5%B2%A5%F3%A5%B7%A5%E5%A5%BF%A5%A4%A5%F3">ウィトゲンシュタイン</a>ってひとの哲学の話
+<ul>
+<li>内的性質、外的性質、論考？全然知らない</li>
+</ul></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%C9%F1%C7%C8">舞波</a>式第7正規形
+<ul>
+<li>カラムじゃなくてテーブルにしまくる</li>
+</ul></li>
+<li>集合演算
+<ul>
+<li>ばらばらにしたテーブルのデータを集合演算でくっつけてとりだす</li>
+</ul></li>
+</ul><p>とりあえず、1:Nでも関連テーブルは作るようにする。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C9%F1%C7%C8">舞波</a>式第7正規形は行方を見守る。<br />
+あと、高橋会長が来た時にいきなり<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C9%F1%C7%C8">舞波</a>さんを電波認定したのがおかしかった。「<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A6%A5%A3%A5%C8%A5%B2%A5%F3%A5%B7%A5%E5%A5%BF%A5%A4%A5%F3">ウィトゲンシュタイン</a>の名前を出す人は電波」</p><br />
+<p>まだないけど、資料はアップすると言っていたので詳細はそっちで。<br />
+くまくまー <a href="http://wota.jp/ac/">http://wota.jp/ac/</a></p><br />
+<p>参考 <a class="keyword" href="http://d.hatena.ne.jp/keyword/Wikipedia">Wikipedia</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EB%A1%BC%A5%C8%A5%F4%A5%A3%A5%D2%A1%A6%A5%A6%A5%A3%A5%C8%A5%B2%A5%F3%A5%B7%A5%E5%A5%BF%A5%A4%A5%F3">ルートヴィヒ・ウィトゲンシュタイン</a><br />
+<a href="http://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%BC%E3%83%88%E3%83%B4%E3%82%A3%E3%83%92%E3%83%BB%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3">http://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%BC%E3%83%88%E3%83%B4%E3%82%A3%E3%83%92%E3%83%BB%E3%82%A6%E3%82%A3%E3%83%88%E3%82%B2%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3</a></p><p></p>
+
+</div>
+<div class="section">
+    <h4>後半 <a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>とか(自分)</h4>
+    <p>自分を入れて参加者3人。さみしい。<br />
+とくに資料はつくってないので適当に喋った。</p>
+
+<ul>
+<li>Prototype.js1.5
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>ブームに押され気味だったけど、サイトも新しくなって1.5リリースで盛り返すかも。</li>
+<li>$$, getElementsBySelector, $w</li>
+<li>1.5になってまた<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>度が上がった気がする
+<ul>
+<li>StringとかEnumerableあたりに、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>にあるメソッドがだいぶ増えた。</li>
+</ul></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>を使える場合は使うようになってる(getElementsByClassName)</li>
+</ul></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/FireBug">FireBug</a>はやっぱり最強
+<ul>
+<li>1.0betaが出ている</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/FireBug">FireBug</a>に慣れきってしまうと、<a class="keyword" href="http://d.hatena.ne.jp/keyword/IE">IE</a>だけでバグったりしたときにかなり困る</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/FireBug">FireBug</a> Liteを使うといいかも</li>
+<li>console.log以外にもいろいろある
+<ul>
+<li><a href="http://getfirebug.com/console.html">http://getfirebug.com/console.html</a></li>
+</ul></li>
+<li>console.xxxは普通に<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>の中で使える
+<ul>
+<li>ただし<a class="keyword" href="http://d.hatena.ne.jp/keyword/FireBug">FireBug</a>が入っていなかったり、他のブラウザでみたときにエラーになるから注意</li>
+<li>そのエラーは実行時にしかでないので、あまり実行されないとこは特に注意</li>
+</ul></li>
+</ul></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a> - <a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a> - <a class="keyword" href="http://d.hatena.ne.jp/keyword/Prototype.js">Prototype.js</a> / <a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a> - <a class="keyword" href="http://d.hatena.ne.jp/keyword/TurboGears">TurboGears</a> - <a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Prototype.js">Prototype.js</a>は<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>ぽいけど、<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>は<a class="keyword" href="http://d.hatena.ne.jp/keyword/Python">Python</a>ぽい
+<ul>
+<li>それを実現できる<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>の柔軟さがいい</li>
+</ul></li>
+</ul></li>
+<li>テスト
+<ul>
+<li>console.assert</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E6%A5%CB%A5%C3%A5%C8%A5%C6%A5%B9%A5%C8">ユニットテスト</a>は、いろいろあるけど、それ以上のテストは結局<a class="keyword" href="http://d.hatena.ne.jp/keyword/Selenium">Selenium</a>とか使うしかないかも。</li>
+</ul></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/script.aculo.us">script.aculo.us</a>
+<ul>
+<li>名前が悪いと思う。綴りがいつも分からなくなるし、読み方も分かりにくい</li>
+<li>1.7リリース</li>
+<li>morph
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/css">css</a>のプロパティを与えて、それを徐々に変化させる</li>
+</ul></li>
+<li>EffectはsetTimeoutやsetInterval系を使うので、制御が分かれる
+<ul>
+<li>Effectの次の行はEffectの後ではなくて、実行中に実行される</li>
+<li>Effectの後に実行したいものはafterFinishオプション</li>
+</ul></li>
+<li>Effectを同時実行する場合はEffect.Parallel。</li>
+</ul></li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Ajax">Ajax</a>関連
+<ul>
+<li>使わない場合よりも絶対に手間がかかる</li>
+<li>使わない場合ほど、定石な作り方があるわけじゃない</li>
+<li>でもそこで得られる使い勝手の良さは大きい
+<ul>
+<li>だたし、受託の場合、その分のコストをどうするかが問題かも。</li>
+</ul></li>
+<li>同期・非同期(asynchronous)の使い分けが重要
+<ul>
+<li>同期の場合、待たされる。でもむしろ待ちたい場合のが多いし簡単。</li>
+<li>非同期の場合、結果はイベント処理。結果の処理が独立してる場合は問題ないけど、そうじゃない場合難しい。</li>
+</ul></li>
+<li>ブラウザ依存や面倒な部分があるので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Prototype.js">Prototype.js</a>とか<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>とか何かしらライブラリを使うべし。</li>
+</ul></li>
+</ul><p><br />
+他にもいろいろ話をした気がするけど、だいたいこんな感じ。<br />
+あと<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>の宣伝も少ししたかな。<br />
+<br />
+</p>
+
+</div>
+<div class="section">
+    <h4>その他</h4>
+    
+<ul>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/MySQL">MySQL</a>よりやっぱPostgresだよね
+<ul>
+<li>\d</li>
+<li>最近のは速い</li>
+<li>データリンク</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/psql">psql</a>の補完</li>
+<li>あとなんかあったけど忘れた</li>
+</ul></li>
+</ul>
+</div>
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

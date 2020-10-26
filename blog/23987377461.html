@@ -1,0 +1,92 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: Node.jsでServer-Sent Eventsを使ってみた</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>Node.jsでServer-Sent Eventsを使ってみた</h2>
+  <div>2012-05-29 16:53:00</div>
+  <div class="content">
+    <p><img src="https://64.media.tumblr.com/tumblr_m4rxod2aGB1r3sayi.png" alt=""></p>
+
+<ul><li>setIntervalで定期的にevnetを送るのと、redisのPub/Subを利用してeventを送るのという2種類。</li>
+<li>イベント発生時にレスポンスを書き出すようにするのは、EventEmitterを経由する。</li>
+<li>resdisからeventを送るのを試すにはredis-cliを使って、'redis-cli publish node-sse-example:myevent foo'みたいにすればいい。</li>
+<li>クライアントサイドのコードのも一緒に書いているけど、簡単に実行できるように1ファイルにしたかったからで、普通は分ける方がいい。</li>
+<li>nginxでreverse proxyしたときのバッファリングをオフにするためにX-Accel-Bufferingヘッダーをつけている。</li>
+<li>バッファリングに気をつければnginx経由でも簡単に動くので、そこはwebsocketよりだいぶ楽。</li>
+</ul><p><br></p>
+
+<pre><code>var util = require('util')
+var events = require('events')
+var express = require('express')
+var redis = require('redis')
+
+var app = express.createServer()
+var notifyEmitter = new events.EventEmitter()
+var redisClientSubscriber = redis.createClient()
+redisClientSubscriber.on('message', function(ch, d) {
+    util.log(JSON.stringify(['redisSubscriber', ch, d]))
+    notifyEmitter.emit('myevent', 'redis node-sse-example:myevent ' + d)
+})
+redisClientSubscriber.subscribe('node-sse-example:myevent')
+
+setInterval(function() {
+    var len = notifyEmitter.listeners('myevent').length
+    util.log(JSON.stringify(['listeners.length', len]))
+    if (len &gt; 0) {
+        notifyEmitter.emit('myevent', 'interval!')
+        util.log(JSON.stringify(['emit myevent']))
+    }
+}, 10 * 1000)
+
+app.get('/', function(req, res) {
+    var r = '&lt;html&gt;&lt;head&gt;&lt;script&gt;\n'
+    var f = function() {
+        var es = new EventSource('/sse')
+        es.onmessage = function(m) {
+            document.body.innerHTML += m.data + new Date() + '&lt;br /&gt;'
+        }
+        es.onerror = function(e) {
+            console.log('err:', e)
+        }
+    }
+    r += 'var f = ' + f.toString() + '\n' + 'f()'
+    r += '\n&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;sever sent events test&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;'
+    res.send(r)
+})
+
+app.get('/sse', function(req, res) {
+    res.writeHead(200, {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive',
+        'X-Accel-Buffering': 'no' // disable nginx proxy buffering
+    })
+    res.write('\n')
+    var f = function(d) {
+        res.write('data: ' + d + ' \n\n')
+    }
+    notifyEmitter.on('myevent', f)
+    req.on('close', function() {
+        notifyEmitter.removeListener('myevent', f)
+    })
+})
+app.listen(9301)
+console.log('see http://localhost:9301/')
+console.log("publish by redis 'redis-cli publish node-sse-example:myevent foo'\n")
+</code></pre>
+
+<p><br>
+<a href="https://gist.github.com/2823050">https://gist.github.com/2823050</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

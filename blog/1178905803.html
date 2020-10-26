@@ -1,0 +1,57 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: AutoPagerize0.0.9</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>AutoPagerize0.0.9</h2>
+  <div>2007-05-12 02:50:03</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a> &ndash; Userscripts.org<br />
+<a href="http://userscripts.org/scripts/show/8551">http://userscripts.org/scripts/show/8551</a></p><br />
+<p>細かい修正がメインです<br />
+<br />
+</p>
+
+<ul>
+<li>SITEINFOのremainHeightを使わないようにした</li>
+<li>document.characterSetを使ってmimeTypeを指定</li>
+<li>SITEINFOを読み込む要素を//textareaから//*に変更</li>
+</ul><p><br />
+remainHeightが効いてくるのは、フッターやサイドバーがすごく長い場合とロードが遅い場合。<br />
+前者については、insertBeforeやpageElementの位置を使って調整するようにしてみた。<br />
+後者の場合っていうのは実はあんまりないんじゃないかと思っていてなにもしていない。<br />
+2ページ目を読み込む時間を測って、遅い場合はremainHeightを大きくするとか、<br />
+できなくはなさそうだけど、そこまでしなくてもという感じ。<br />
+とりあえず、これでいってみて問題なさそうなら、SITEINFOのremainHeightは完全に廃止で、<br />
+どうしてもremainHeightを調整しないとキツいケースがあったら、オプショナルとして復活させる。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/del.icio.us">del.icio.us</a>は表示数を100件にしてると、遅いんだけどか25件にするとスムーズにいける。<br />
+表示件数が変えられる場合は、少なめにしたらいいかも。</p><br />
+<p>document.characterSetは知らなかったんだけど、<br />
+Pagerizationで使ってると聞いて、調べたら良さそうだったので使うようにした。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/UTF-8">UTF-8</a>じゃないページの文字化けが直ってるはず。<br />
+SITEINFOにmimeTypeという項目があったのだけれど廃止。</p><br />
+<p>//textareaから//*に変更したのはtextareaじゃなくてもいいかなあと思ったから。<br />
+でもまだ考え中で、また変えるかもしれない。</p><br />
+<p>バージョンアップを重ねて、少しずつでも良くなってるせいか、<br />
+だいぶ手に馴染んできた気がする。<br />
+かなり自然に使えてるし、無効にして過すとけっこうきつい。<br />
+あと<a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>(<a href="http://swdyh.infogami.com/autopagerize">http://swdyh.infogami.com/autopagerize</a>)がうまく機能しているのが嬉しい。<br />
+最初は自分がSITEINFOを書く場所だったのが、<br />
+他のひともSITEINFOを書いてくれるようになってSITEINFOを共有する場所になった。<br />
+さらに<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>の情報をまとめる場所にもなってきてる。</p><br />
+<br />
+<p>拡張にしてみたいなあ。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

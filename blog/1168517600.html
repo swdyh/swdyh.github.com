@@ -1,0 +1,59 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: AutoPagerize</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>AutoPagerize</h2>
+  <div>2007-01-11 21:13:20</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>にGoogleAutoPagerとかなんとかAutoPagerというのがあって、<br />
+とても便利なのだけど、こういうのってもっと汎用化できるんじゃないかと考えてみた。</p><p>複雑なサイトは別にして、サイトのAutoPager化を考えると、</p>
+
+<ul>
+<li>次のページへのリンク</li>
+<li>次のページをどこに差し込むか</li>
+<li>次のページどこからどこまでを差し込むか</li>
+</ul><p>があたりがデータとしてあれば、AutoPagerの仕組みは1つでいいし、<br />
+そのデータは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Japanize">Japanize</a>みたいに<a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>とかで管理すれば、<br />
+HTMLが変わって動かなくなっても、対応とかしやすいし、<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/Web2.0">Web2.0</a>ぽく、いろんな人が適当に登録しっててくれれば、<br />
+いつのまにかいろんなサイトがAutoPager化されるとかも実現できるんじゃないのかな。</p><br />
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>とか作ったり、データの仕様とか考えるのはすぐできないので、<br />
+まず手始めに、いつの間にか動かなくなっていたGoogleAutoPagerを、<br />
+上のことを意識しながら作り直してみることにした。</p><br />
+<p>まだ試作だけれど、とりあえずアップしときます。<br />
+動作確認してるのは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac">Mac</a>のFirefox2だけです。<br />
+<a href="http://swdyh.yu.to/autopagerizeforgoogle.user.js">http://swdyh.yu.to/autopagerizeforgoogle.user.js</a></p><br />
+<p>リンクの指定とかは<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>か<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD">正規表現</a>の好きな方を使えるといいかなあと思ったんだけど、<br />
+2ページ目以降に対して<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>を使う方法がよくわからなかったりして、まだうまくできてない。</p><br />
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Wikipedia">Wikipedia</a>日本語版<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C1%B4%CA%B8%B8%A1%BA%F7">全文検索</a>AutoPagerを作った<br />
+<a href="http://la.ma.la/blog/diary_200601100209.htm">http://la.ma.la/blog/diary_200601100209.htm</a></p><br />
+<p>これをベースに作っていて、DOMParserとかはじめて知って、おおって思ったんだけど、<br />
+well-formedじゃないのはパースできなかった。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>をはじめ世の中のサイトはwell-formedじゃなかったりするから、<br />
+HTMLとしてパースして、それに<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>が適用したいんだけど。。。</p><br />
+<p>ロードマップみたいなもの。</p>
+
+<ol>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>以外のもいくつか作ってみる</li>
+<li>データを外部化</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>を考える</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>を作る</li>
+<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>からデータをとるようにする</li>
+</ol><p>あー、これ見たら、なんかもうちょっとめんどくさくなってきた。途中で飽きてしまいそう。<br />
+あと、<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>よりもっと良い名前ないかなあ。<br />
+ぺーじゃらいず？ぺーじゃーらいず？、どっちにしてもダサいなあ。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

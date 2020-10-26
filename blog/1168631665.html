@@ -1,0 +1,44 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: アップできない</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>アップできない</h2>
+  <div>2007-01-13 04:54:25</div>
+  <div class="content">
+    <p> <br />
+せっかく<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>をバージョンアップしたのに、yu.toが繋がらない。<br />
+メンテかなあ。</p><br />
+<p>バージョンアップの内容は、サイト用のデータ（次のページのリンクとか）を<br />
+別のページに書いておいて、そこからもデータを取るようにした。</p><br />
+<p>サイト用のデータを書くページ<br />
+<a href="http://swdyh.infogami.com/autopagerize">http://swdyh.infogami.com/autopagerize</a></p><br />
+<p>readonlyのtextareaにclass属性に<a class="keyword" href="http://d.hatena.ne.jp/keyword/autopagerize">autopagerize</a>_dataをつけた。<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_<a class="keyword" href="http://d.hatena.ne.jp/keyword/xmlhttpRequest">xmlhttpRequest</a>でこのページを取得して、そこからデータを取り出して使う。<br />
+これでGresemonkeyの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>をアップデートしなくても、<br />
+サイト用のデータをアップデートできるようになった。</p><br />
+<p>infogamiのページごとにアクセス権限を決められるといいんだけど、<br />
+全ページおなじ権限みたいなので、このページをedit可能にすると、<br />
+swdyh関連のページが全部edit可能になってしまう。<br />
+でもまあ、たぶん誰も書き換えたりしないだろうし、<a class="keyword" href="http://d.hatena.ne.jp/keyword/history">history</a>もあるのでそうしておいた。<br />
+ただ<a class="keyword" href="http://d.hatena.ne.jp/keyword/spam">spam</a>とかはいやなので、logged-in usersがedit可能にしておいた。</p><br />
+<p>このデータ読み込みのへんのコードがうまく書けない。<br />
+いっこ前に書いたけど、<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_<a class="keyword" href="http://d.hatena.ne.jp/keyword/xmlhttpRequest">xmlhttpRequest</a>が非同期しかできなくて、<br />
+結果の処理がどう書くといいのかよく分からない。<br />
+非同期むずい！Deferrdのコードとか読んで勉強するかあ。</p><br />
+<p>あと、いま気づいたけど、最近の<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firefox">Firefox</a>はforEachとかmapとかあるみたい。<br />
+めんどくさいと思いながらも、for (var i = 0; ...)とかずっと書いてた。しまった。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

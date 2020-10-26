@@ -1,0 +1,50 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: 継続渡しスタイルのfact</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>継続渡しスタイルのfact</h2>
+  <div>2007-01-23 02:44:14</div>
+  <div class="content">
+    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%D8%BF%F4%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0">関数プログラミング</a>の勉強 <a href="http://p0t.jp/mt/archives/2007/01/post_545.html">http://p0t.jp/mt/archives/2007/01/post_545.html</a><br />
+を見て、ふと思いたって考えてみた。</p><br />
+<p>継続(continuation)って未だによくわかってないんだけど、このへんを読んだ。</p><br />
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Scheme">Scheme</a>とActor理論 <a href="http://www.ice.nuie.nagoya-u.ac.jp/~h003149b/lang/actor/actor.html">http://www.ice.nuie.nagoya-u.ac.jp/~h003149b/lang/actor/actor.html</a><br />
+なんでも継続 <a href="http://www.shiro.dreamhost.com/scheme/docs/cont-j.html">http://www.shiro.dreamhost.com/scheme/docs/cont-j.html</a><br />
+継続渡しによるWebアプリケーション <a href="http://www.kahua.org/kahua/docserv/seminar200402/cps/index.html">http://www.kahua.org/kahua/docserv/seminar200402/cps/index.html</a><br />
+なんでも継続、<a class="keyword" href="http://d.hatena.ne.jp/keyword/ActionScript">ActionScript</a> で。<a href="http://torus.jp/memo/x200403/nandemo_keizoku_as.rd.html">http://torus.jp/memo/x200403/nandemo_keizoku_as.rd.html</a></p><br />
+<p>むずしい。むずかしすぎる。<br />
+考えてるとすぐわけわかんなくなってくる。<br />
+そもそも<a class="keyword" href="http://d.hatena.ne.jp/keyword/Scheme">Scheme</a>が分かってないし。</p><br />
+<p>で、factを継続渡しスタイルで書くとたぶんこんなふう。</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink><span class="synIdentifier">function</span> factCPS(n, k) <span class="synIdentifier">{</span>
+    <span class="synStatement">if</span> (n == 0) <span class="synIdentifier">{</span>
+        <span class="synStatement">return</span> k(1)
+    <span class="synIdentifier">}</span>
+    <span class="synStatement">else</span> <span class="synIdentifier">{</span>
+        <span class="synStatement">return</span> factCPS(n - 1, <span class="synIdentifier">function</span>(u) <span class="synIdentifier">{</span><span class="synStatement">return</span> k(u * n)<span class="synIdentifier">}</span>)
+    <span class="synIdentifier">}</span>
+<span class="synIdentifier">}</span>
+</pre><p>console.logを直でfactCPSに渡すとエラーになったのでlogをつくった。</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink><span class="synIdentifier">var</span> log = <span class="synIdentifier">function</span>(x)<span class="synIdentifier">{</span>console.log(x)<span class="synIdentifier">}</span>
+<span class="synStatement">for</span> (<span class="synIdentifier">var</span> i = 0; i &lt;= 10; i++) <span class="synIdentifier">{</span>
+    factCPS(i, log)
+<span class="synIdentifier">}</span>
+</pre><p><br />
+「なんでも継続、<a class="keyword" href="http://d.hatena.ne.jp/keyword/ActionScript">ActionScript</a> で。」のひとも書いているけれど、<br />
+returnを書くのが面倒くさい。一個、書き忘れて軽くはまった。<br />
+いちおう計算はできてるけど、これでいいのかな。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

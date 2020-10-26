@@ -1,0 +1,79 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: mad(1)を使ってみる</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>mad(1)を使ってみる</h2>
+  <div>2012-06-15 17:54:00</div>
+  <div class="content">
+    <p><img src="https://64.media.tumblr.com/tumblr_m5nhbe5ke11r3sayi.png" alt=""></p>
+
+<p>madはmarkdownベースのmanみたいなもの。もともとmarkdownはそのままでも読みやすいんだけど、強調とかコードに色がついて読みやすくなっている。mad-pagesにNode.jsのドキュメントとhttpステータスとかが用意されていて、数は多くないけれどなかなか便利。</p>
+
+<p>Going mad(1) - TJ Holowaychuk
+<a href="http://tjholowaychuk.com/post/21100445420/going-mad-1">http://tjholowaychuk.com/post/21100445420/going-mad-1</a></p>
+
+<p>mad(1) node.js pages - TJ Holowaychuk
+<a href="http://tjholowaychuk.com/post/23368504100/mad-1-node-js-pages">http://tjholowaychuk.com/post/23368504100/mad-1-node-js-pages</a></p>
+
+<p>visionmedia/mad
+<a href="https://github.com/visionmedia/mad">https://github.com/visionmedia/mad</a></p>
+
+<p>visionmedia/mad-pages
+<a href="https://github.com/visionmedia/mad-pages">https://github.com/visionmedia/mad-pages</a></p>
+
+<p>インストール</p>
+
+<pre><code>% hub clone visionmedia/mad
+% cd mad
+% make install
+% mad --update
+</code></pre>
+
+<p>madの一覧表示</p>
+
+<pre><code>% mad -l
+</code></pre>
+
+<p>madを見る</p>
+
+<pre><code>% mad node.fs
+% mad http.status
+% mad ansi
+</code></pre>
+
+<p>madのデータは/usr/local/share/madにあって自分で追加してもいい。あと表示色は/usr/local/etc/mad.confでやMAD_CONFIGで指定したファイルで変えられる。色の指定はmad ansiを見るのが便利。そもそも、1mとかじゃなくてboldとかで指定できたら良さそうだけど。</p>
+
+<p>あと、てきとうだけどmad用のzsh補完関数を書いた。zsh補完関数の書き方、全然わからないし意味わからないからいつも困るけど、あるとやっぱり便利だから見よう見まねでなんとか書いてる。</p>
+
+<p><a href="https://gist.github.com/2933058">https://gist.github.com/2933058</a></p>
+
+<pre><code>#compdef mad
+
+_arguments \
+  '(-U --update-self)'{-U,--update-self}'[update mad(1) itself]' \
+  '(-u --update)'{-u,--update}'[update remote mad-pages]' \
+  '(-v --version)'{-v,--version}'[output mad version]' \
+  '(-h --help)'{-h,--help}'[output this help information]' \
+  '(-l --list)'{-l,--list}'[list mad-pages]' \
+  '-[read from stdin]' \
+  '*:: :-&gt;' &amp;&amp; return 0
+
+if (( CURRENT == 1 )); then
+  `mad -l | grep '^ \w' | sed 's/^/compadd /'`
+  _files -g "*.(md|markdown)"
+  return
+fi
+</code></pre>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

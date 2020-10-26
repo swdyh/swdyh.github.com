@@ -1,0 +1,56 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: 帰宅連絡 KAERUYO #家庭を支える技術</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>帰宅連絡 KAERUYO #家庭を支える技術</h2>
+  <div>2014-12-10 01:04:00</div>
+  <div class="content">
+    <p><img src="https://64.media.tumblr.com/56b051555f6d048d874325a8ed13fc9a/tumblr_inline_ngblaqZqH61r3sayi.png" alt=""></p>
+
+<p><a href="http://www.adventar.org/calendars/595">家庭を支える技術 Advent Calendar 2014</a> 10日目の記事です。</p>
+
+<p>帰宅するときの「いまから帰るよ」という連絡している家庭は多いと思いますが、うちではYoを利用していて、その紹介をしたいと思います。</p>
+
+<p><a href="http://www.justyo.co">Yo</a>というのは、指定した相手にYoという通知を送ることができるだけのシンプルなサービスです。またAPIがあり、APIを使うともう少しだけ凝ったことができます。</p>
+
+<p>このAPIを利用し、「KAERUYO」というYoユーザにYoすると、相手に「KAERUYO」からYoが届くという仕組みを作って、帰宅連絡に使っています。</p>
+
+<p>わざわざAPIを使ったのは、相手に直接Yoしてしまうと、帰宅の連絡なのか分かりにくかったり、帰宅じゃないときになんとなくYoすると、帰宅ととられてしまったりして困るからです。</p>
+
+<p>Yoを使う前はLINEで連絡していたんですが、最低でも5タップくらいは押さないといけなくて地味に面倒でした。この仕組だと、Yoアプリを立ち上げてKAERUYOをタップするだけ、という簡単さでとても快適です。</p>
+
+<p>手間を省くという意味では、位置情報やビーコンとか、もっとハイテクな技術でもっと楽にできそうですが、「帰るよ」という連絡するというコミュニケーションとしての意味合いがなくなってしまいそうなので、それはそれで寂しいかもなあと思っています。</p>
+
+<p>逆に、Yoだけしか送れないと不便じゃないの、LINEやメールでいいじゃん、と思うひともいると思いますが、Yoが送られてくると単純にそれだけでちょっと面白い感じがあります。あと位置情報やリンクも送れます。</p>
+
+<p>この仕組を7月から運用していて、だいたい5ヶ月になりますが順調です。5ヶ月まえの時点では、APIだと60秒に一回しかYoを送ることができなかったため、わが家だけで地味に運用してきました。</p>
+
+<p>ところが最近APIのドキュメントを見ていたら、制限についての記述がなくなっていて、試してみたら60秒待たなくても次のYoが送れるようになっていたので、他の家庭でも使ってもらえる仕組みとして作りなおすことにしました。</p>
+
+<p><img src="https://64.media.tumblr.com/ebe9cdd8224e256420cc5c9f4eacd682/tumblr_inline_ngblbepU0T1r3sayi.png" alt="KAERUYO"></p>
+
+<p>KAERUYO <a href="http://kaeruyo.io">http://kaeruyo.io</a></p>
+
+<p>さっそく今日から公開します。帰宅の連絡が面倒だなと思っているかたはぜひ試してみてください。サイト登録してYoユーザのペアの登録してKAERUYOにYoすると使えるようになります。</p>
+
+<p>KAERUYOのサイトのデザインは、いまトレタという会社で一緒に働いている<a href="https://twitter.com/more_more_for">@more_more_for</a>さんにやってもらいました。Yo APIを使ったサーバの実装はGolangを使っていて、そのうちコードも公開しようと思っています。</p>
+
+<p>明日の家庭を支える技術は、こちらもトレタで一緒に働いているiOSエンジニアの<a href="https://twitter.com/y_koh">@y_koh</a>さんです。</p>
+
+<p>トレタは飲食店むけのiPadアプリを作っている会社で、そのサーバAPIの開発を<a href="https://twitter.com/masuidrive">@masuidrive</a>さんとやっています。興味のあるかたはこちらもどうぞ</p>
+
+<p>トレタ <a href="http://toreta.in">http://toreta.in</a><br>
+トレタ 採用情報 <a href="https://www.wantedly.com/companies/toreta">https://www.wantedly.com/companies/toreta</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

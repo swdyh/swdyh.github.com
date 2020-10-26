@@ -1,0 +1,29 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: require_gemからgemへ</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>require_gemからgemへ</h2>
+  <div>2007-02-09 18:47:06</div>
+  <div class="content">
+    <p>こないだ<a class="keyword" href="http://d.hatena.ne.jp/keyword/rubygems">rubygems</a>をアップデータした</p>
+<pre class="code" data-lang="" data-unlink>sudo gem update --system</pre><p>アップデートしてから、このWarningがよく出る</p>
+<pre class="code" data-lang="" data-unlink> Warning: require_gem is obsolete.  Use gem instead.</pre><p>require_gemがgemに変わったらしい<br />
+ちょっと気になってがackしてみたら、<a class="keyword" href="http://d.hatena.ne.jp/keyword/activerecord">activerecord</a>とかの中身もrequire_gemからgemに変わってた<br />
+<a class="keyword" href="http://d.hatena.ne.jp/keyword/rails">rails</a>コマンドで作られるboot.rbもrequire_gemからgemに変わってた</p><br />
+<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/rubygems">rubygems</a>が古い環境でgemしても大丈夫なのかなあ、よくわからん。<br />
+とりあえずは<a class="keyword" href="http://d.hatena.ne.jp/keyword/rubygems">rubygems</a>.rbの60行目を<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%E1%A5%F3%A5%C8%A5%A2%A5%A6%A5%C8">コメントアウト</a>して、様子見。</p>
+
+
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  

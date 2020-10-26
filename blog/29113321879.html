@@ -1,0 +1,64 @@
+  <html>
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+  
+    <title>swdyh: WiFiの電波から位置情報を取得するwifi_locationをNode.jsに移植</title>
+  </head>
+  <body>
+  <h1><a href="index.html">swdyh</a></h1>
+  <h2>WiFiの電波から位置情報を取得するwifi_locationをNode.jsに移植</h2>
+  <div>2012-08-10 16:47:00</div>
+  <div class="content">
+    <p>Mac/LinuxのWiFiで位置情報を取得
+<a href="http://shokai.org/blog/archives/6399">http://shokai.org/blog/archives/6399</a></p>
+
+<p>このshokaiさんのwifi_locationはRubyで書いてあったのでJavaScriptに書きなおして、Node.jsで使えるものを作りました。やっていることはほとんど同じで、airpot(Mac)かiwlist(Linux)コマンドでWiFiの電波を取得、それを使ってGoogle MapのAPIから位置情報を取得します。WiFiの電波はネットがなくてもいいけれど、位置情報の方はネットが使えないと取得できません。</p>
+
+<p>Linuxは持っていなくてネットで見つけたiwlistの出力を使って書いていて、実際の動作は確認してないので、おかしかったら教えて下さい。</p>
+
+<p>インストール</p>
+
+<pre><code>npm install wifi_location
+</code></pre>
+
+<p>使い方</p>
+
+<pre><code>var wifiLocation = require('wifi_location')
+
+wifiLocation.wifiTowers(function(err, val) {
+    console.log(err, val)
+})   
+wifiLocation.location(function(err, val) {
+    console.log(err, val)
+})
+</code></pre>
+
+
+
+<pre><code>% node
+&gt; var wifiLocation = require('wifi_location')
+undefined
+&gt; wifiLocation.location(console.log)
+undefined
+&gt; null { latitude: 35.7124159,
+  longitude: 139.774889,
+  address:
+   { country: '日本',
+     country_code: 'JP',
+     region: '東京都',
+     city: '台東区',
+     street_number: '１' },
+  accuracy: 57 }
+</code></pre>
+
+<p>swdyh/node_wifi_location
+<a href="https://github.com/swdyh/node_wifi_location">https://github.com/swdyh/node_wifi_location</a></p>
+  </div>
+  <div>
+    <a class="back" href="index.html">◀</a>
+  </div>
+  </body>
+  </html>
+  
