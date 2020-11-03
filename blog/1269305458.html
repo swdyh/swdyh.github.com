@@ -1,23 +1,36 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: URLのトラッキング用パラメータを無視するFirefox拡張 Through utm_</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>URLのトラッキング用パラメータを無視するFirefox拡張 Through utm_</title>
+    <meta property="og:title" content="URLのトラッキング用パラメータを無視するFirefox拡張 Through utm_" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1269305458.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>URLのトラッキング用パラメータを無視するFirefox拡張 Through utm_</h2>
   <div>2010-03-23 09:50:58</div>
   <div class="content">
-    <p>URLのト<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C3%A5%AD%A5%F3%A5%B0">ラッキング</a>用パラメータを無視する<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firefox">Firefox</a>拡張(Through utm_) を作りました。インストールすると、utm_から始まるパラメータがついたURLにアクセスしようとした場合に、そのアクセスをキャンセルし、そのパラメータを削除したURLへアクセスします。</p><p>Through utm_<br /><a href="https://relucks-org.appspot.com/through_utm_/through_utm_.xpi">https://relucks-org.appspot.com/through_utm_/through_utm_.xpi</a></p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>を使っていて、ソースはいつものように<a class="keyword" href="http://d.hatena.ne.jp/keyword/Github">Github</a>に置いてあります。</p><p>swdyh's Through-utm_ at master - <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br /><a href="http://github.com/swdyh/Through-utm_">http://github.com/swdyh/Through-utm_</a></p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>を使ってちょっと書いてみたという感じのもので、いま思うと他のト<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C3%A5%AD%A5%F3%A5%B0">ラッキング</a>用パラメータ(?ref=<a class="keyword" href="http://d.hatena.ne.jp/keyword/rss">rss</a>とか)も対象にしたり、設定で変更できるようにしたり、もうちょっと汎用的にしてもよかったかなあと思ってます。</p><p>前からhttpまわりを簡単に触れるとけっこう面白いんじゃないかなあと思っていて、このへんはもうちょっといろいろできそうだなあという感じはあるので、またべつのものを作るかもしれないです。</p><p>あと今回は、ファイルを<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google%20App%20Engine">Google App Engine</a>に置いています。<a class="keyword" href="http://d.hatena.ne.jp/keyword/Jetpack">Jetpack</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/SDK">SDK</a>でxpiを作る場合に署名を仕込むのが難しそうだったので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/https">https</a>が使えるApp Engineにしました。ファイルを置くだけなら<a class="keyword" href="http://d.hatena.ne.jp/keyword/yaml">yaml</a>を書くだけでいいし、なかなか良さそうです。App Engineでファイルを配布する場合、.xpi用の<a class="keyword" href="http://d.hatena.ne.jp/keyword/mime">mime</a> typeが用意されていないので、設定ファイルで<a class="keyword" href="http://d.hatena.ne.jp/keyword/mime">mime</a> type(<a class="keyword" href="http://d.hatena.ne.jp/keyword/mime">mime</a>_type: application/x-xpinstall)を指定しておくといいと思います。</p>
+    <p>URLのトラッキング用パラメータを無視するFirefox拡張(Through utm_) を作りました。インストールすると、utm_から始まるパラメータがついたURLにアクセスしようとした場合に、そのアクセスをキャンセルし、そのパラメータを削除したURLへアクセスします。</p><p>Through utm_<br><a href="https://relucks-org.appspot.com/through_utm_/through_utm_.xpi">https://relucks-org.appspot.com/through_utm_/through_utm_.xpi</a></p><p>Jetpack SDKを使っていて、ソースはいつものようにGithubに置いてあります。</p><p>swdyh's Through-utm_ at master - GitHub<br><a href="http://github.com/swdyh/Through-utm_">http://github.com/swdyh/Through-utm_</a></p><p>Jetpack SDKを使ってちょっと書いてみたという感じのもので、いま思うと他のトラッキング用パラメータ(?ref=rssとか)も対象にしたり、設定で変更できるようにしたり、もうちょっと汎用的にしてもよかったかなあと思ってます。</p><p>前からhttpまわりを簡単に触れるとけっこう面白いんじゃないかなあと思っていて、このへんはもうちょっといろいろできそうだなあという感じはあるので、またべつのものを作るかもしれないです。</p><p>あと今回は、ファイルをGoogle App Engineに置いています。Jetpack SDKでxpiを作る場合に署名を仕込むのが難しそうだったので、httpsが使えるApp Engineにしました。ファイルを置くだけならyamlを書くだけでいいし、なかなか良さそうです。App Engineでファイルを配布する場合、.xpi用のmime typeが用意されていないので、設定ファイルでmime type(mime_type: application/x-xpinstall)を指定しておくといいと思います。</p>
 
 
   </div>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

@@ -1,35 +1,41 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: nokogiriをインストールしてみた</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>nokogiriをインストールしてみた</title>
+    <meta property="og:title" content="nokogiriをインストールしてみた" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1225381995.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>nokogiriをインストールしてみた</h2>
   <div>2008-10-31 00:53:15</div>
   <div class="content">
-    <p>tenderlove's nokogiri at master ― <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br />
-<a href="http://github.com/tenderlove/nokogiri/tree/master">http://github.com/tenderlove/nokogiri/tree/master</a></p><br />
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>や<a class="keyword" href="http://d.hatena.ne.jp/keyword/CSS">CSS</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%EC%A5%AF%A5%BF">セレクタ</a>が使える<a class="keyword" href="http://d.hatena.ne.jp/keyword/xml">xml</a>/htmlパーサー。<br />
-libxmlを使っていて、Hpricotとの互換性もあり。<br />
-良さそうだと思ったのでインストールしてみたけど、少し面倒だったのでその手順を記録。<br />
-<br />
+    <p>tenderlove's nokogiri at master ― GitHub<br>
+<a href="http://github.com/tenderlove/nokogiri/tree/master">http://github.com/tenderlove/nokogiri/tree/master</a></p><br>
+<p>XPathやCSSセレクタが使えるxml/htmlパーサー。<br>
+libxmlを使っていて、Hpricotとの互換性もあり。<br>
+良さそうだと思ったのでインストールしてみたけど、少し面倒だったのでその手順を記録。<br>
+<br>
 </p>
 
 <div class="section">
     <h4>環境</h4>
     
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac%20OS%20X">Mac OS X</a> 10.5.5</li>
+<li>Mac OS X 10.5.5</li>
 <li>libxml2はインストール済 (sudo port install libxml2)</li>
 </ul>
 </div>
 <div class="section">
     <h4>raccのインストール</h4>
-    <pre class="code lang-sh" data-lang="sh" data-unlink>wget http://i.loveruby.net/archive/racc/racc-1.4.5-all.tar.gz
+    <pre class="code lang-sh" data-lang="sh" data-unlink="">wget http://i.loveruby.net/archive/racc/racc-1.4.5-all.tar.gz
 tar zxvf racc-1.4.5-all.tar.gz
 <span class="synStatement">cd</span> racc-1.4.5-all
 ruby setup.rb config
@@ -39,15 +45,15 @@ sudo ruby setup.rb install
 </div>
 <div class="section">
     <h4>frexのインストール</h4>
-    <pre class="code lang-sh" data-lang="sh" data-unlink>sudo gem install aaronp-frex
-</pre><p>gemの取得先に<a class="keyword" href="http://d.hatena.ne.jp/keyword/github">github</a>を追加していない場合、gem sources -a <a href="http://gems.github.com">http://gems.github.com</a></p><p></p>
+    <pre class="code lang-sh" data-lang="sh" data-unlink="">sudo gem install aaronp-frex
+</pre><p>gemの取得先にgithubを追加していない場合、gem sources -a <a href="http://gems.github.com">http://gems.github.com</a></p><p></p>
 
 </div>
 <div class="section">
     <h4>nokogiriのインストール</h4>
-    <pre class="code lang-sh" data-lang="sh" data-unlink>sudo gem install nokogiri
+    <pre class="code lang-sh" data-lang="sh" data-unlink="">sudo gem install nokogiri
 </pre><p>テストでこけてインストールできなかった</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink>  <span class="synConstant">1</span><span class="synError">)</span> Failure:
+<pre class="code lang-sh" data-lang="sh" data-unlink="">  <span class="synConstant">1</span><span class="synError">)</span> Failure:
 test_scan_boingboing<span class="synPreProc">(</span><span class="synSpecial">TestParser</span><span class="synPreProc">)</span> <span class="synStatement">[</span>./test/hpricot/test_parser.rb:<span class="synConstant">127</span><span class="synStatement">]</span>:
 <span class="synStatement">&lt;</span><span class="synConstant">111</span><span class="synStatement">&gt;</span> expected but was
 <span class="synStatement">&lt;</span><span class="synConstant">110</span><span class="synStatement">&gt;</span>.
@@ -55,29 +61,29 @@ test_scan_boingboing<span class="synPreProc">(</span><span class="synSpecial">Te
 <span class="synConstant">238</span> tests, <span class="synConstant">699</span> assertions, <span class="synConstant">1</span> failures, <span class="synConstant">0</span> errors
 rake aborted!
 </pre><p>ソースからインストールする</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink>git clone git://github.com/tenderlove/nokogiri.git
+<pre class="code lang-sh" data-lang="sh" data-unlink="">git clone git://github.com/tenderlove/nokogiri.git
 <span class="synStatement">cd</span> nokogiri
 </pre><p>test/hpricot/test_parser.rb を修正。124から131行目</p>
-<pre class="code lang-ruby" data-lang="ruby" data-unlink>    <span class="synComment">### Modified.  Hpricot is wrong</span>
-    <span class="synComment">#assert_equal 129, @boingboing.search(&quot;p[text()]&quot;).length</span>
+<pre class="code lang-ruby" data-lang="ruby" data-unlink="">    <span class="synComment">### Modified.  Hpricot is wrong</span>
+    <span class="synComment">#assert_equal 129, @boingboing.search("p[text()]").length</span>
 <span class="synComment">#    if Nokogiri::LIBXML_VERSION == '2.6.16'</span>
-<span class="synComment">#      assert_equal 111, @boingboing.search(&quot;p[text()]&quot;).length</span>
+<span class="synComment">#      assert_equal 111, @boingboing.search("p[text()]").length</span>
 <span class="synComment">#    else</span>
-      assert_equal <span class="synConstant">110</span>, <span class="synIdentifier">@boingboing</span>.search(<span class="synSpecial">&quot;</span><span class="synConstant">p[text()]</span><span class="synSpecial">&quot;</span>).length
+      assert_equal <span class="synConstant">110</span>, <span class="synIdentifier">@boingboing</span>.search(<span class="synSpecial">"</span><span class="synConstant">p[text()]</span><span class="synSpecial">"</span>).length
 <span class="synComment">#    end</span>
-    assert_equal <span class="synConstant">211</span>, <span class="synIdentifier">@boingboing</span>.search(<span class="synSpecial">&quot;</span><span class="synConstant">p</span><span class="synSpecial">&quot;</span>).length
-</pre><p>Nokogiri::LIBXML_VERSIONは'2.6.16'なんだけど、110が返ってるみたいなので、そこを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%E1%A5%F3%A5%C8%A5%A2%A5%A6%A5%C8">コメントアウト</a>。とりあえずインストールしたいので、今はそれ以上追わない。</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink>rake gem
+    assert_equal <span class="synConstant">211</span>, <span class="synIdentifier">@boingboing</span>.search(<span class="synSpecial">"</span><span class="synConstant">p</span><span class="synSpecial">"</span>).length
+</pre><p>Nokogiri::LIBXML_VERSIONは'2.6.16'なんだけど、110が返ってるみたいなので、そこをコメントアウト。とりあえずインストールしたいので、今はそれ以上追わない。</p>
+<pre class="code lang-sh" data-lang="sh" data-unlink="">rake gem
 sudo gem install  pkg/nokogiri-1.0.0.gem
-</pre><p>インストールおわり<br />
-<br />
+</pre><p>インストールおわり<br>
+<br>
 </p>
 
 </div>
 <div class="section">
     <h4>使ってみる</h4>
     <p>最近のgistの番号を取ってくる</p>
-<pre class="code lang-ruby" data-lang="ruby" data-unlink><span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">rubygems</span><span class="synSpecial">'</span>
+<pre class="code lang-ruby" data-lang="ruby" data-unlink=""><span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">rubygems</span><span class="synSpecial">'</span>
 <span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">nokogiri</span><span class="synSpecial">'</span>
 <span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">open-uri</span><span class="synSpecial">'</span>
 
@@ -85,8 +91,8 @@ u = <span class="synSpecial">'</span><span class="synConstant">http://gist.githu
 doc = <span class="synType">Nokogiri</span>::HTML(open(u))
 p doc.css(<span class="synSpecial">'</span><span class="synConstant">.file a</span><span class="synSpecial">'</span>).map { |<span class="synIdentifier">i</span>| i[<span class="synSpecial">'</span><span class="synConstant">href</span><span class="synSpecial">'</span>].sub(<span class="synSpecial">'</span><span class="synConstant">/</span><span class="synSpecial">'</span>, <span class="synSpecial">''</span>) }
 </pre><p>実行</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink>ruby recent_gist.rb
-<span class="synStatement">[&quot;</span><span class="synConstant">20059</span><span class="synStatement">&quot;</span>, <span class="synStatement">&quot;</span><span class="synConstant">19595</span><span class="synStatement">&quot;</span>, <span class="synStatement">&quot;</span><span class="synConstant">19584</span><span class="synStatement">&quot;</span>, <span class="synStatement">&quot;</span><span class="synConstant">17797</span><span class="synStatement">&quot;</span>, <span class="synStatement">&quot;</span><span class="synConstant">13833</span><span class="synStatement">&quot;]</span>
+<pre class="code lang-sh" data-lang="sh" data-unlink="">ruby recent_gist.rb
+<span class="synStatement">["</span><span class="synConstant">20059</span><span class="synStatement">"</span>, <span class="synStatement">"</span><span class="synConstant">19595</span><span class="synStatement">"</span>, <span class="synStatement">"</span><span class="synConstant">19584</span><span class="synStatement">"</span>, <span class="synStatement">"</span><span class="synConstant">17797</span><span class="synStatement">"</span>, <span class="synStatement">"</span><span class="synConstant">13833</span><span class="synStatement">"]</span>
 </pre>
 </div>
 
@@ -94,6 +100,13 @@ p doc.css(<span class="synSpecial">'</span><span class="synConstant">.file a</sp
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

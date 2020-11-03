@@ -1,17 +1,23 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: Rails勉強会＠東京第15回</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>Rails勉強会＠東京第15回</title>
+    <meta property="og:title" content="Rails勉強会＠東京第15回" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1171798440.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>Rails勉強会＠東京第15回</h2>
   <div>2007-02-18 20:34:00</div>
   <div class="content">
-    <p>行ってきた</p><p>前半 <a class="keyword" href="http://d.hatena.ne.jp/keyword/Capistrano">Capistrano</a> Yuguiさん</p>
+    <p>行ってきた</p><p>前半 Capistrano Yuguiさん</p>
 
 <ul>
 <li>インストールするとcapコマンドができる</li>
@@ -20,52 +26,52 @@
 <ul>
 <li>いろいろな説明。--helpとは違う内容</li>
 </ul></li>
-<li>rakeがcapをラップしてるrakeのタスクで実行できる(lib/<a class="keyword" href="http://d.hatena.ne.jp/keyword/capistrano">capistrano</a>.rake)</li>
+<li>rakeがcapをラップしてるrakeのタスクで実行できる(lib/capistrano.rake)</li>
 <li>% rake:remote xxxx</li>
 <li>設定はconfig/deploy.rb</li>
-<li>標準のdeployはサーバにの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リを作成して<a class="keyword" href="http://d.hatena.ne.jp/keyword/svn">svn</a> coして<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B7%A5%F3%A5%DC%A5%EA%A5%C3%A5%AF%A5%EA%A5%F3%A5%AF">シンボリックリンク</a>をはる</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B7%A5%F3%A5%DC%A5%EA%A5%C3%A5%AF%A5%EA%A5%F3%A5%AF">シンボリックリンク</a>だから、まずい場合にすぐ戻せる</li>
+<li>標準のdeployはサーバにのディレクトリを作成してsvn coしてシンボリックリンクをはる</li>
+<li>シンボリックリンクだから、まずい場合にすぐ戻せる</li>
 <li>migrateとかもできる</li>
-<li>AWDwR2版は多くはないけれど<a class="keyword" href="http://d.hatena.ne.jp/keyword/capistrano">capistrano</a>のことが載ってる</li>
+<li>AWDwR2版は多くはないけれどcapistranoのことが載ってる</li>
 </ul><p>Ceruberus 継続ビルドツール よしみさん</p>
 
 <ul>
-<li>ビルド結果などを<a class="keyword" href="http://d.hatena.ne.jp/keyword/Plagger">Plagger</a>みたいにパブリッシュ</li>
-<li>フィードとかメールとか<a class="keyword" href="http://d.hatena.ne.jp/keyword/IRC">IRC</a>とか<a class="keyword" href="http://d.hatena.ne.jp/keyword/Jabber">Jabber</a>とか</li>
+<li>ビルド結果などをPlaggerみたいにパブリッシュ</li>
+<li>フィードとかメールとかIRCとかJabberとか</li>
 <li>開発の経過を追いかけたい場合に便利</li>
-</ul><p><br />
+</ul><p><br>
 後半 フィード生成とキャッシュ 自分</p>
 
 <ul>
 <li>FeedToolsを使うとフィードの生成と読み込みがかんたんにできる</li>
 <li>hapricotは読み方がよくわからないけど、便利</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a>のキャッシュはファイル、メ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E2%A5%EA%A1%BC">モリー</a>、DRB、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Memcached">Memcached</a></li>
+<li>Railsのキャッシュはファイル、メモリー、DRB、Memcached</li>
 <li>mephisto(ブログツール)は自力でDBにキャッシュしてる</li>
-<li>やっぱり<a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a>は遅い</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/mongrel">mongrel</a> clusterを使えば、そこそこ速くなる</li>
+<li>やっぱりRailsは遅い</li>
+<li>mongrel clusterを使えば、そこそこ速くなる</li>
 <li>Sweeperはobserverみたいだけどobserverじゃなくて使いにくい</li>
-<li>SCGIの人はSCGIをやめて<a class="keyword" href="http://d.hatena.ne.jp/keyword/mongrel">mongrel</a>を作っているから、SCGIはもうあんまり更新されないかも</li>
-</ul><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a>とは関係ない話 瀧内さん、yamazさん</p>
+<li>SCGIの人はSCGIをやめてmongrelを作っているから、SCGIはもうあんまり更新されないかも</li>
+</ul><p>Railsとは関係ない話 瀧内さん、yamazさん</p>
 
 <ul>
-<li>画像リダイレクトをたくさんやると<a class="keyword" href="http://d.hatena.ne.jp/keyword/IE">IE</a>が落ちたりする</li>
+<li>画像リダイレクトをたくさんやるとIEが落ちたりする</li>
 <li>大規模サイトはいかにキャッシュを使うかが重要</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Apache">Apache</a>なり<a class="keyword" href="http://d.hatena.ne.jp/keyword/Squid">Squid</a>なりを二段構成でアプリサーバの前に置いたりする</li>
-<li>必ずしも<a class="keyword" href="http://d.hatena.ne.jp/keyword/RDBMS">RDBMS</a>が良いわけじゃない</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CB%A5%B3%A5%CB%A5%B3%C6%B0%B2%E8">ニコニコ動画</a>はたぶん<a class="keyword" href="http://d.hatena.ne.jp/keyword/RDBMS">RDBMS</a>は使っていない</li>
-</ul><p><br />
+<li>ApacheなりSquidなりを二段構成でアプリサーバの前に置いたりする</li>
+<li>必ずしもRDBMSが良いわけじゃない</li>
+<li>ニコニコ動画はたぶんRDBMSは使っていない</li>
+</ul><p><br>
 FeedToolsの使用例</p>
-<pre class="code lang-ruby" data-lang="ruby" data-unlink>  <span class="synPreProc">def</span> <span class="synIdentifier">feed</span>
+<pre class="code lang-ruby" data-lang="ruby" data-unlink="">  <span class="synPreProc">def</span> <span class="synIdentifier">feed</span>
     item_size = <span class="synConstant">20</span>
     feed = <span class="synType">FeedTools</span>::<span class="synType">Feed</span>.new
     feed.link        = url_for <span class="synConstant">:controller</span> =&gt; <span class="synSpecial">'</span><span class="synConstant">items</span><span class="synSpecial">'</span>, <span class="synConstant">:action</span> =&gt; <span class="synSpecial">'</span><span class="synConstant">feed</span><span class="synSpecial">'</span>
     feed.language    = <span class="synSpecial">'</span><span class="synConstant">ja-JP</span><span class="synSpecial">'</span>
-    feed.title       = <span class="synSpecial">&quot;</span><span class="synConstant">recently </span><span class="synSpecial">#{</span>item_size<span class="synSpecial">}</span><span class="synConstant"> items</span><span class="synSpecial">&quot;</span>
+    feed.title       = <span class="synSpecial">"</span><span class="synConstant">recently </span><span class="synSpecial">#{</span>item_size<span class="synSpecial">}</span><span class="synConstant"> items</span><span class="synSpecial">"</span>
 
     items = <span class="synType">Item</span>.find <span class="synConstant">:all</span>, <span class="synConstant">:limit</span> =&gt; item_size, <span class="synConstant">:order</span> =&gt; <span class="synSpecial">'</span><span class="synConstant">created_at ASC</span><span class="synSpecial">'</span>
     items.each <span class="synStatement">do</span> |<span class="synIdentifier">item</span>|
       feed_item = <span class="synType">FeedTools</span>::<span class="synType">FeedItem</span>.new
-      feed_item.title = <span class="synSpecial">&quot;</span><span class="synConstant">item </span><span class="synSpecial">#{</span>item.id<span class="synSpecial">}&quot;</span>
+      feed_item.title = <span class="synSpecial">"</span><span class="synConstant">item </span><span class="synSpecial">#{</span>item.id<span class="synSpecial">}"</span>
       feed_item.link  = url_for <span class="synConstant">:controller</span> =&gt; <span class="synSpecial">'</span><span class="synConstant">items</span><span class="synSpecial">'</span>,
                                 <span class="synConstant">:action</span> =&gt; <span class="synSpecial">'</span><span class="synConstant">show</span><span class="synSpecial">'</span>, <span class="synConstant">:id</span> =&gt; item.id
       feed_item.updated = item.updated_at
@@ -74,20 +80,27 @@ FeedToolsの使用例</p>
     <span class="synStatement">end</span>
     render_text feed.build_xml
   <span class="synPreProc">end</span>
-</pre><p>感想<br />
-人が多かった<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/WiFi">WiFi</a>が導入されて便利だった<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Capistrano">Capistrano</a>は使えるようにしたい<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a>のキャッシュのへんはあんまり収穫なし<br />
-でも大規模なサイトの運用の話がきけて良かった<br />
-パンくずは<a class="keyword" href="http://d.hatena.ne.jp/keyword/%BE%F0%CA%F3%A5%A2%A1%BC%A5%AD%A5%C6%A5%AF%A5%C1%A5%E3">情報アーキテクチャ</a>的にきちんと設計されているかがまず重要（システムの設計じゃなくて、ユーザー視点）<br />
-パンくずの実装はべたにビューに書いておけば良い気がするけど、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a>アプリでやったことないからわからない</p>
+</pre><p>感想<br>
+人が多かった<br>
+WiFiが導入されて便利だった<br>
+Capistranoは使えるようにしたい<br>
+Railsのキャッシュのへんはあんまり収穫なし<br>
+でも大規模なサイトの運用の話がきけて良かった<br>
+パンくずは情報アーキテクチャ的にきちんと設計されているかがまず重要（システムの設計じゃなくて、ユーザー視点）<br>
+パンくずの実装はべたにビューに書いておけば良い気がするけど、Railsアプリでやったことないからわからない</p>
 
 
   </div>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

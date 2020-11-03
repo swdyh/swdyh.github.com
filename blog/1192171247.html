@@ -1,38 +1,44 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: activesupport1.4.3でinclude Rackするとrequireできなくなる</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>activesupport1.4.3でinclude Rackするとrequireできなくなる</title>
+    <meta property="og:title" content="activesupport1.4.3でinclude Rackするとrequireできなくなる" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1192171247.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>activesupport1.4.3でinclude Rackするとrequireできなくなる</h2>
   <div>2007-10-12 15:40:47</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/rails">rails</a>をアップデートしたら、自分用つくってたアプリが急に動かなくなった。<br />
-そのアプリは<a class="keyword" href="http://d.hatena.ne.jp/keyword/rails">rails</a>を使っていなくて、rackと<a class="keyword" href="http://d.hatena.ne.jp/keyword/activerecord">activerecord</a>を使ってる。<br />
-いろいろ削ってみると、これだけでエラーが起きることがわかった。<br />
-<br />
+    <p>railsをアップデートしたら、自分用つくってたアプリが急に動かなくなった。<br>
+そのアプリはrailsを使っていなくて、rackとactiverecordを使ってる。<br>
+いろいろ削ってみると、これだけでエラーが起きることがわかった。<br>
+<br>
 </p>
-<pre class="code lang-ruby" data-lang="ruby" data-unlink><span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">rubygems</span><span class="synSpecial">'</span>
+<pre class="code lang-ruby" data-lang="ruby" data-unlink=""><span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">rubygems</span><span class="synSpecial">'</span>
 <span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">rack</span><span class="synSpecial">'</span>
 <span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">active_support</span><span class="synSpecial">'</span>
 
 <span class="synPreProc">include</span> <span class="synType">Rack</span>
 <span class="synPreProc">require</span> <span class="synSpecial">'</span><span class="synConstant">ostruct</span><span class="synSpecial">'</span>
-</pre><pre class="code" data-lang="" data-unlink>% ruby include_rack.rb
+</pre><pre class="code" data-lang="" data-unlink="">% ruby include_rack.rb
 /opt/local/lib/ruby/gems/1.8/gems/activesupport-1.4.3/lib/active_support/dependencies.rb:376:in
- `new_constants_in&#39;: undefined method `empty?&#39; for nil:NilClass (NoMethodError)
-	from /opt/local/lib/ruby/gems/1.8/gems/activesupport-1.4.3/lib/active_support/dependencies.rb:495:in `require&#39;
-	from include_rack.rb:7</pre><p><br />
-ostructに限らず、include Rack後は何をrequireしてもこれが出る。<br />
-1.4.2では大丈夫だったの1.4.3への変更点があやしい。<br />
-あとRackがautoloadしまくってるのもあやしい。<br />
-dependencies.rbのへんを見てみたけどよくわからず。<br />
-気が向いたらもう少し追いかけてみる。とりあえず、現状をメモ。</p><br />
-<p><a href="http://dev.rubyonrails.org/changeset/6426">http://dev.rubyonrails.org/changeset/6426</a><br />
+ `new_constants_in': undefined method `empty?' for nil:NilClass (NoMethodError)
+	from /opt/local/lib/ruby/gems/1.8/gems/activesupport-1.4.3/lib/active_support/dependencies.rb:495:in `require'
+	from include_rack.rb:7</pre><p><br>
+ostructに限らず、include Rack後は何をrequireしてもこれが出る。<br>
+1.4.2では大丈夫だったの1.4.3への変更点があやしい。<br>
+あとRackがautoloadしまくってるのもあやしい。<br>
+dependencies.rbのへんを見てみたけどよくわからず。<br>
+気が向いたらもう少し追いかけてみる。とりあえず、現状をメモ。</p><br>
+<p><a href="http://dev.rubyonrails.org/changeset/6426">http://dev.rubyonrails.org/changeset/6426</a><br>
 <a href="http://dev.rubyonrails.org/ticket/6951">http://dev.rubyonrails.org/ticket/6951</a></p>
 
 
@@ -40,6 +46,13 @@ dependencies.rbのへんを見てみたけどよくわからず。<br />
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

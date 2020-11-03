@@ -1,31 +1,37 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: コマンドラインからgistを使う</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>コマンドラインからgistを使う</title>
+    <meta property="og:title" content="コマンドラインからgistを使う" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1224888573.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>コマンドラインからgistを使う</h2>
   <div>2008-10-25 07:49:33</div>
   <div class="content">
-    <p><img src="http://github.com/defunkt/gist/tree/master%2Fbattle.png?raw=true" width="400" /></p><p>defunkt's gist at master ― <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br />
-<a href="http://github.com/defunkt/gist/tree/master">http://github.com/defunkt/gist/tree/master</a></p><p>gist<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%DE%A5%F3%A5%C9%A5%E9%A5%A4%A5%F3">コマンドライン</a>ツール - ロックスターになりたい<br />
+    <p><img src="http://github.com/defunkt/gist/tree/master%2Fbattle.png?raw=true" width="400"></p><p>defunkt's gist at master ― GitHub<br>
+<a href="http://github.com/defunkt/gist/tree/master">http://github.com/defunkt/gist/tree/master</a></p><p>gistコマンドラインツール - ロックスターになりたい<br>
 <a href="http://d.hatena.ne.jp/ku0522/20081024/1224855262">http://d.hatena.ne.jp/ku0522/20081024/1224855262</a></p><p></p>
 
 <div class="section">
     <h4>アカウントの設定</h4>
-    <p>アカウントを設定しない場合、書き込みをしたときにanonymousのgistになる。自分のgistとして登録したい場合、git configでアカウントの設定をする。設定に必要なのは<a class="keyword" href="http://d.hatena.ne.jp/keyword/github">github</a>のユーザ名と<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A1%BC%A5%AF">トーク</a>ン。<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A1%BC%A5%AF">トーク</a>ンは<a class="keyword" href="http://d.hatena.ne.jp/keyword/github">github</a>のアカウントページで取得する。</p><p>Your Account ― <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br />
+    <p>アカウントを設定しない場合、書き込みをしたときにanonymousのgistになる。自分のgistとして登録したい場合、git configでアカウントの設定をする。設定に必要なのはgithubのユーザ名とAPIトークン。APIトークンはgithubのアカウントページで取得する。</p><p>Your Account ― GitHub<br>
 <a href="https://github.com/account">https://github.com/account</a></p><p>"Global Git Config"というリンクを押すと、下のようなコマンドが出てくるので、そのまま実行。</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink> % git config <span class="synSpecial">--global</span> github.user username
+<pre class="code lang-sh" data-lang="sh" data-unlink=""> % git config <span class="synSpecial">--global</span> github.user username
  % git config <span class="synSpecial">--global</span> github.token toooken
 </pre>
 </div>
 <div class="section">
     <h4>インストール</h4>
-    <pre class="code lang-sh" data-lang="sh" data-unlink> % curl <span class="synStatement">'</span><span class="synConstant">http://github.com/defunkt/gist/tree/master%2Fgist.rb?raw=true</span><span class="synStatement">'</span> <span class="synStatement">&gt;</span> gist
+    <pre class="code lang-sh" data-lang="sh" data-unlink=""> % curl <span class="synStatement">'</span><span class="synConstant">http://github.com/defunkt/gist/tree/master%2Fgist.rb?raw=true</span><span class="synStatement">'</span> <span class="synStatement">&gt;</span> gist
  % <span class="synStatement">chmod</span> <span class="synSpecial">+x</span> gist
  % sudo <span class="synStatement">mv</span> gist /usr/<span class="synStatement">local</span>/bin/gist
 </pre>
@@ -33,13 +39,13 @@
 <div class="section">
     <h4>使ってみる</h4>
     <p>書き込み</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink> % <span class="synStatement">echo</span><span class="synConstant"> gist.rb test </span>| gist
+<pre class="code lang-sh" data-lang="sh" data-unlink=""> % <span class="synStatement">echo</span><span class="synConstant"> gist.rb test </span>| gist
  http://gist.github.com/<span class="synConstant">19595</span>
 </pre><p>読み込み</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink> % gist <span class="synConstant">19595</span>
+<pre class="code lang-sh" data-lang="sh" data-unlink=""> % gist <span class="synConstant">19595</span>
  gist.rb <span class="synStatement">test</span>
 </pre><p>プライベートモード</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink> % <span class="synStatement">echo</span><span class="synConstant"> private gist </span>| gist <span class="synSpecial">-p</span>
+<pre class="code lang-sh" data-lang="sh" data-unlink=""> % <span class="synStatement">echo</span><span class="synConstant"> private gist </span>| gist <span class="synSpecial">-p</span>
  http://gist.github.com/61155776fac4771e7cd3
 
  % gist 61155776fac4771e7cd3
@@ -48,10 +54,10 @@
 </div>
 <div class="section">
     <h4>その他</h4>
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Linux">Linux</a>だとxclip、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Mac">Mac</a>だとpbcopyで、結果のURLを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AF%A5%EA%A5%C3%A5%D7%A5%DC%A1%BC%A5%C9">クリップボード</a>に入れくれる。<br />
-gistコマンドの中身は実質50行くらいの<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>。<br />
-Net::HTTP.post_form 初めて知った。<br />
-自分のgist一覧が取れると便利な気がするけど、そういう機能も<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>もない。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EC%A5%A4%A5%D4%A5%F3%A5%B0">スクレイピング</a>してつくろうかな。</p>
+    <p>Linuxだとxclip、Macだとpbcopyで、結果のURLをクリップボードに入れくれる。<br>
+gistコマンドの中身は実質50行くらいのRubyスクリプト。<br>
+Net::HTTP.post_form 初めて知った。<br>
+自分のgist一覧が取れると便利な気がするけど、そういう機能もAPIもない。スクレイピングしてつくろうかな。</p>
 
 </div>
 
@@ -59,6 +65,13 @@ Net::HTTP.post_form 初めて知った。<br />
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

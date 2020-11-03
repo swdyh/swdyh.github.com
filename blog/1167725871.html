@@ -1,18 +1,23 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: JSAN.jsからMochiKitをつかってみる</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>JSAN.jsからMochiKitをつかってみる</title>
+    <meta property="og:title" content="JSAN.jsからMochiKitをつかってみる" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1167725871.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>JSAN.jsからMochiKitをつかってみる</h2>
   <div>2007-01-02 17:17:51</div>
   <div class="content">
-    
-<pre><script type="text/javascript" src="js/JSAN.js"></script>
+    <pre><script type="text/javascript" src="js/JSAN.js"></script>
 <script type="text/javascript">
 JSAN.use('MochiKit.MochiKit')
 JSAN.exporter(MochiKit.Base, MochiKit.Base.EXPORT)
@@ -23,7 +28,7 @@ var f = function(x) {return x * 3}
 log(map(f, a))
 </script>
 
-</pre><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/JSAN">JSAN</a>も<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>も使い始めたばかりなので、このやり方が正しいのかはよくわからない。とりあえず<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSAN">JSAN</a>.use('<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>.<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>')すると、<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>のファイルが全部ロードされる。これだけだと、エクスポートされていないので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/MochiKit">MochiKit</a>.Logging.log('aa')みたいに全部書く必要がある。それは面倒なので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSAN">JSAN</a>.exporterでグローバルで使いたいものをエクスポートしてくる。</p><p>参考<br />
+</pre><p>JSANもMochiKitも使い始めたばかりなので、このやり方が正しいのかはよくわからない。とりあえずJSAN.use('MochiKit.MochiKit')すると、MochiKitのファイルが全部ロードされる。これだけだと、エクスポートされていないので、MochiKit.Logging.log('aa')みたいに全部書く必要がある。それは面倒なので、JSAN.exporterでグローバルで使いたいものをエクスポートしてくる。</p><p>参考<br>
 <a href="http://d.hatena.ne.jp/brazil/20050911/1126388204">http://d.hatena.ne.jp/brazil/20050911/1126388204</a></p>
 
 
@@ -31,6 +36,13 @@ log(map(f, a))
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

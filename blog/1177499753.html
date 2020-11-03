@@ -1,53 +1,66 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: AutoPagerize0.0.7</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>AutoPagerize0.0.7</title>
+    <meta property="og:title" content="AutoPagerize0.0.7" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1177499753.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>AutoPagerize0.0.7</h2>
   <div>2007-04-25 20:15:53</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a> &ndash; Userscripts.org<br />
+    <p>AutoPagerize – Userscripts.org<br>
 <a href="http://userscripts.org/scripts/show/8551">http://userscripts.org/scripts/show/8551</a></p><p></p>
 
 <ul>
 <li>pageElementの対象を複数にした</li>
 <li>ページを継ぎ足し後、全てのリンクのtargetを_blankにするようにした</li>
 <li>addEventListenerの第3引数をfalse</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>の処理のへんを修正</li>
-</ul><p><br />
-nextLinkとinsertBeforeの対象が1つ(最初にマッチした要素)だから、<br />
-pageElementだけ複数だと分りにくいかと思って1つにしてた。<br />
-でもやっぱり複数のが便利なので複数にした。<br />
-sをつけてpageElementsにしたいけれど、<br />
-Pagerizationや過去バージョンの互換性とか考えるとめんどうなので保留。</p><br />
-<p>addEventListenerの第3引数はtrueだと動かない場合があるらしいのでfalseにした。<br />
-要素が重なってるときのクリックとかの場合の、<br />
-true, falseの違いはなんとなく理解しているけれど、<br />
-この場合になにが起きているのかは正直わかっていない。</p><br />
-<p>リンクをどう開きたいかは、基本的にはユーザに任せるのがいいと思うんだけれど、<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>でが動いてるような場合は、別ウィンドウがいいのかも、と思ってそうしてみた。<br />
-別ウィンドウで開きたい、とうより、同じウィンドウでリンクを開いて戻ったときに、<br />
-いっきにロードがかかるのを避けたい。<br />
-だからtargetの書きかえは、AutoPagerの起動時じゃなくて、<br />
-継ぎ足しロードが終ったあと。</p><br />
-<p>あと<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>のへんで勘違いをしていて、<br />
-少し書きかえたんだけど、なんかずいぶん速くなった気がする。</p><br />
-<p>?D of K - <a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>向けにデータを出してみた<br />
-<a href="http://d.hatena.ne.jp/ofk/20070418/1176898785">http://d.hatena.ne.jp/ofk/20070418/1176898785</a></p><br />
-<p>あと、これを取り込みたかったけど、<br />
-複数URLはちゃんと動かない気がするので、ちょっと保留。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_<a class="keyword" href="http://d.hatena.ne.jp/keyword/xmlhttpRequest">xmlhttpRequest</a>が非同期しかできないのがやっぱネックだなあ。</p>
+<li>XPathの処理のへんを修正</li>
+</ul><p><br>
+nextLinkとinsertBeforeの対象が1つ(最初にマッチした要素)だから、<br>
+pageElementだけ複数だと分りにくいかと思って1つにしてた。<br>
+でもやっぱり複数のが便利なので複数にした。<br>
+sをつけてpageElementsにしたいけれど、<br>
+Pagerizationや過去バージョンの互換性とか考えるとめんどうなので保留。</p><br>
+<p>addEventListenerの第3引数はtrueだと動かない場合があるらしいのでfalseにした。<br>
+要素が重なってるときのクリックとかの場合の、<br>
+true, falseの違いはなんとなく理解しているけれど、<br>
+この場合になにが起きているのかは正直わかっていない。</p><br>
+<p>リンクをどう開きたいかは、基本的にはユーザに任せるのがいいと思うんだけれど、<br>
+AutoPagerizeでが動いてるような場合は、別ウィンドウがいいのかも、と思ってそうしてみた。<br>
+別ウィンドウで開きたい、とうより、同じウィンドウでリンクを開いて戻ったときに、<br>
+いっきにロードがかかるのを避けたい。<br>
+だからtargetの書きかえは、AutoPagerの起動時じゃなくて、<br>
+継ぎ足しロードが終ったあと。</p><br>
+<p>あとXPathのへんで勘違いをしていて、<br>
+少し書きかえたんだけど、なんかずいぶん速くなった気がする。</p><br>
+<p>?D of K - AutoPagerize向けにデータを出してみた<br>
+<a href="http://d.hatena.ne.jp/ofk/20070418/1176898785">http://d.hatena.ne.jp/ofk/20070418/1176898785</a></p><br>
+<p>あと、これを取り込みたかったけど、<br>
+複数URLはちゃんと動かない気がするので、ちょっと保留。<br>
+GM_xmlhttpRequestが非同期しかできないのがやっぱネックだなあ。</p>
 
 
   </div>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

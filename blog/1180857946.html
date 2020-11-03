@@ -1,38 +1,44 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: AutoPagerize0.0.10</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>AutoPagerize0.0.10</title>
+    <meta property="og:title" content="AutoPagerize0.0.10" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1180857946.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>AutoPagerize0.0.10</h2>
   <div>2007-06-03 17:05:46</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a> &ndash; Userscripts.org<br />
+    <p>AutoPagerize – Userscripts.org<br>
 <a href="http://userscripts.org/scripts/show/8551">http://userscripts.org/scripts/show/8551</a></p><p></p>
 
 <ul>
 <li>SITEINFO取得時のエラー処理を追加</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>のSITEINFOを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%E1%A5%F3%A5%C8%A5%A2%A5%A6%A5%C8">コメントアウト</a></li>
+<li>googleのSITEINFOをコメントアウト</li>
 <li>actionからもリンクをひろえるようにした</li>
-</ul><p><br />
-infogamiが落ちるとその分が動かなくなっていて、しかもその場合、毎回アクセスするようになっていたのを修正<br />
-(落ちてるときほどアクセスするって、ひどすぎるなあ)<br />
-レスポンスが200じゃない場合、キャッシュのexpireを1日のばして、そのままキャッシュのデータを使って動作させるようにした<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/localhost">localhost</a>とかで試したから、たぶんそうなってると思うけど、実際にinfogamiが落ちてる、という状況は試せてない<br />
-もし200を返しながらエラーページを表示してたらダメかも<br />
-何かおかしかったら教えてください</p><br />
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>のをはずしたのは、それも<a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>のがいいなあって思ったから<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>のがちょっとおかしいという指摘がきたり、英語版にするとダメだったりしていて、<br />
-その修正が自分しかできないというのは変だし、コードの修正とSITEINFOの修正は完全に別にしたかった</p><br />
-<p>actionはシロさんからのリク<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%B9">エス</a>ト<br />
-<a href="http://d.hatena.ne.jp/swdyh/20070512/1178992203#c1180774985">http://d.hatena.ne.jp/swdyh/20070512/1178992203#c1180774985</a><br />
-リンクがボタンになっていてactionだけで、なんとかなるケースはレアじゃないかと思うけど、<br />
-まあいいかと思って、取れるようにしておいた</p><br />
-<p>insertAfterとかappendChildは迷ったとこだけど、とりあえずなし<br />
+</ul><p><br>
+infogamiが落ちるとその分が動かなくなっていて、しかもその場合、毎回アクセスするようになっていたのを修正<br>
+(落ちてるときほどアクセスするって、ひどすぎるなあ)<br>
+レスポンスが200じゃない場合、キャッシュのexpireを1日のばして、そのままキャッシュのデータを使って動作させるようにした<br>
+localhostとかで試したから、たぶんそうなってると思うけど、実際にinfogamiが落ちてる、という状況は試せてない<br>
+もし200を返しながらエラーページを表示してたらダメかも<br>
+何かおかしかったら教えてください</p><br>
+<p>googleのをはずしたのは、それもWikiのがいいなあって思ったから<br>
+googleのがちょっとおかしいという指摘がきたり、英語版にするとダメだったりしていて、<br>
+その修正が自分しかできないというのは変だし、コードの修正とSITEINFOの修正は完全に別にしたかった</p><br>
+<p>actionはシロさんからのリクエスト<br>
+<a href="http://d.hatena.ne.jp/swdyh/20070512/1178992203#c1180774985">http://d.hatena.ne.jp/swdyh/20070512/1178992203#c1180774985</a><br>
+リンクがボタンになっていてactionだけで、なんとかなるケースはレアじゃないかと思うけど、<br>
+まあいいかと思って、取れるようにしておいた</p><br>
+<p>insertAfterとかappendChildは迷ったとこだけど、とりあえずなし<br>
 insertBeforeはたしかテキストノードとかでもいけるので、改行とかがあればうまいこと差しこめるかも</p>
 
 
@@ -40,6 +46,13 @@ insertBeforeはたしかテキストノードとかでもいけるので、改�
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

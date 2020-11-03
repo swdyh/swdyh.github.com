@@ -1,27 +1,33 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: [ruby] MacでTwitterのページを一気にひらく適当スクリプト</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>[ruby] MacでTwitterのページを一気にひらく適当スクリプト</title>
+    <meta property="og:title" content="[ruby] MacでTwitterのページを一気にひらく適当スクリプト" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1190418314.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>[ruby] MacでTwitterのページを一気にひらく適当スクリプト</h2>
   <div>2007-09-22 08:45:14</div>
   <div class="content">
-    <pre class="code lang-ruby" data-lang="ruby" data-unlink><span class="synStatement">if</span> <span class="synIdentifier">ARGV</span>.size == <span class="synConstant">2</span>
+    <pre class="code lang-ruby" data-lang="ruby" data-unlink=""><span class="synStatement">if</span> <span class="synIdentifier">ARGV</span>.size == <span class="synConstant">2</span>
   s = <span class="synIdentifier">ARGV</span>[<span class="synConstant">0</span>].to_i
   n = <span class="synIdentifier">ARGV</span>[<span class="synConstant">1</span>].to_i
   n.times <span class="synStatement">do</span> |<span class="synIdentifier">i</span>|
-    u = <span class="synSpecial">&quot;</span><span class="synConstant">http://twitter.com/home?page=</span><span class="synSpecial">#{</span>s + i<span class="synSpecial">}&quot;</span>
-    puts <span class="synSpecial">&quot;</span><span class="synConstant">open -a Firefox </span><span class="synSpecial">#{</span>u<span class="synSpecial">}&quot;</span>
-    puts <span class="synSpecial">&quot;</span><span class="synConstant">sleep 2</span><span class="synSpecial">&quot;</span>
+    u = <span class="synSpecial">"</span><span class="synConstant">http://twitter.com/home?page=</span><span class="synSpecial">#{</span>s + i<span class="synSpecial">}"</span>
+    puts <span class="synSpecial">"</span><span class="synConstant">open -a Firefox </span><span class="synSpecial">#{</span>u<span class="synSpecial">}"</span>
+    puts <span class="synSpecial">"</span><span class="synConstant">sleep 2</span><span class="synSpecial">"</span>
   <span class="synStatement">end</span>
 <span class="synStatement">end</span>
-</pre><pre class="code" data-lang="" data-unlink>% ruby tw.rb 12 5 |sh   </pre><p><br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>だと<a class="keyword" href="http://d.hatena.ne.jp/keyword/firefox">firefox</a>.exeを叩くのかな。<br />
+</pre><pre class="code" data-lang="" data-unlink="">% ruby tw.rb 12 5 |sh   </pre><p><br>
+Windowsだとfirefox.exeを叩くのかな。<br>
 あんまり負荷をかけない程度に。</p>
 
 
@@ -29,6 +35,13 @@
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

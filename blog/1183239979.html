@@ -1,13 +1,19 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: AutoPagerize0.0.11</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>AutoPagerize0.0.11</title>
+    <meta property="og:title" content="AutoPagerize0.0.11" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1183239979.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>AutoPagerize0.0.11</h2>
   <div>2007-07-01 06:46:19</div>
   <div class="content">
@@ -20,41 +26,41 @@
 <li>DEFAULT_STATUS = ’disable’にしたときに表示がでない</li>
 <li>スクロールしなくて済むときにロードが起きない</li>
 </ul></li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Microformats">Microformats</a>対応</li>
-</ul><p></p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Microformats">Microformats</a>はyoupyさんからア<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%C7%A5%A2">イデア</a>をもらいました<br />
-<a href="http://subtech.g.hatena.ne.jp/youpy/20070603/p1">http://subtech.g.hatena.ne.jp/youpy/20070603/p1</a></p><br />
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>に必要な情報をページ中のHTMLに埋め込んでおけば、<br />
-SITEINFOがなくてもAutoPagerが起動するようになります</p><br />
+<li>Microformats対応</li>
+</ul><p></p><p>Microformatsはyoupyさんからアイデアをもらいました<br>
+<a href="http://subtech.g.hatena.ne.jp/youpy/20070603/p1">http://subtech.g.hatena.ne.jp/youpy/20070603/p1</a></p><br>
+<p>AutoPagerizeに必要な情報をページ中のHTMLに埋め込んでおけば、<br>
+SITEINFOがなくてもAutoPagerが起動するようになります</p><br>
 <p>埋め込みの形式は以下の通りです</p>
 
 <ul>
 <li>link要素またはa要素でrel="next"  (複数あった場合は、先に現れるものが選ばれます)</li>
-<li>classで<a class="keyword" href="http://d.hatena.ne.jp/keyword/autopagerize">autopagerize</a>_insert_before  (複数あった場合は、先に現れるものが選ばれます)
+<li>classでautopagerize_insert_before  (複数あった場合は、先に現れるものが選ばれます)
 <ul>
 <li>追記 2008/05/15 けっこう前からなくても大丈夫になってます。</li>
-<li>ない場合、最後の<a class="keyword" href="http://d.hatena.ne.jp/keyword/autopagerize">autopagerize</a>_page_elementの後ろに入ります。</li>
+<li>ない場合、最後のautopagerize_page_elementの後ろに入ります。</li>
 </ul></li>
-<li>classで<a class="keyword" href="http://d.hatena.ne.jp/keyword/autopagerize">autopagerize</a>_page_element  (複数指定可、指定したもの全てが挿入されます)</li>
-</ul><p><br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DE%A1%BC%A5%AF%A5%A2%A5%C3%A5%D7">マークアップ</a>の例</p>
-<pre class="code lang-html" data-lang="html" data-unlink><span class="synIdentifier">&lt;</span><span class="synStatement">html</span><span class="synIdentifier">&gt;</span>
+<li>classでautopagerize_page_element  (複数指定可、指定したもの全てが挿入されます)</li>
+</ul><p><br>
+マークアップの例</p>
+<pre class="code lang-html" data-lang="html" data-unlink=""><span class="synIdentifier">&lt;</span><span class="synStatement">html</span><span class="synIdentifier">&gt;</span>
   <span class="synIdentifier">&lt;</span><span class="synStatement">body</span><span class="synIdentifier">&gt;</span>
-    <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;autopagerize_page_element&quot;</span><span class="synIdentifier">&gt;</span>
+    <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">"autopagerize_page_element"</span><span class="synIdentifier">&gt;</span>
       <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>foo foo foo<span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
       <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>foo foo foo<span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
       <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>foo foo foo<span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
       <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>foo foo foo<span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
       <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>foo foo foo<span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
     <span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
-    <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier">&gt;&lt;</span><span class="synStatement">a</span><span class="synIdentifier"> </span><span class="synType">href</span><span class="synIdentifier">=</span><span class="synConstant">&quot;ap_micro2.html&quot;</span><span class="synIdentifier"> </span><span class="synType">rel</span><span class="synIdentifier">=</span><span class="synConstant">&quot;next&quot;</span><span class="synIdentifier">&gt;</span><span class="synUnderlined">next</span><span class="synIdentifier">&lt;/</span><span class="synStatement">a</span><span class="synIdentifier">&gt;&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
+    <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier">&gt;&lt;</span><span class="synStatement">a</span><span class="synIdentifier"> </span><span class="synType">href</span><span class="synIdentifier">=</span><span class="synConstant">"ap_micro2.html"</span><span class="synIdentifier"> </span><span class="synType">rel</span><span class="synIdentifier">=</span><span class="synConstant">"next"</span><span class="synIdentifier">&gt;</span><span class="synUnderlined">next</span><span class="synIdentifier">&lt;/</span><span class="synStatement">a</span><span class="synIdentifier">&gt;&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
     <span class="synComment">&lt;!-- autopagerize_insert_beforeは省略できます。挿入位置を指定したい場合のみ入れてください。--&gt;</span>
-    <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">&quot;autopagerize_insert_before&quot;</span><span class="synIdentifier">&gt;</span>footer<span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
+    <span class="synIdentifier">&lt;</span><span class="synStatement">div</span><span class="synIdentifier"> </span><span class="synType">class</span><span class="synIdentifier">=</span><span class="synConstant">"autopagerize_insert_before"</span><span class="synIdentifier">&gt;</span>footer<span class="synIdentifier">&lt;/</span><span class="synStatement">div</span><span class="synIdentifier">&gt;</span>
   <span class="synIdentifier">&lt;/</span><span class="synStatement">body</span><span class="synIdentifier">&gt;</span>
 <span class="synIdentifier">&lt;/</span><span class="synStatement">html</span><span class="synIdentifier">&gt;</span>
-</pre><p><br />
-次のページを指定を表わすのは、rel="next"というのが既に使われているので、<br />
-それをそのまま使うことにしました。残り2つは見ての通り独自の規格です</p><br />
-<p>自分のサイトも<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a>対応にしたいけど、<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>わかんないしめんどくさいなあ、<br />
+</pre><p><br>
+次のページを指定を表わすのは、rel="next"というのが既に使われているので、<br>
+それをそのまま使うことにしました。残り2つは見ての通り独自の規格です</p><br>
+<p>自分のサイトもAutoPagerize対応にしたいけど、XPathわかんないしめんどくさいなあ、<br>
 と思っていた方はぜひ試してみてください</p>
 
 
@@ -62,6 +68,13 @@ SITEINFOがなくてもAutoPagerが起動するようになります</p><br />
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

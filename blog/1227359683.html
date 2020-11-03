@@ -1,35 +1,48 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: usericonsリニューアルとソース公開</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>usericonsリニューアルとソース公開</title>
+    <meta property="og:title" content="usericonsリニューアルとソース公開" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1227359683.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>usericonsリニューアルとソース公開</h2>
   <div>2008-11-22 22:14:43</div>
   <div class="content">
-    <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20081122213037" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20081122/20081122213037.png" alt="f:id:swdyh:20081122213037p:image" title="f:id:swdyh:20081122213037p:image" class="hatena-fotolife" itemprop="image"></a></span></p><p>usericons.relucks.org<br />
-<a href="http://usericons.relucks.org/">http://usericons.relucks.org/</a></p><br />
+    <p><span itemscope="" itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20081122213037" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20081122/20081122213037.png" alt="f:id:swdyh:20081122213037p:image" title="f:id:swdyh:20081122213037p:image" class="hatena-fotolife" itemprop="image"></a></span></p><p>usericons.relucks.org<br>
+<a href="http://usericons.relucks.org/">http://usericons.relucks.org/</a></p><br>
 <p>とく機能は増えていないんですが、主に裏側をいろいろ改善しました。</p>
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/cgi">cgi</a>.rbから<a class="keyword" href="http://d.hatena.ne.jp/keyword/sinatra">sinatra</a>へ</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/cgi">cgi</a>起動からpassenger(mod_<a class="keyword" href="http://d.hatena.ne.jp/keyword/rails">rails</a>)起動へ</li>
+<li>cgi.rbからsinatraへ</li>
+<li>cgi起動からpassenger(mod_rails)起動へ</li>
 <li>HpricotからNokogiriへ</li>
 <li>使っているアプケーションやサービスを掲載</li>
-<li>ソースを<a class="keyword" href="http://d.hatena.ne.jp/keyword/Github">Github</a>に</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C9%A5%CD%A1%BC%A5%B7%A5%E7%A5%F3">ドネーション</a>募集</li>
-</ul><p>usericonsは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>に標準でついてる<a class="keyword" href="http://d.hatena.ne.jp/keyword/cgi">cgi</a>.rbを使ったindex.<a class="keyword" href="http://d.hatena.ne.jp/keyword/cgi">cgi</a>があるだけで、それをそのまま<a class="keyword" href="http://d.hatena.ne.jp/keyword/cgi">cgi</a>として起動するだけの単純なものだったんですが、最近アクセスが増えてちょっと処理がおいつかなくなってました。最近、<a class="keyword" href="http://d.hatena.ne.jp/keyword/sinatra">sinatra</a>というWebアプリケーション<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D5%A5%EC%A1%BC%A5%E0%A5%EF%A1%BC%A5%AF">フレームワーク</a>を知って、ちょうどいいなと思ったので<a class="keyword" href="http://d.hatena.ne.jp/keyword/sinatra">sinatra</a>を使って書き直してみました。<a class="keyword" href="http://d.hatena.ne.jp/keyword/sinatra">sinatra</a>は、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Rails">Rails</a>に比べるとだいぶ軽めで、ちょっとしたWebアプリを書くのにちょうどいいです。rackを使っているので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/fcgi">fcgi</a>とか<a class="keyword" href="http://d.hatena.ne.jp/keyword/mongrel">mongrel</a>とかいろいろな方法で起動させることができます。usericonsではpassengerを使って動かすことにしました。当たり前といえば当たり前だけど、<a class="keyword" href="http://d.hatena.ne.jp/keyword/cgi">cgi</a>ののときよりも大分さくさく動いてます。</p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>の処理をHpricotからNokogiriを使うようにしました。Hpricotは、ささっとHTMLを処理したいときにはすごく便利で素晴しいんだけど、<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>の処理系として見ると使える関数が少なかったりして、ちょっと物足りない部分がありました。また今後、<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>がサポートされなくなるかもしれないので、この機会にNokogiriにすることにしました。</p><p>使っているアプリケーションやサービスを把握してる範囲で載せました。手動で書いているので、これも載せてとか勝手に載せるなとかが、あればいってください。</p><p>ソースを<a class="keyword" href="http://d.hatena.ne.jp/keyword/Github">Github</a>に置きました。とくに非公開にする理由もないし、なにかの参考になればなあと思って公開することにしました。他のサーバでも動しやすいように、ということは考えてつくっていなかったので、動かそうとするとちょっと面倒かもしれません。</p><p>swdyh's usericons.relucks.org at master ― <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br />
-<a href="http://github.com/swdyh/usericons.relucks.org/tree/master">http://github.com/swdyh/usericons.relucks.org/tree/master</a></p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C9%A5%CD%A1%BC%A5%B7%A5%E7%A5%F3">ドネーション</a>も募集してます。<a class="keyword" href="http://d.hatena.ne.jp/keyword/Paypal">Paypal</a>のアカウントがあればわりと簡単に送金できます。今は<a class="keyword" href="http://d.hatena.ne.jp/keyword/slicehost">slicehost</a>という<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DB%A5%B9%A5%C6%A5%A3%A5%F3%A5%B0">ホスティング</a>の一番安いプラン(月額20$)で運用していて、メモリが256Mしかないので、もうちょっと増やせたらいいなあと思ってます。</p><p><a href='http://www.pledgie.com/campaigns/2101'><img alt='Click here to lend your support to: usericons.relucks.org and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/2101.png?skin_name=chrome' border='0' /></a></p>
+<li>ソースをGithubに</li>
+<li>ドネーション募集</li>
+</ul><p>usericonsはRubyに標準でついてるcgi.rbを使ったindex.cgiがあるだけで、それをそのままcgiとして起動するだけの単純なものだったんですが、最近アクセスが増えてちょっと処理がおいつかなくなってました。最近、sinatraというWebアプリケーションフレームワークを知って、ちょうどいいなと思ったのでsinatraを使って書き直してみました。sinatraは、Railsに比べるとだいぶ軽めで、ちょっとしたWebアプリを書くのにちょうどいいです。rackを使っているので、fcgiとかmongrelとかいろいろな方法で起動させることができます。usericonsではpassengerを使って動かすことにしました。当たり前といえば当たり前だけど、cgiののときよりも大分さくさく動いてます。</p><p>XPathの処理をHpricotからNokogiriを使うようにしました。Hpricotは、ささっとHTMLを処理したいときにはすごく便利で素晴しいんだけど、XPathの処理系として見ると使える関数が少なかったりして、ちょっと物足りない部分がありました。また今後、XPathがサポートされなくなるかもしれないので、この機会にNokogiriにすることにしました。</p><p>使っているアプリケーションやサービスを把握してる範囲で載せました。手動で書いているので、これも載せてとか勝手に載せるなとかが、あればいってください。</p><p>ソースをGithubに置きました。とくに非公開にする理由もないし、なにかの参考になればなあと思って公開することにしました。他のサーバでも動しやすいように、ということは考えてつくっていなかったので、動かそうとするとちょっと面倒かもしれません。</p><p>swdyh's usericons.relucks.org at master ― GitHub<br>
+<a href="http://github.com/swdyh/usericons.relucks.org/tree/master">http://github.com/swdyh/usericons.relucks.org/tree/master</a></p><p>ドネーションも募集してます。Paypalのアカウントがあればわりと簡単に送金できます。今はslicehostというホスティングの一番安いプラン(月額20$)で運用していて、メモリが256Mしかないので、もうちょっと増やせたらいいなあと思ってます。</p><p><a href="http://www.pledgie.com/campaigns/2101"><img alt="Click here to lend your support to: usericons.relucks.org and make a donation at www.pledgie.com !" src="http://www.pledgie.com/campaigns/2101.png?skin_name=chrome" border="0"></a></p>
 
 
   </div>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

@@ -1,21 +1,27 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: AquaSKKのショートカットキーの変更</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>AquaSKKのショートカットキーの変更</title>
+    <meta property="og:title" content="AquaSKKのショートカットキーの変更" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1250960832.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>AquaSKKのショートカットキーの変更</h2>
   <div>2009-08-23 02:07:12</div>
   <div class="content">
-    <p>ひさしぶりに<a class="keyword" href="http://d.hatena.ne.jp/keyword/AquaSKK">AquaSKK</a>をアップデートしたら、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Emacs">Emacs</a>でコマンドのキャンセル(Ctrl-g)やUndo(Ctrl-/)ができなくなった。バージョンは<a class="keyword" href="http://d.hatena.ne.jp/keyword/AquaSKK">AquaSKK</a> 4.0RC5(2009-8-21)。<a class="keyword" href="http://d.hatena.ne.jp/keyword/AquaSKK">AquaSKK</a>キーボードショートカットが影響しているっぽい。なんとかしないと<a class="keyword" href="http://d.hatena.ne.jp/keyword/Emacs">Emacs</a>が使いものにならない。</p><p>調べてみると、keymap.confというファイルで設定できるらしい。</p><p>keymap.confの文法 - <a class="keyword" href="http://d.hatena.ne.jp/keyword/AquaSKK">AquaSKK</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a> - <a class="keyword" href="http://d.hatena.ne.jp/keyword/AquaSKK">AquaSKK</a> - <a class="keyword" href="http://d.hatena.ne.jp/keyword/SourceForge.JP">SourceForge.JP</a><br />
+    <p>ひさしぶりにAquaSKKをアップデートしたら、Emacsでコマンドのキャンセル(Ctrl-g)やUndo(Ctrl-/)ができなくなった。バージョンはAquaSKK 4.0RC5(2009-8-21)。AquaSKKキーボードショートカットが影響しているっぽい。なんとかしないとEmacsが使いものにならない。</p><p>調べてみると、keymap.confというファイルで設定できるらしい。</p><p>keymap.confの文法 - AquaSKK Wiki - AquaSKK - SourceForge.JP<br>
 <a href="http://sourceforge.jp/projects/aquaskk/wiki/keymap.conf%E3%81%AE%E6%96%87%E6%B3%95">http://sourceforge.jp/projects/aquaskk/wiki/keymap.conf%E3%81%AE%E6%96%87%E6%B3%95</a></p><p>keymap.confをコピーしてきて、Ctrl-gとCtrl-/の部分を空にしてみる。</p>
-<pre class="code lang-sh" data-lang="sh" data-unlink>% cp /Library/Input\ Methods/AquaSKK.app/Contents/Resources/keymap.conf ~/Library/Application\ Support/AquaSKK/keymap.conf
-</pre><p>~/Library/Application\ Support/<a class="keyword" href="http://d.hatena.ne.jp/keyword/AquaSKK">AquaSKK</a>/keymap.conf を編集。</p>
-<pre class="code lang-diff" data-lang="diff" data-unlink><span class="synStatement">11c11</span>
+<pre class="code lang-sh" data-lang="sh" data-unlink="">% cp /Library/Input\ Methods/AquaSKK.app/Contents/Resources/keymap.conf ~/Library/Application\ Support/AquaSKK/keymap.conf
+</pre><p>~/Library/Application\ Support/AquaSKK/keymap.conf を編集。</p>
+<pre class="code lang-diff" data-lang="diff" data-unlink=""><span class="synStatement">11c11</span>
 <span class="synSpecial">&lt; SKK_CANCEL            ctrl::g||hex::0x1b</span>
 <span class="synStatement">---</span>
 <span class="synIdentifier">&gt; SKK_CANCEL</span>
@@ -23,13 +29,20 @@
 <span class="synSpecial">&lt; SKK_UNDO                ctrl::/</span>
 <span class="synStatement">---</span>
 <span class="synIdentifier">&gt; SKK_UNDO  </span>
-</pre><p>ログオフして、ログインしなおす。</p><p>空にするよりも別のキーに変えた方がいいかもしれないけど、とりあえずこれで<a class="keyword" href="http://d.hatena.ne.jp/keyword/Emacs">Emacs</a>でのキャンセルとUndoは復活した。</p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AquaSKK">AquaSKK</a>のことを良く知らないので、バグなのか意図なのか判断できないけど、ショートカットキー使うアプリでけっこう普通に困りそうな気がする。</p>
+</pre><p>ログオフして、ログインしなおす。</p><p>空にするよりも別のキーに変えた方がいいかもしれないけど、とりあえずこれでEmacsでのキャンセルとUndoは復活した。</p><p>AquaSKKのことを良く知らないので、バグなのか意図なのか判断できないけど、ショートカットキー使うアプリでけっこう普通に困りそうな気がする。</p>
 
 
   </div>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

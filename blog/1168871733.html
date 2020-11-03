@@ -1,18 +1,24 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: 結果を待って実行</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>結果を待って実行</title>
+    <meta property="og:title" content="結果を待って実行" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1168871733.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>結果を待って実行</h2>
   <div>2007-01-15 23:35:33</div>
   <div class="content">
     <p>Deferrdはまだ見てないんだけど、適当に作ってみた。</p>
-<pre class="code lang-javascript" data-lang="javascript" data-unlink><span class="synIdentifier">function</span> execWhen(cond, proc, opt) <span class="synIdentifier">{</span>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink=""><span class="synIdentifier">function</span> execWhen(cond, proc, opt) <span class="synIdentifier">{</span>
     <span class="synIdentifier">var</span> opt = opt ? opt: <span class="synIdentifier">{}</span>
     <span class="synIdentifier">var</span> limit    = opt.limit || 10000
     <span class="synIdentifier">var</span> interval = opt.interval || 500
@@ -36,7 +42,7 @@
     <span class="synIdentifier">}</span>
 <span class="synIdentifier">}</span>
 </pre><p>こんな感じに使う。</p>
-<pre class="code lang-javascript" data-lang="javascript" data-unlink><span class="synIdentifier">var</span> list = <span class="synIdentifier">[]</span>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink=""><span class="synIdentifier">var</span> list = <span class="synIdentifier">[]</span>
 setTimeout(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>list.push(<span class="synConstant">'A'</span>)<span class="synIdentifier">}</span>, 500)
 setTimeout(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>list.push(<span class="synConstant">'B'</span>)<span class="synIdentifier">}</span>, 1000)
 setTimeout(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>list.push(<span class="synConstant">'C'</span>)<span class="synIdentifier">}</span>, 2000)
@@ -49,14 +55,21 @@ execWhen(cond, <span class="synIdentifier">function</span>() <span class="synIde
         console.log(i)
     <span class="synIdentifier">}</span>)
 <span class="synIdentifier">}</span>)
-</pre><p>もっとスマートな方法もありそうだけど、まあいいや。</p><br />
-<p>これで非同期オンリーな<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_<a class="keyword" href="http://d.hatena.ne.jp/keyword/xmlhttpRequest">xmlhttpRequest</a>だって、へっちゃらのはず。</p>
+</pre><p>もっとスマートな方法もありそうだけど、まあいいや。</p><br>
+<p>これで非同期オンリーなGM_xmlhttpRequestだって、へっちゃらのはず。</p>
 
 
   </div>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

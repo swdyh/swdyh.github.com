@@ -1,23 +1,28 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: FireBugのassertが減った？</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>FireBugのassertが減った？</title>
+    <meta property="og:title" content="FireBugのassertが減った？" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1168992461.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>FireBugのassertが減った？</h2>
   <div>2007-01-17 09:07:41</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>でもテストがほしいなあと思ったらbrazilさんが書いてた。</p><br />
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>内でのテストコード、ok/is、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firebug">Firebug</a>コンソールへの出力(log/info/error)<br />
-<a href="http://d.hatena.ne.jp/brazil/20060821/1156165379">http://d.hatena.ne.jp/brazil/20060821/1156165379</a></p><br />
-<p>これによると、<a class="keyword" href="http://d.hatena.ne.jp/keyword/FireBug">FireBug</a>のconsoleにassertがたくさんあるらしい。<br />
+    <p>Greasemonkeyでもテストがほしいなあと思ったらbrazilさんが書いてた。</p><br>
+<p>Greasemonkey内でのテストコード、ok/is、Firebugコンソールへの出力(log/info/error)<br>
+<a href="http://d.hatena.ne.jp/brazil/20060821/1156165379">http://d.hatena.ne.jp/brazil/20060821/1156165379</a></p><br>
+<p>これによると、FireBugのconsoleにassertがたくさんあるらしい。<br>
 確認してみる。</p>
-<pre class="code" data-lang="" data-unlink>
-&gt;&gt;&gt; for(var i in console){if(i.match(/assert/)){console.log(i)}}
+<pre class="code" data-lang="" data-unlink="">&gt;&gt;&gt; for(var i in console){if(i.match(/assert/)){console.log(i)}}
 assert
 assertEquals
 assertNotEquals
@@ -37,16 +42,15 @@ assertInstanceOf
 assertNotInstanceOf
 assertTypeOf
 assertNotTypeOf
-</pre><p>なんかいろいろ出てきた。<br />
-とりあえずドキュメントを見てみると、assertしか載っていない。<br />
-<a href="http://www.getfirebug.com/console.html">http://www.getfirebug.com/console.html</a></p><br />
-<p>あれ、と思いながらサイトを見ていてたら1.0ベータが出ていたので、<br />
-早速インストールしてみた。</p><br />
+</pre><p>なんかいろいろ出てきた。<br>
+とりあえずドキュメントを見てみると、assertしか載っていない。<br>
+<a href="http://www.getfirebug.com/console.html">http://www.getfirebug.com/console.html</a></p><br>
+<p>あれ、と思いながらサイトを見ていてたら1.0ベータが出ていたので、<br>
+早速インストールしてみた。</p><br>
 <p>で、さっきのを試したら、これ。</p>
-<pre class="code" data-lang="" data-unlink>
-&gt;&gt;&gt; for(var i in console){if(i.match(/assert/)){console.log(i)}}
+<pre class="code" data-lang="" data-unlink="">&gt;&gt;&gt; for(var i in console){if(i.match(/assert/)){console.log(i)}}
 assert
-</pre><p><br />
+</pre><p><br>
 うーん、assertXxxxは全部没になったのかなあ。</p>
 
 
@@ -54,6 +58,13 @@ assert
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

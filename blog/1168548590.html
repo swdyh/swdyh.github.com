@@ -1,48 +1,54 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: AutoPagerize 0.0.1 Release.</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>AutoPagerize 0.0.1 Release.</title>
+    <meta property="og:title" content="AutoPagerize 0.0.1 Release." />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1168548590.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>AutoPagerize 0.0.1 Release.</h2>
   <div>2007-01-12 05:49:50</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a> 0.0.1<br />
-<a href="http://swdyh.yu.to/autopagerize.user.js">http://swdyh.yu.to/autopagerize.user.js</a><br />
-ダブルクリックで起動するので、あとはスクロールするだけです。<br />
-ライセンスは<a class="keyword" href="http://d.hatena.ne.jp/keyword/GPL">GPL</a>です。（GoogleAutoPagerが<a class="keyword" href="http://d.hatena.ne.jp/keyword/GPL">GPL</a>になっていたから）</p><br />
-<p>昨日までのは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>用だったのだけれど、複数サイトの対応できるようにした。<br />
-なので@includeは*に変更して、別の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>としてリリース。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>以外にもいくつか追加したので、もし昨日までのを使っているレアな人がいたら、<br />
-そっちはuninstallしてこっちを使ってみてください。<br />
+    <p>AutoPagerize 0.0.1<br>
+<a href="http://swdyh.yu.to/autopagerize.user.js">http://swdyh.yu.to/autopagerize.user.js</a><br>
+ダブルクリックで起動するので、あとはスクロールするだけです。<br>
+ライセンスはGPLです。（GoogleAutoPagerがGPLになっていたから）</p><br>
+<p>昨日までのはGoogle用だったのだけれど、複数サイトの対応できるようにした。<br>
+なので@includeは*に変更して、別のスクリプトとしてリリース。<br>
+Google以外にもいくつか追加したので、もし昨日までのを使っているレアな人がいたら、<br>
+そっちはuninstallしてこっちを使ってみてください。<br>
 いまのところ、対応したのはこんな感じ。</p>
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>の検索</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/del.icio.us">del.icio.us</a>（自分のブックマークとか、ネットワークとか）</li>
+<li>Googleの検索</li>
+<li>del.icio.us（自分のブックマークとか、ネットワークとか）</li>
 <li>YahooJapanの検索</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E4%A5%D5%A5%AA%A5%AF">ヤフオク</a>の検索（HTMLが指定しにくかったので、わりと適当）</li>
-</ul><p>各サイト用のデータはまだプログラム内に書いてあるんだけど、<br />
-次に外部ファイル化して、その次に<a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>にする（たぶん）。</p><br />
-<p>結局リンクの指定とかは<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>のみにしたんだけど、サイトのHTML次第で、<br />
-書きやすかったり書きにくかったりする。上の4つは<a class="keyword" href="http://d.hatena.ne.jp/keyword/FireBug">FireBug</a>のインスペクター使って、<br />
-手探りで探して、試しての繰り返しで作った。<br />
-面倒だけど慣れれば、わりと時間もかからない気がする。<br />
-HTML次第で、どうしても<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>じゃキツいってこともありそうだけど、<br />
-そういうのはあきらめる方向にしようと思う。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD">正規表現</a>は部分マッチとかあるときに、なんかめんどいのでやめた。<br />
-関数を挟めるようにするのもいいかと思ったけど、データ外部化したときに<br />
-evalしないといけなくなるからやめた。</p><br />
-<p>プログラムはけっこうがっつり書き換えていて、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AA%A5%D6%A5%B8%A5%A7%A5%AF%A5%C8%BB%D8%B8%FE">オブジェクト指向</a>っぽくしておいた。<br />
-それから配色はbrazilさんぽい感じにした。</p><br />
-<p>いくつかのサイト用のデータを作ってみて思ったのだけど、ロードの時間がかなり使い心地に影響する。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>とかは速いからさくさくいけるんだけど、<a class="keyword" href="http://d.hatena.ne.jp/keyword/del.icio.us">del.icio.us</a>とかは遅いからいちいちつまづく。<br />
-なので、サイトごとに読み込みを開始の位置を変えれるようにしてあって、<br />
-読み込みが遅いサイトとかは、早めに読み込みすると少しスムーズになる。<br />
+<li>ヤフオクの検索（HTMLが指定しにくかったので、わりと適当）</li>
+</ul><p>各サイト用のデータはまだプログラム内に書いてあるんだけど、<br>
+次に外部ファイル化して、その次にWikiにする（たぶん）。</p><br>
+<p>結局リンクの指定とかはXPathのみにしたんだけど、サイトのHTML次第で、<br>
+書きやすかったり書きにくかったりする。上の4つはFireBugのインスペクター使って、<br>
+手探りで探して、試しての繰り返しで作った。<br>
+面倒だけど慣れれば、わりと時間もかからない気がする。<br>
+HTML次第で、どうしてもXPathじゃキツいってこともありそうだけど、<br>
+そういうのはあきらめる方向にしようと思う。<br>
+正規表現は部分マッチとかあるときに、なんかめんどいのでやめた。<br>
+関数を挟めるようにするのもいいかと思ったけど、データ外部化したときに<br>
+evalしないといけなくなるからやめた。</p><br>
+<p>プログラムはけっこうがっつり書き換えていて、オブジェクト指向っぽくしておいた。<br>
+それから配色はbrazilさんぽい感じにした。</p><br>
+<p>いくつかのサイト用のデータを作ってみて思ったのだけど、ロードの時間がかなり使い心地に影響する。<br>
+Googleとかは速いからさくさくいけるんだけど、del.icio.usとかは遅いからいちいちつまづく。<br>
+なので、サイトごとに読み込みを開始の位置を変えれるようにしてあって、<br>
+読み込みが遅いサイトとかは、早めに読み込みすると少しスムーズになる。<br>
 いっそ見てる次の次のページが読み込まれるくらいでもいいのかなあ。UI関連はもう少しじっくり考えよう。</p>
 
 
@@ -50,6 +56,13 @@ evalしないといけなくなるからやめた。</p><br />
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

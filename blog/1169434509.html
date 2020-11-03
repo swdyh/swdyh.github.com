@@ -1,44 +1,49 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: Greasemonkeyメモ</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>Greasemonkeyメモ</title>
+    <meta property="og:title" content="Greasemonkeyメモ" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1169434509.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>Greasemonkeyメモ</h2>
   <div>2007-01-22 11:55:09</div>
   <div class="content">
-    
-<div class="section">
-    <h4><a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_setValue/<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_getValue</h4>
-    <p>データを保存して、それを使うことができる。<br />
-データは<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>名、ネームスペース別に保存される。<br />
-だからその<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%AB%A4%E9%A4%B7">からし</a>か保存できないし、使うこともできない。<br />
-別の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>から変な値を入れられるということもない。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>名もネームスペースも同じ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>は同じものとして扱われるので、<br />
-同時にインストールされることはない。（上書きされる）</p><br />
-<p>about:config<br />
-でどんな値が入っているか確認できる。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/greasemonkey">greasemonkey</a>.scriptvals.ネームスペース/<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>名.変数名<br />
-<br />
+    <div class="section">
+    <h4>GM_setValue/GM_getValue</h4>
+    <p>データを保存して、それを使うことができる。<br>
+データはスクリプト名、ネームスペース別に保存される。<br>
+だからそのスクリプトからしか保存できないし、使うこともできない。<br>
+別のスクリプトから変な値を入れられるということもない。<br>
+スクリプト名もネームスペースも同じスクリプトは同じものとして扱われるので、<br>
+同時にインストールされることはない。（上書きされる）</p><br>
+<p>about:config<br>
+でどんな値が入っているか確認できる。<br>
+greasemonkey.scriptvals.ネームスペース/スクリプト名.変数名<br>
+<br>
 </p>
 
 </div>
 <div class="section">
-    <h4><a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_registerMemuCommand</h4>
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/FireFox">FireFox</a>のメニューから関数を実行できるようにする。</p><br />
-<p>ツール - Greasemonekey - User Script Commands - セットした名前</p><br />
-<p>わりと深めの所にあるので、ちょっと使いにくいし、<br />
-あっても気づかれなさそう。でも実は便利かも。</p><br />
-<p>いまのところ、セットしたのを消すとか、<br />
-今セットしてある内容を取得するとかはないっぽいので、<br />
-動的なメニューはたぶんできない。</p><br />
-<p>動的なメニューっていうのは、例えば、<br />
-AutoPagerが出てるときには、offっていうメニューにして、<br />
-出ていないときには、onっていうメニューにするとかそういうの。<br />
+    <h4>GM_registerMemuCommand</h4>
+    <p>FireFoxのメニューから関数を実行できるようにする。</p><br>
+<p>ツール - Greasemonekey - User Script Commands - セットした名前</p><br>
+<p>わりと深めの所にあるので、ちょっと使いにくいし、<br>
+あっても気づかれなさそう。でも実は便利かも。</p><br>
+<p>いまのところ、セットしたのを消すとか、<br>
+今セットしてある内容を取得するとかはないっぽいので、<br>
+動的なメニューはたぶんできない。</p><br>
+<p>動的なメニューっていうのは、例えば、<br>
+AutoPagerが出てるときには、offっていうメニューにして、<br>
+出ていないときには、onっていうメニューにするとかそういうの。<br>
 on/offでいっか。</p>
 
 </div>
@@ -47,6 +52,13 @@ on/offでいっか。</p>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

@@ -1,26 +1,32 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: 文字列のHTMLに対してXPathを使う</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>文字列のHTMLに対してXPathを使う</title>
+    <meta property="og:title" content="文字列のHTMLに対してXPathを使う" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1168462732.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>文字列のHTMLに対してXPathを使う</h2>
   <div>2007-01-11 05:58:52</div>
   <div class="content">
-    <p>XHRで取ってきた文字列としてのHTMLに対して、<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>使ってデータを取るのがなんとかできた。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firefox">Firefox</a>以外では動かないと思うけど、今回は<a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>用なので気にしない。</p>
+    <p>XHRで取ってきた文字列としてのHTMLに対して、XPath使ってデータを取るのがなんとかできた。<br>
+Firefox以外では動かないと思うけど、今回はGreasemonkey用なので気にしない。</p>
 
 <ol>
 <li>document.implementation.createDocumentを使ってDocumentをつくる</li>
 <li>RangeのcreateContextualFragmentを使ってDocumentFragmentをつくる</li>
 <li>最初に作ったDocumentにDocumentFragmentを付ける</li>
-<li>そのDocumentに対して<a class="keyword" href="http://d.hatena.ne.jp/keyword/XPath">XPath</a>を使う</li>
+<li>そのDocumentに対してXPathを使う</li>
 </ol><p>まだ雑だけど、そのへんのコードはこんな感じ。</p>
-<pre class="code lang-javascript" data-lang="javascript" data-unlink>    <span class="synIdentifier">function</span> load(data) <span class="synIdentifier">{</span>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink="">    <span class="synIdentifier">function</span> load(data) <span class="synIdentifier">{</span>
         <span class="synIdentifier">var</span> v = data.responseText.replace(<span class="synConstant">/&lt;html.*?&gt;/</span>, <span class="synConstant">''</span>)
         v = v.replace(<span class="synConstant">/&lt;\/html&gt;/</span>, <span class="synConstant">''</span>)
         <span class="synIdentifier">var</span> ns = <span class="synConstant">'http://www.w3.org/1999/xhtml'</span>
@@ -42,11 +48,11 @@
         insert_elem.parentNode.insertBefore(page, insert_elem)
         busy(<span class="synConstant">false</span>)
     <span class="synIdentifier">}</span>
-</pre><p>でも少しルートのへんがおかしくて、/htmlとか/html/bodyとかがうまくマッチしないんだけど、<br />
-とりあえず疲れたのでこのへんにしとく。</p><p>ということで、これをつかったバージョンにアップデートしました。<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a> for <a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a><br />
-<a href="http://swdyh.yu.to/autopagerizeforgoogle.user.js">http://swdyh.yu.to/autopagerizeforgoogle.user.js</a></p><br />
-<p>参考 新しく作成した<a class="keyword" href="http://d.hatena.ne.jp/keyword/XML">XML</a>文書でDOM HTMLを使う<br />
+</pre><p>でも少しルートのへんがおかしくて、/htmlとか/html/bodyとかがうまくマッチしないんだけど、<br>
+とりあえず疲れたのでこのへんにしとく。</p><p>ということで、これをつかったバージョンにアップデートしました。<br>
+AutoPagerize for Google<br>
+<a href="http://swdyh.yu.to/autopagerizeforgoogle.user.js">http://swdyh.yu.to/autopagerizeforgoogle.user.js</a></p><br>
+<p>参考 新しく作成したXML文書でDOM HTMLを使う<br>
 <a href="http://www.akatsukinishisu.net/itazuragaki/xml/use_dom_html_in_xml.html">http://www.akatsukinishisu.net/itazuragaki/xml/use_dom_html_in_xml.html</a></p>
 
 
@@ -54,6 +60,13 @@
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

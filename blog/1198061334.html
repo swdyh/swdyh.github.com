@@ -1,37 +1,43 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: AutoPagerizeをFirefox3で動かそうとしたときにつまったポイント</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>AutoPagerizeをFirefox3で動かそうとしたときにつまったポイント</title>
+    <meta property="og:title" content="AutoPagerizeをFirefox3で動かそうとしたときにつまったポイント" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1198061334.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>AutoPagerizeをFirefox3で動かそうとしたときにつまったポイント</h2>
   <div>2007-12-19 19:48:54</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>を書くひとはこのへんを注意するといいと思います。<br />
-ほとんどDOM関連なので<a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>に限った話じゃないかも。<br />
-<br />
+    <p>Greasemonkeyスクリプトを書くひとはこのへんを注意するといいと思います。<br>
+ほとんどDOM関連なのでGreasemonkeyに限った話じゃないかも。<br>
+<br>
 </p>
 
 <ul>
 <li>異るドキュメントのノードをappendChildしたりinsertBeforeしたい場合は、一旦importNodeをしてから実行する </li>
-</ul><pre class="code" data-lang="" data-unlink>htmlDoc.documentElement.appendChild(fragment)</pre><p>↓</p>
-<pre class="code" data-lang="" data-unlink>htmlDoc.documentElement.appendChild(htmlDoc.importNode(fragment, true))</pre><p>fragmentがhtmlDocに属していなかったので、htmlDocにimportNodeしてからappendChildするようにした。<br />
+</ul><pre class="code" data-lang="" data-unlink="">htmlDoc.documentElement.appendChild(fragment)</pre><p>↓</p>
+<pre class="code" data-lang="" data-unlink="">htmlDoc.documentElement.appendChild(htmlDoc.importNode(fragment, true))</pre><p>fragmentがhtmlDocに属していなかったので、htmlDocにimportNodeしてからappendChildするようにした。<br>
 参考: Textノードを追加できない - DOSEI日記 <a href="http://d.hatena.ne.jp/DOSEI/20071013/p1">http://d.hatena.ne.jp/DOSEI/20071013/p1</a></p><p></p>
 
 <ul>
 <li>document.evaluateのdocumentは第2引数のノードが属しているドキュメントを使わないとエラーになる。</li>
-</ul><pre class="code" data-lang="" data-unlink>var node = node || document
+</ul><pre class="code" data-lang="" data-unlink="">var node = node || document
 var nodesSnapshot = document.evaluate(xpath, node, null,
     XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)</pre><p>↓</p>
-<pre class="code" data-lang="" data-unlink>var node = node || document
+<pre class="code" data-lang="" data-unlink="">var node = node || document
 var doc = node.ownerDocument ? node.ownerDocument : node
 var nodesSnapshot = doc.evaluate(xpath, node, null,
-    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)</pre><p>第2引数のnodeのownerDocumentを確認して、それが取れた場合はそれのevaluateを使うようにした。<br />
-<br />
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)</pre><p>第2引数のnodeのownerDocumentを確認して、それが取れた場合はそれのevaluateを使うようにした。<br>
+<br>
 </p>
 
 <ul>
@@ -49,6 +55,13 @@ var nodesSnapshot = doc.evaluate(xpath, node, null,
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

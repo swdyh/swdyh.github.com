@@ -1,5 +1,5 @@
 h1 {
-  font-size: 60px;
+  font-size: 7vh;
   margin: 0;
   padding: 0;
 }
@@ -27,6 +27,9 @@ body {
   width: 85%;
   margin: 0 auto 200px auto;
   font-family: sans-serif;
+}
+footer {
+  margin: 5vh 0 0 0;
 }
 
 pre.code,

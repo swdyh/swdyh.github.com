@@ -1,31 +1,37 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: node-kyoto-tycoon</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>node-kyoto-tycoon</title>
+    <meta property="og:title" content="node-kyoto-tycoon" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1287390598.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>node-kyoto-tycoon</h2>
   <div>2010-10-18 17:29:58</div>
   <div class="content">
-    <p>node-kyoto-tycoon<br />
-<a href="http://github.com/swdyh/node-kyoto-tycoon">http://github.com/swdyh/node-kyoto-tycoon</a></p><p>KyotoTycoonのNode.js用ライブラリを作りました。まだだいぶ荒削りな状態で、KyotoTycoonの<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>を簡単にラップした感じのものです。<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>も変わるかもしれないし、バグもたぶんあると思いますが試してみてください。</p><p>Node.jsが新しめでないとHTTPのKeep-Aliveが使えないので、古いNode.jsを使っている場合は、新しいNode.jsを入れて使ってください。(Keep-Aliveが使えなくても動きますが、カーソル関連は使えないと思います)<br />
-<br />
+    <p>node-kyoto-tycoon<br>
+<a href="http://github.com/swdyh/node-kyoto-tycoon">http://github.com/swdyh/node-kyoto-tycoon</a></p><p>KyotoTycoonのNode.js用ライブラリを作りました。まだだいぶ荒削りな状態で、KyotoTycoonのAPIを簡単にラップした感じのものです。APIも変わるかもしれないし、バグもたぶんあると思いますが試してみてください。</p><p>Node.jsが新しめでないとHTTPのKeep-Aliveが使えないので、古いNode.jsを使っている場合は、新しいNode.jsを入れて使ってください。(Keep-Aliveが使えなくても動きますが、カーソル関連は使えないと思います)<br>
+<br>
 </p>
 
 <div class="section">
     <h4>インストール</h4>
     <p>npmを使う</p>
-<pre class="code" data-lang="" data-unlink> % npm install kyoto-tycoon</pre><p>ソースから</p>
-<pre class="code" data-lang="" data-unlink> % git clone http://github.com/swdyh/node-kyoto-tycoon.git
+<pre class="code" data-lang="" data-unlink=""> % npm install kyoto-tycoon</pre><p>ソースから</p>
+<pre class="code" data-lang="" data-unlink=""> % git clone http://github.com/swdyh/node-kyoto-tycoon.git
  % cp -r node-kyoto-tycoon ~/.node_libraries/kyoto-tycoon</pre>
 </div>
 <div class="section">
     <h4>使い方</h4>
-    <pre class="code lang-javascript" data-lang="javascript" data-unlink>    <span class="synIdentifier">var</span> KyotoTycoon = require(<span class="synConstant">'kyoto-tycoon'</span>).KyotoTycoon
+    <pre class="code lang-javascript" data-lang="javascript" data-unlink="">    <span class="synIdentifier">var</span> KyotoTycoon = require(<span class="synConstant">'kyoto-tycoon'</span>).KyotoTycoon
 
     <span class="synIdentifier">var</span> kt = <span class="synStatement">new</span> KyotoTycoon()
     kt.set(<span class="synConstant">'key1'</span>, <span class="synConstant">'val1'</span>, <span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>
@@ -34,9 +40,9 @@
             kt.end()
         <span class="synIdentifier">}</span>)
     <span class="synIdentifier">}</span>)
-</pre><p>Node.jsらしく非同期な<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>しかなくて、なにをするにもコールバック関数を渡します。<br />
-ただこれだと、いくつかの処理を順にやろうとすると、コールバック関数がネストしていってつらいので、<a class="keyword" href="http://d.hatena.ne.jp/keyword/JSDeferred">JSDeferred</a>を使えるようにしています。ソースの中に入れてあるのでインストールする必要はありません。</p>
-<pre class="code lang-javascript" data-lang="javascript" data-unlink>    <span class="synIdentifier">var</span> kt3 = <span class="synStatement">new</span> KyotoTycoon(<span class="synIdentifier">{</span> deferred : <span class="synConstant">true</span> <span class="synIdentifier">}</span>)
+</pre><p>Node.jsらしく非同期なAPIしかなくて、なにをするにもコールバック関数を渡します。<br>
+ただこれだと、いくつかの処理を順にやろうとすると、コールバック関数がネストしていってつらいので、JSDeferredを使えるようにしています。ソースの中に入れてあるのでインストールする必要はありません。</p>
+<pre class="code lang-javascript" data-lang="javascript" data-unlink="">    <span class="synIdentifier">var</span> kt3 = <span class="synStatement">new</span> KyotoTycoon(<span class="synIdentifier">{</span> deferred : <span class="synConstant">true</span> <span class="synIdentifier">}</span>)
     kt3.set(<span class="synConstant">'key3'</span>, <span class="synConstant">'val3'</span>).next(<span class="synIdentifier">function</span>() <span class="synIdentifier">{</span>
         <span class="synStatement">return</span> kt3.get(<span class="synConstant">'key3'</span>)
     <span class="synIdentifier">}</span>).next(<span class="synIdentifier">function</span>(err, data) <span class="synIdentifier">{</span>
@@ -48,15 +54,15 @@
         console.log(err)
         kt3.end()
     <span class="synIdentifier">}</span>)
-</pre><p>newのときにdeferredオプションを付けておくと、Deferredオブジェクトが返ってくるようになるので、nextで次の処理をつないでいけば順番に処理していけます。<br />
-<br />
+</pre><p>newのときにdeferredオプションを付けておくと、Deferredオブジェクトが返ってくるようになるので、nextで次の処理をつないでいけば順番に処理していけます。<br>
+<br>
 </p>
 
 </div>
 <div class="section">
     <h4>実装の話</h4>
-    <p>KyotoTycoonはhttpでアクセスするで、Node.jsについているhttpのライブラリをそのまま使っていています。データはTSVで返ってくるTSV-RPCという方式らしいので、TSV-RPCを処理するtsv-rpc.jsと、それを使ったkyoto-tycoon.jsのという構成にしています。<br />
-KyotoTycoonにはは<a class="keyword" href="http://d.hatena.ne.jp/keyword/REST%20API">REST API</a>もあるんだけど、こっとは機能が少ないのと、REST用ライブラリだったら汎用のものがありそうで、KyotoTycoon用のライブラリとして書く意味がないという気がしたので使ってません。</p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/JSDeferred">JSDeferred</a>を使えるようにしたところは、Deferred.connectというコールバックを取る関数を渡すと、Deferredを使った関数返をしてくれるという魔法みたいな関数があるので、それを呼びまくって関数を入れ替えています。</p><p>テストはVowsというので書いていて、正直あまり分かってないんだけど、非同期な関数のテストを想定してあったり、出力が綺麗だったりするので使ってみました。</p>
+    <p>KyotoTycoonはhttpでアクセスするで、Node.jsについているhttpのライブラリをそのまま使っていています。データはTSVで返ってくるTSV-RPCという方式らしいので、TSV-RPCを処理するtsv-rpc.jsと、それを使ったkyoto-tycoon.jsのという構成にしています。<br>
+KyotoTycoonにははREST APIもあるんだけど、こっとは機能が少ないのと、REST用ライブラリだったら汎用のものがありそうで、KyotoTycoon用のライブラリとして書く意味がないという気がしたので使ってません。</p><p>JSDeferredを使えるようにしたところは、Deferred.connectというコールバックを取る関数を渡すと、Deferredを使った関数返をしてくれるという魔法みたいな関数があるので、それを呼びまくって関数を入れ替えています。</p><p>テストはVowsというので書いていて、正直あまり分かってないんだけど、非同期な関数のテストを想定してあったり、出力が綺麗だったりするので使ってみました。</p>
 
 </div>
 
@@ -64,6 +70,13 @@ KyotoTycoonにはは<a class="keyword" href="http://d.hatena.ne.jp/keyword/REST%
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

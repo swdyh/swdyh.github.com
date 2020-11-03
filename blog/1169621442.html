@@ -1,34 +1,40 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: ページを見ながらdel.icio.usにブックマーク</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>ページを見ながらdel.icio.usにブックマーク</title>
+    <meta property="og:title" content="ページを見ながらdel.icio.usにブックマーク" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1169621442.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>ページを見ながらdel.icio.usにブックマーク</h2>
   <div>2007-01-24 15:50:42</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/del.icio.us">del.icio.us</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>は実行するとページが変わってしまうので、<br />
-もとページがみられなくなってしまう。<br />
-コメントを必ず書くようにしているので、もとページをみながらブックマークをしたい。</p><br />
-<p>もともとの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>を少し改造して、<br />
-ページの一番下にiframeで<a class="keyword" href="http://d.hatena.ne.jp/keyword/del.icio.us">del.icio.us</a>のページを読み込むようにした。<br />
+    <p>del.icio.usのブックマークレットは実行するとページが変わってしまうので、<br>
+もとページがみられなくなってしまう。<br>
+コメントを必ず書くようにしているので、もとページをみながらブックマークをしたい。</p><br>
+<p>もともとのブックマークレットを少し改造して、<br>
+ページの一番下にiframeでdel.icio.usのページを読み込むようにした。<br>
 ブックマークした後がださいんだけど、それは我慢。</p>
-<pre class="code lang-javascript" data-lang="javascript" data-unlink>javascript:(<span class="synIdentifier">function</span>()<span class="synIdentifier">{var</span> ifr = <span class="synStatement">document</span>.createElement(<span class="synConstant">'iframe'</span>);ifr.width = <span class="synConstant">'100%'</span>;ifr.height = <span class="synConstant">'800px'</span>;ifr.src=<span class="synConstant">'http://del.icio.us/post?v=4;url='</span>+encodeURIComponent(<span class="synStatement">location</span>.href)+<span class="synConstant">';title='</span>+encodeURIComponent(<span class="synStatement">document</span>.title);<span class="synStatement">document</span>.body.appendChild(ifr)<span class="synIdentifier">}</span>)();
-</pre><p><br />
-まえ、<a class="keyword" href="http://d.hatena.ne.jp/keyword/BlueDot">BlueDot</a>を少し使ったときに<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>がよくできていて、<br />
-そういうのを作ろうかと思ったんだけど、いろいろ作ってるうちに面倒なことが分かってきて断念。</p><br />
-<p>今書きながら気づいたけど、外国のサイトで探したらいいのあるかも。</p><br />
-<p>※追記<br />
+<pre class="code lang-javascript" data-lang="javascript" data-unlink="">javascript:(<span class="synIdentifier">function</span>()<span class="synIdentifier">{var</span> ifr = <span class="synStatement">document</span>.createElement(<span class="synConstant">'iframe'</span>);ifr.width = <span class="synConstant">'100%'</span>;ifr.height = <span class="synConstant">'800px'</span>;ifr.src=<span class="synConstant">'http://del.icio.us/post?v=4;url='</span>+encodeURIComponent(<span class="synStatement">location</span>.href)+<span class="synConstant">';title='</span>+encodeURIComponent(<span class="synStatement">document</span>.title);<span class="synStatement">document</span>.body.appendChild(ifr)<span class="synIdentifier">}</span>)();
+</pre><p><br>
+まえ、BlueDotを少し使ったときにブックマークレットがよくできていて、<br>
+そういうのを作ろうかと思ったんだけど、いろいろ作ってるうちに面倒なことが分かってきて断念。</p><br>
+<p>今書きながら気づいたけど、外国のサイトで探したらいいのあるかも。</p><br>
+<p>※追記<br>
 position:fixedなdivを使ったバージョン。</p>
-<pre class="code lang-javascript" data-lang="javascript" data-unlink>javascript:(<span class="synIdentifier">function</span>()<span class="synIdentifier">{var</span> dummy = <span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);dummy.style.height = <span class="synConstant">'310px'</span>;<span class="synIdentifier">var</span> div = <span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);<span class="synStatement">with</span> (div.style) <span class="synIdentifier">{</span>position = <span class="synConstant">'fixed'</span>;width = <span class="synConstant">'100%'</span>;height = <span class="synConstant">'300px'</span>;<span class="synStatement">top</span> = <span class="synStatement">window</span>.innerHeight - 310 + <span class="synConstant">'px'</span>;left = <span class="synConstant">'0px'</span>;zIndex = 1000;<span class="synIdentifier">}var</span> ifr = <span class="synStatement">document</span>.createElement(<span class="synConstant">'iframe'</span>);ifr.style.width = <span class="synConstant">'100%'</span>;ifr.style.height = <span class="synConstant">'100%'</span>;ifr.src = <span class="synConstant">'http://del.icio.us/post?v=4;url='</span>+encodeURIComponent(<span class="synStatement">location</span>.href)+<span class="synConstant">';title='</span>+encodeURIComponent(<span class="synStatement">document</span>.title);div.appendChild(ifr);<span class="synStatement">document</span>.body.appendChild(dummy);<span class="synStatement">document</span>.body.appendChild(div);<span class="synIdentifier">}</span>)();
-</pre><p>※追記<br />
+<pre class="code lang-javascript" data-lang="javascript" data-unlink="">javascript:(<span class="synIdentifier">function</span>()<span class="synIdentifier">{var</span> dummy = <span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);dummy.style.height = <span class="synConstant">'310px'</span>;<span class="synIdentifier">var</span> div = <span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);<span class="synStatement">with</span> (div.style) <span class="synIdentifier">{</span>position = <span class="synConstant">'fixed'</span>;width = <span class="synConstant">'100%'</span>;height = <span class="synConstant">'300px'</span>;<span class="synStatement">top</span> = <span class="synStatement">window</span>.innerHeight - 310 + <span class="synConstant">'px'</span>;left = <span class="synConstant">'0px'</span>;zIndex = 1000;<span class="synIdentifier">}var</span> ifr = <span class="synStatement">document</span>.createElement(<span class="synConstant">'iframe'</span>);ifr.style.width = <span class="synConstant">'100%'</span>;ifr.style.height = <span class="synConstant">'100%'</span>;ifr.src = <span class="synConstant">'http://del.icio.us/post?v=4;url='</span>+encodeURIComponent(<span class="synStatement">location</span>.href)+<span class="synConstant">';title='</span>+encodeURIComponent(<span class="synStatement">document</span>.title);div.appendChild(ifr);<span class="synStatement">document</span>.body.appendChild(dummy);<span class="synStatement">document</span>.body.appendChild(div);<span class="synIdentifier">}</span>)();
+</pre><p>※追記<br>
 closeボタン付き</p>
-<pre class="code lang-javascript" data-lang="javascript" data-unlink>javascript:(<span class="synIdentifier">function</span>()<span class="synIdentifier">{var</span> dummy=<span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);dummy.style.height=<span class="synConstant">'310px'</span>;<span class="synIdentifier">var</span> div=<span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);<span class="synStatement">with</span>(div.style)<span class="synIdentifier">{</span>position=<span class="synConstant">'fixed'</span>;width=<span class="synConstant">'100%'</span>;height=<span class="synConstant">'300px'</span>;<span class="synStatement">top</span>=<span class="synStatement">window</span>.innerHeight-310+<span class="synConstant">'px'</span>;left=<span class="synConstant">'0px'</span>;zIndex=1000;backgroundColor=<span class="synConstant">'#555'</span>;border=<span class="synConstant">'1px solid #000'</span>;textAlign=<span class="synConstant">'center'</span>;color=<span class="synConstant">'#fff'</span>;<span class="synIdentifier">}var</span> ifr=<span class="synStatement">document</span>.createElement(<span class="synConstant">'iframe'</span>);ifr.style.width=<span class="synConstant">'100%'</span>;ifr.style.height=<span class="synConstant">'285px'</span>;ifr.style.border=<span class="synConstant">'0px'</span>;ifr.src=<span class="synConstant">'http://del.icio.us/post?v=4;url='</span>+encodeURIComponent(<span class="synStatement">location</span>.href)+<span class="synConstant">';title='</span>+encodeURIComponent(<span class="synStatement">document</span>.title);<span class="synIdentifier">var</span> p=<span class="synStatement">document</span>.createElement(<span class="synConstant">'p'</span>);p.innerHTML=<span class="synConstant">'close'</span>;<span class="synStatement">with</span>(p.style)<span class="synIdentifier">{</span>height=<span class="synConstant">'15px'</span>;margin=<span class="synConstant">'0px'</span>;padding=<span class="synConstant">'0px'</span>;border=<span class="synConstant">'0px'</span>;fontSize=<span class="synConstant">'12px'</span>;fontWeight=<span class="synConstant">'bold'</span>;<span class="synIdentifier">}</span>p.onclick=<span class="synIdentifier">function</span>()<span class="synIdentifier">{</span><span class="synStatement">document</span>.body.removeChild(div);<span class="synStatement">document</span>.body.removeChild(dummy);<span class="synIdentifier">}</span>;div.appendChild(p);div.appendChild(ifr);<span class="synStatement">document</span>.body.appendChild(dummy);<span class="synStatement">document</span>.body.appendChild(div);<span class="synIdentifier">}</span>)();
-</pre><p>※追記</p><p>こっちにまとめました。<br />
+<pre class="code lang-javascript" data-lang="javascript" data-unlink="">javascript:(<span class="synIdentifier">function</span>()<span class="synIdentifier">{var</span> dummy=<span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);dummy.style.height=<span class="synConstant">'310px'</span>;<span class="synIdentifier">var</span> div=<span class="synStatement">document</span>.createElement(<span class="synConstant">'div'</span>);<span class="synStatement">with</span>(div.style)<span class="synIdentifier">{</span>position=<span class="synConstant">'fixed'</span>;width=<span class="synConstant">'100%'</span>;height=<span class="synConstant">'300px'</span>;<span class="synStatement">top</span>=<span class="synStatement">window</span>.innerHeight-310+<span class="synConstant">'px'</span>;left=<span class="synConstant">'0px'</span>;zIndex=1000;backgroundColor=<span class="synConstant">'#555'</span>;border=<span class="synConstant">'1px solid #000'</span>;textAlign=<span class="synConstant">'center'</span>;color=<span class="synConstant">'#fff'</span>;<span class="synIdentifier">}var</span> ifr=<span class="synStatement">document</span>.createElement(<span class="synConstant">'iframe'</span>);ifr.style.width=<span class="synConstant">'100%'</span>;ifr.style.height=<span class="synConstant">'285px'</span>;ifr.style.border=<span class="synConstant">'0px'</span>;ifr.src=<span class="synConstant">'http://del.icio.us/post?v=4;url='</span>+encodeURIComponent(<span class="synStatement">location</span>.href)+<span class="synConstant">';title='</span>+encodeURIComponent(<span class="synStatement">document</span>.title);<span class="synIdentifier">var</span> p=<span class="synStatement">document</span>.createElement(<span class="synConstant">'p'</span>);p.innerHTML=<span class="synConstant">'close'</span>;<span class="synStatement">with</span>(p.style)<span class="synIdentifier">{</span>height=<span class="synConstant">'15px'</span>;margin=<span class="synConstant">'0px'</span>;padding=<span class="synConstant">'0px'</span>;border=<span class="synConstant">'0px'</span>;fontSize=<span class="synConstant">'12px'</span>;fontWeight=<span class="synConstant">'bold'</span>;<span class="synIdentifier">}</span>p.onclick=<span class="synIdentifier">function</span>()<span class="synIdentifier">{</span><span class="synStatement">document</span>.body.removeChild(div);<span class="synStatement">document</span>.body.removeChild(dummy);<span class="synIdentifier">}</span>;div.appendChild(p);div.appendChild(ifr);<span class="synStatement">document</span>.body.appendChild(dummy);<span class="synStatement">document</span>.body.appendChild(div);<span class="synIdentifier">}</span>)();
+</pre><p>※追記</p><p>こっちにまとめました。<br>
 <a href="http://swdyh.infogami.com/layered_del.icio.us_bookmarklet">http://swdyh.infogami.com/layered_del.icio.us_bookmarklet</a></p>
 
 
@@ -36,6 +42,13 @@ closeボタン付き</p>
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

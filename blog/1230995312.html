@@ -1,18 +1,24 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: tabundle</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>tabundle</title>
+    <meta property="og:title" content="tabundle" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1230995312.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>tabundle</h2>
   <div>2009-01-04 00:08:32</div>
   <div class="content">
-    <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20090104235748" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20090104/20090104235748.png" alt="f:id:swdyh:20090104235748p:image" title="f:id:swdyh:20090104235748p:image" class="hatena-fotolife" itemprop="image"></a></span></p><p>開いているタブのページの情報をまとめたHTMLを生成する、という<a class="keyword" href="http://d.hatena.ne.jp/keyword/Firefox">Firefox</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B3%C8%C4%A5%B5%A1%C7%BD">拡張機能</a>をつくりました。JSActionsの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>として書いてあったんですが、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B3%C8%C4%A5%B5%A1%C7%BD">拡張機能</a>を作る練習としていいかなと思ってやってみました。ここからインストールしてください。</p><p><del datetime="2010-02-16T03:04:31+09:00"><a href="http://www.relucks.org/tabundle/tabundle.xpi">http://www.relucks.org/tabundle/tabundle.xpi</a></del><br />
-<a href="https://addons.mozilla.org/ja/firefox/addon/63140">https://addons.mozilla.org/ja/firefox/addon/63140</a></p><p>インストール後は、メニューのツールにtabundleというのが追加されてbundleとviewという二つのコマンドが実行できます。bundleは、今開いているタブのURLをまとめたHTMLを生成してそれ開きます。viewは、過去にbundleしたものの一覧を表示します。ステータスバーのアイコンからも同じコマンドが実行できます。今のところ機能はそれだけです。</p><p>生成したHTMLは、画像とかもろもろ埋め込んで1ファイルにしていて、どこかに移したりするのも簡単です。あと、編集や削除の機能がないんですが、単純にファイルになっているので、なんとでもなると思います。ファイルはプロファイル<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リ(<a href="http://kb.mozillazine.org/Profile_folder">http://kb.mozillazine.org/Profile_folder</a>)直下のtabundleという<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リにあります。</p><p>最初は出力するファイルの名前を<a class="keyword" href="http://d.hatena.ne.jp/keyword/Unix">Unix</a> timeにしていたんだけど、一日に一個HTMLが残れば十分かなあと思ったので、日付けをファイル名にして、同じ日に実行した場合は上書きするようにしました。このへんは、わりと好みがあると思うので設定できるようにした方がいいかなあと思っています。</p><p>これを作ろうと思ったきっかけは、自分はいつもタブをけっこうたくさん開きっぱなしにしていて、たまに地味にCPUを消費する<a class="keyword" href="http://d.hatena.ne.jp/keyword/Flash">Flash</a>の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%ED%A5%B0%A5%D1%A1%BC%A5%C4">ブログパーツ</a>とか広告がどっかに入っていて、CPUを20から30%くらい使い続けてる状態になったりするのがすごく嫌でなんとかしようと思ったからです。そういうのは見つけ次第<a class="keyword" href="http://d.hatena.ne.jp/keyword/Adblock">Adblock</a>に追加していたんだけどきりがなくて…。全部<a class="keyword" href="http://d.hatena.ne.jp/keyword/SBM">SBM</a>に登録しちゃうとか、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Tab%20Mix%20Plus">Tab Mix Plus</a>のセッションとか、いろいろ方法はあるけど、あんまりしっくりくる方法がなかったのでつくってみました。正直、まだ自分でも試しにつくってみた感じの状態かなと思うんですが、興味ある方はぜひ試してみてください。</p><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BD%A1%BC%A5%B9%A5%B3%A1%BC%A5%C9">ソースコード</a>はいつものように<a class="keyword" href="http://d.hatena.ne.jp/keyword/github">github</a>です。</p><p>swdyh's tabundle at master ― <a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a><br />
+    <p><span itemscope="" itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/swdyh/20090104235748" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/swdyh/20090104/20090104235748.png" alt="f:id:swdyh:20090104235748p:image" title="f:id:swdyh:20090104235748p:image" class="hatena-fotolife" itemprop="image"></a></span></p><p>開いているタブのページの情報をまとめたHTMLを生成する、というFirefoxの拡張機能をつくりました。JSActionsのスクリプトとして書いてあったんですが、拡張機能を作る練習としていいかなと思ってやってみました。ここからインストールしてください。</p><p><del datetime="2010-02-16T03:04:31+09:00"><a href="http://www.relucks.org/tabundle/tabundle.xpi">http://www.relucks.org/tabundle/tabundle.xpi</a></del><br>
+<a href="https://addons.mozilla.org/ja/firefox/addon/63140">https://addons.mozilla.org/ja/firefox/addon/63140</a></p><p>インストール後は、メニューのツールにtabundleというのが追加されてbundleとviewという二つのコマンドが実行できます。bundleは、今開いているタブのURLをまとめたHTMLを生成してそれ開きます。viewは、過去にbundleしたものの一覧を表示します。ステータスバーのアイコンからも同じコマンドが実行できます。今のところ機能はそれだけです。</p><p>生成したHTMLは、画像とかもろもろ埋め込んで1ファイルにしていて、どこかに移したりするのも簡単です。あと、編集や削除の機能がないんですが、単純にファイルになっているので、なんとでもなると思います。ファイルはプロファイルディレクトリ(<a href="http://kb.mozillazine.org/Profile_folder">http://kb.mozillazine.org/Profile_folder</a>)直下のtabundleというディレクトリにあります。</p><p>最初は出力するファイルの名前をUnix timeにしていたんだけど、一日に一個HTMLが残れば十分かなあと思ったので、日付けをファイル名にして、同じ日に実行した場合は上書きするようにしました。このへんは、わりと好みがあると思うので設定できるようにした方がいいかなあと思っています。</p><p>これを作ろうと思ったきっかけは、自分はいつもタブをけっこうたくさん開きっぱなしにしていて、たまに地味にCPUを消費するFlashのブログパーツとか広告がどっかに入っていて、CPUを20から30%くらい使い続けてる状態になったりするのがすごく嫌でなんとかしようと思ったからです。そういうのは見つけ次第Adblockに追加していたんだけどきりがなくて…。全部SBMに登録しちゃうとか、Tab Mix Plusのセッションとか、いろいろ方法はあるけど、あんまりしっくりくる方法がなかったのでつくってみました。正直、まだ自分でも試しにつくってみた感じの状態かなと思うんですが、興味ある方はぜひ試してみてください。</p><p>ソースコードはいつものようにgithubです。</p><p>swdyh's tabundle at master ― GitHub<br>
 <a href="http://github.com/swdyh/tabundle/tree/master">http://github.com/swdyh/tabundle/tree/master</a></p>
 
 
@@ -20,6 +26,13 @@
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   

@@ -1,31 +1,37 @@
   <html>
   <head>
         <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="main.css">
-  
-    <title>swdyh: AutoPagerize0.0.3</title>
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
+    <meta name="twitter:site" content="@swdyh" />
+    <meta name="twitter:card" content="summary">
+
+    <title>AutoPagerize0.0.3</title>
+    <meta property="og:title" content="AutoPagerize0.0.3" />
+    <meta property="og:url" content="https://swdyh.github.io/blog/1168877675.html" />
   </head>
   <body>
-  <h1><a href="index.html">swdyh</a></h1>
+      <h1><a href="index.html">swdyh</a></h1>
+
   <h2>AutoPagerize0.0.3</h2>
   <div>2007-01-16 01:14:35</div>
   <div class="content">
-    <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/AutoPagerize">AutoPagerize</a> 0.0.3<br />
-<a href="http://swdyh.yu.to/autopagerize003.user.js">http://swdyh.yu.to/autopagerize003.user.js</a></p><br />
-<p>このあいだ、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Wiki">Wiki</a>からデータを取るようにしたと書いたのだけど、<br />
-ひとまずそれは、サーバーの負荷を考えてやめました。<br />
-今のやつだと、「ユーザー数 * そのユーザーが見たページ」のアクセスが<br />
-いってしまうので、そのへんを改善しないうちはやめて置くことにしました。</p><br />
-<p>改善の方法としては、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Greasemonkey">Greasemonkey</a>は<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_setValueと<a class="keyword" href="http://d.hatena.ne.jp/keyword/GM">GM</a>_getValueというのがあって、<br />
-これでデータをキャッシュしてたまにだけアクセスするっていう手もあるかなあと思ってます。<br />
-ただ、配列とかが入れられないので、evalしないことを前提に考えると、<br />
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B7%A5%EA%A5%A2%A5%E9%A5%A4%A5%BA">シリアライズ</a>したりする仕組みがいるなあとか考えたら、めんどくさそうなのでちょっと保留です。</p><br />
-<p>あと自分のサーバーを使って、その範囲内でやるならありかなあとも思うんだけど、<br />
-今のところそんなサーバは用意できないので、それもなし。</p><br />
-<p>あ、でも外部サイトからデータをとってくるロジックは、そのまま残してあって、<br />
-取ってくる先のURLのリストが空になっているので、取りにいかないようになっているだけです。</p><br />
-<p>あとは、ダブルクリックで起動がやっぱりめんどうな気がしてきたので、<br />
+    <p>AutoPagerize 0.0.3<br>
+<a href="http://swdyh.yu.to/autopagerize003.user.js">http://swdyh.yu.to/autopagerize003.user.js</a></p><br>
+<p>このあいだ、Wikiからデータを取るようにしたと書いたのだけど、<br>
+ひとまずそれは、サーバーの負荷を考えてやめました。<br>
+今のやつだと、「ユーザー数 * そのユーザーが見たページ」のアクセスが<br>
+いってしまうので、そのへんを改善しないうちはやめて置くことにしました。</p><br>
+<p>改善の方法としては、GreasemonkeyはGM_setValueとGM_getValueというのがあって、<br>
+これでデータをキャッシュしてたまにだけアクセスするっていう手もあるかなあと思ってます。<br>
+ただ、配列とかが入れられないので、evalしないことを前提に考えると、<br>
+シリアライズしたりする仕組みがいるなあとか考えたら、めんどくさそうなのでちょっと保留です。</p><br>
+<p>あと自分のサーバーを使って、その範囲内でやるならありかなあとも思うんだけど、<br>
+今のところそんなサーバは用意できないので、それもなし。</p><br>
+<p>あ、でも外部サイトからデータをとってくるロジックは、そのまま残してあって、<br>
+取ってくる先のURLのリストが空になっているので、取りにいかないようになっているだけです。</p><br>
+<p>あとは、ダブルクリックで起動がやっぱりめんどうな気がしてきたので、<br>
 ダブルクリックはしなくても動くようにしました。</p>
 
 
@@ -33,6 +39,13 @@
   <div>
     <a class="back" href="index.html">◀</a>
   </div>
+    <footer>
+    <p>
+      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
+    </p>
+  </footer>
+
   </body>
   </html>
   
