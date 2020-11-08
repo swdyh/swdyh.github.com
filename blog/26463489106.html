@@ -2,6 +2,7 @@
   <head>
         <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
+    <link rel=alternate href="https://swdyh.github.io/blog/atom" type="application/atom+xml">
     <meta name="viewport" content="width=device-width">
     <meta property="og:image" content="https://swdyh.github.io/blog/og.jpg" />
     <meta name="twitter:site" content="@swdyh" />
@@ -9,7 +10,8 @@
 
     <title>node_redisのエラーハンドリング</title>
     <meta property="og:title" content="node_redisのエラーハンドリング" />
-    <meta property="og:url" content="https://swdyh.github.io/blog/26463489106.html" />
+    <meta property="og:description" content="node_redisを使うときにエラーをハンドリングしていないと、接続に失敗したときにプロセスごと死んでしまう。このときのエラーはtry catchだと補足できないので、onメソッドでerrorイベン..." />
+    <meta property="og:url" content="https://swdyh.github.io/blog/26463489106" />
   </head>
   <body>
       <h1><a href="index.html">swdyh</a></h1>
@@ -62,7 +64,7 @@ app.listen(9999)
   </div>
     <footer>
     <p>
-      このサイトはswdyhの個人ブログです。プログラミングや日々のことについて書いたりします<br>
+      swdyhの個人ブログです。プログラミングや日々のことについて書いたりします
       <a href="https://swdyh.github.io/">Profile</a> <a href="https://github.com/swdyh">Github</a> <a href="https://twitter.com/swdyh">Twitter</a>
     </p>
   </footer>
