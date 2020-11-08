@@ -2,2090 +2,2091 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
   <id>tag:swdyh.github.io,2016:blog/</id>
   <title>swdyh blog</title>
+  <author><name>swdyh</name></author>
   <updated>2012-01-03T11:48:36.000Z</updated>
   <link rel="alternate" type='text/html' href="https://swdyh.github.io/blog/" />
-  <link rel="self" type="application/atom+xml" href="https://swdyh.github.io/blog/atom" />
+  <link rel="self" type="application/atom+xml" href="https://swdyh.github.io/blog/atom.xml" />
       <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1603801318</id>
       <title>過去のブログの整理と移動</title>
       <summary>はてなダイアリー(今はてなブログ)で書いていた記事と、そのあとTumblrで書いていた記事をエクスポートしてきて、Github Pageのなかに移動しました。最近の個人ブログブームに触発されたのと、は...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1603801318" />
       <updated>2020-10-27T12:21:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/156522137410</id>
       <title>Ohacan ジョブカンのコマンドラインクライアントをつくりました</title>
       <summary>出勤と退勤しかできませんが、ジョブカンのコマンドラインクライアントをつくりました。  Ohacan https://github.com/swdyh/ohacan  ここからバイナリがダウンロード...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/156522137410" />
       <updated>2017-01-29T07:00:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/154289849300</id>
       <title>複数の仮想環境を立ち上げてWeb開発するときに便利なmDNS</title>
       <summary>トレタアドベントカレンダー11日目です。  アドベントカレンダーを書くのは二年ぶりです。そのときは、家庭を支える技術アドベントカレンダーで、いまから帰るよという連絡をYOでするサービスをつくった話を書...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/154289849300" />
       <updated>2016-12-10T15:48:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/141774065075</id>
       <title>天下Wiki武道会に参加してきました</title>
       <summary>京都で開催された天下wiki武道会(http://connpass.com/event/27643/)に行ってきました。東京からわざわざ参加するおもしろいひとや、Nota社やはてな社のおもしろいひ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/141774065075" />
       <updated>2016-03-27T12:35:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/136317130125</id>
       <title>ButtonLessCam 長押しで撮影するiOSのカメラアプリをつくった</title>
       <summary>ButtonlessCam - 長押しでかんたん撮影 https://itunes.apple.com/us/app/buttonlesscam-zhang-yashidekantan/id10...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/136317130125" />
       <updated>2015-12-31T09:01:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/104763974010</id>
       <title>帰宅連絡 KAERUYO #家庭を支える技術</title>
       <summary>家庭を支える技術 Advent Calendar 2014 10日目の記事です。  帰宅するときの「いまから帰るよ」という連絡している家庭は多いと思いますが、うちではYoを利用していて、その紹介を...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/104763974010" />
       <updated>2014-12-09T16:04:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/93581891675</id>
       <title>チャットワークのチャットログと添付ファイルをまるっとダウンロード</title>
       <summary>チャットワークのチャットログと添付ファイルをまるっとダウンロードするツールをつくりました。最近チャットワークからSlackに移行して、過去ログを一応とっておこうと思ったらエクスポート機能がなかったので...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/93581891675" />
       <updated>2014-08-02T10:59:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/56414725160</id>
       <title>go-enumerable 並行版関数を追加</title>
       <summary>Golangでスライスに対してmapやfilter処理をするgo-enumerableに、複数のGoroutineを使って実行するバージョンの関数を追加しました。  func ExampleMakeM...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/56414725160" />
       <updated>2013-07-25T09:49:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/55771477125</id>
       <title>GoのExampleテストが便利</title>
       <summary>Goでは、Example用のコードをgodocに表示させたり、テストとして実行して結果をチェックをすることができます。Example用のコードを書いて、それをドキュメントにコピペする作業や、その内容が...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/55771477125" />
       <updated>2013-07-18T10:28:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/55585331908</id>
       <title>Opera15以降用のAutoPagerizeをリリース</title>
       <summary>autopagerize:    Opera15以降用のAutoPagerizeをリリースしました。Operaの拡張機能サイトからインストールしてください。  拡張機能「 AutoPagerize」...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/55585331908" />
       <updated>2013-07-16T06:56:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/54986564541</id>
       <title>go-enumerable golangでスライスにmapとかfilter</title>
       <summary>Golangでスライスに対して、 map, filter(select), some(any), every(all), reduce(inject, foldl), reduceRight(fold...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/54986564541" />
       <updated>2013-07-09T07:50:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/54581861275</id>
       <title>Add-To-Zaim Chrome Extension</title>
       <summary>AddToZaim http://swdyh.github.io/add-to-zaim/  WebページからZaimに登録しやすくするChrome拡張をつくりました。ECサイトの注文履歴ページ、オン...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/54581861275" />
       <updated>2013-07-04T07:38:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/50154551190</id>
       <title>X-Content-Type-Options: nosniff の効果</title>
       <summary>Heads up: nosniff header support coming to Chrome and Firefox https://github.com/blog/1482-heads-up-...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/50154551190" />
       <updated>2013-05-11T09:21:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/48945521939</id>
       <title>gisty version 0.2.4</title>
       <summary>Github APIにアクセスするときにUser-Agentを指定する要があったので追加しました。アップデートして使ってください。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/48945521939" />
       <updated>2013-04-26T19:24:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/36273207295</id>
       <title>Fulltext search with Node.js and elasticsearch</title>
       <summary>東京Node学園祭2012の発表資料です。半分くらいはelasticsearchの紹介なのと、Node.jsから使ってる部分はhttpクライアントしか使っていないので、他のプログラミング言語で使う...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/36273207295" />
       <updated>2012-11-22T08:08:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/35783011184</id>
       <title>東京Node学園祭2012で発表します</title>
       <summary>今度の日曜(11/18)の東京Node学園祭2012でNode.jsとelasticsearchについての発表をします。時間が長いのでかんたんなライブコーディングもしてみるつもりです。ひさびさの発...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/35783011184" />
       <updated>2012-11-15T18:07:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/34707403242</id>
       <title>2012-11-01 01:53:00.000</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/34707403242" />
       <updated>2012-10-31T16:53:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/30368802499</id>
       <title>Yet Another npm Search</title>
       <summary>Yet Another npm search http://ya-npm-search.herokuapp.com/  “Yet Another npm search” is a search e...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/30368802499" />
       <updated>2012-08-28T04:40:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/29113321879</id>
       <title>WiFiの電波から位置情報を取得するwifi_locationをNode.jsに移植</title>
       <summary>Mac/LinuxのWiFiで位置情報を取得 http://shokai.org/blog/archives/6399  このshokaiさんのwifi_locationはRubyで書いてあったのでJ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/29113321879" />
       <updated>2012-08-10T07:47:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/28474643309</id>
       <title>Sumallyの一覧に転載元ページへのリンクを追加するユーザスクリプト</title>
       <summary>https://userscripts.org/scripts/source/139785.user.js  FirefoxのGreasemonkeyとChromeで動きます。 インストールすると...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/28474643309" />
       <updated>2012-08-01T08:35:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/27543601469</id>
       <title>アニメーションgifを止める/アニメーションgifから任意のコマを取り出すWeb APIを作った</title>
       <summary>urlパラメータにgifのurlを渡す  http://stopgif.herokuapp.com/?url=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/27543601469" />
       <updated>2012-07-19T07:42:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/26463489106</id>
       <title>node_redisのエラーハンドリング</title>
       <summary>node_redisを使うときにエラーをハンドリングしていないと、接続に失敗したときにプロセスごと死んでしまう。このときのエラーはtry catchだと補足できないので、onメソッドでerrorイベン...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/26463489106" />
       <updated>2012-07-04T02:22:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/25922359288</id>
       <title>AWS S3でmultipart uploadした場合のetagを計算する</title>
       <summary>Rubyのaws-sdkを使って、定期的にディレクトリごとs3にアップロードしていて、手元のファイルとs3のファイルが同じかどうかをetagでチェックしていたら、etagがファイルのmd5の場合とそう...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/25922359288" />
       <updated>2012-06-26T12:03:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/25150285206</id>
       <title>mad(1)を使ってみる</title>
       <summary>madはmarkdownベースのmanみたいなもの。もともとmarkdownはそのままでも読みやすいんだけど、強調とかコードに色がついて読みやすくなっている。mad-pagesにNode.jsのド...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/25150285206" />
       <updated>2012-06-15T08:54:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/23987377461</id>
       <title>Node.jsでServer-Sent Eventsを使ってみた</title>
       <summary>setIntervalで定期的にevnetを送るのと、redisのPub/Subを利用してeventを送るのという2種類。 イベント発生時にレスポンスを書き出すようにするのは、EventEmitt...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/23987377461" />
       <updated>2012-05-29T07:53:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/23896243559</id>
       <title>Firefox拡張 Add-on SDK simple-prefsを使って設定画面を作る</title>
       <summary>Add-on SDKのsimple-prefsモジュールを使って簡易な設定画面を作ってみる。SDKのドキュメントは情報が少ないので、Add-ons Blogの記事も見るわかりやすい。  Just La...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/23896243559" />
       <updated>2012-05-28T00:13:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/21428058061</id>
       <title>2012-04-20 17:05:00.000</title>
       <summary>New Vulne...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/21428058061" />
       <updated>2012-04-20T08:05:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/19575869862</id>
       <title>gisty 0.1.2</title>
       <summary>ポストできなくなったのを修正しました。 以下のコマンドでアップデートまたはインストールできます。      $ gem install gisty    今まで使っていたtokenがgistの仕様...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/19575869862" />
       <updated>2012-03-19T16:27:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/15240657243</id>
       <title>2012-01-03 23:33:00.000</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/15240657243" />
       <updated>2012-01-03T14:33:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/15237449181</id>
       <title>Emobile GP02 Monitor for Mac</title>
       <summary>GP02 Monitor https://github.com/swdyh/GP02Monitor  定期的(30秒ごと)に接続状態をチェックし、接続がきれていた場合は自動で接続し直します。 ma...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/15237449181" />
       <updated>2012-01-03T11:45:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/15237446761</id>
       <title>A Happy New Year</title>
       <summary>去年はあまりブ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/15237446761" />
       <updated>2012-01-03T11:45:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1325591316</id>
       <title>移転</title>
       <summary>こっちで書くことにしますhttp://swdyh.tumblr.com/</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1325591316" />
       <updated>2012-01-03T11:48:36.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1309291876</id>
       <title>2011-06-29 05:11:16</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1309291876" />
       <updated>2011-06-28T20:11:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1295956901</id>
       <title>AutoPagerize Firefox4対応</title>
       <summary>AutoPagerize Firefox拡張 0.7.0 https://relucks-org.appspot.com/autopagerize/autopagerize.xpi Firefox4(...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1295956901" />
       <updated>2011-01-25T12:01:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1290652779</id>
       <title>Firefox Developers Conference 2010の大ライトニングトークで発表してきました</title>
       <summary>Firefox Developers Conference 2010の大ライトニングトークで発表してきました。Chrome、Safari、Operaにも拡張機能がついて、拡張機能開発もいろいろなブラウ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1290652779" />
       <updated>2010-11-25T02:39:39.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1288107120</id>
       <title>AutoPagerize 更新</title>
       <summary>Safari拡張 0.2.5 http://autopagerize.net/files/autopagerize_for_safari.safariextzChrome拡張 0.2.4 https:...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1288107120" />
       <updated>2010-10-26T15:32:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1287988638</id>
       <title>AutoPagerize 更新</title>
       <summary>Safari拡張 0.2.3 http://autopagerize.net/files/autopagerize_for_safari.safariextzChrome拡張 0.2.2 https:...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1287988638" />
       <updated>2010-10-25T06:37:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1287606040</id>
       <title>AutoPagerize セキュリティアップデート</title>
       <summary>重要:セキュリティ上の問題があるので、必ずアップデートしてください。Greasemonkey版を使っている方は以下から、最新版(0.0.52)をインストールしてください。 http://userscr...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1287606040" />
       <updated>2010-10-20T20:20:40.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1287390598</id>
       <title>node-kyoto-tycoon</title>
       <summary>node-kyoto-tycoon http://github.com/swdyh/node-kyoto-tycoonKyotoTycoonのNode.js用ライブラリを作りました。まだだいぶ荒削りな...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1287390598" />
       <updated>2010-10-18T08:29:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1286509724</id>
       <title>AutoPagerizeのFirefox拡張をJetpack SDKで書き直した</title>
       <summary>Jetpack SDKが0.8になってpage-mod API(content script)がついたので、それを使ってAutPagerizeのFirefox拡張をつくり直しました。前に作っていたFi...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1286509724" />
       <updated>2010-10-08T03:48:44.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1276576719</id>
       <title>2010-06-15 13:38:39</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1276576719" />
       <updated>2010-06-15T04:38:39.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1276156785</id>
       <title>AutoPagerize for Safari</title>
       <summary>Safari5がリリースされ、拡張機能が追加できるようになったので、AutoPagerizeのSafari版をつくってみました。Safariの拡張の仕組みは、Chromeの拡張とほとんど同じなのでわり...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1276156785" />
       <updated>2010-06-10T07:59:45.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1270390379</id>
       <title>2010-04-04 23:12:59</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1270390379" />
       <updated>2010-04-04T14:12:59.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1269305458</id>
       <title>URLのトラッキング用パラメータを無視するFirefox拡張 Through utm_</title>
       <summary>URLのトラッキング用パラメータを無視するFirefox拡張(Through utm_) を作りました。インストールすると、utm_から始まるパラメータがついたURLにアクセスしようとした場合に、その...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1269305458" />
       <updated>2010-03-23T00:50:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1268271416</id>
       <title>Jepack SDKがリリースされたので使ってみる</title>
       <summary>Mozilla Labs » jetpack » Blog Archive » Announcing the Jetpack SDK: First Milestone Release http://m...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1268271416" />
       <updated>2010-03-11T01:36:56.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1260642798</id>
       <title>江ノ島、バイクシェアリング</title>
       <summary>パリやユーロッパの都市では、簡単に借りて返すことができる自転車が街中にあって便利らしいです。その仕組みをバイクシェアリングというんですが、それの小規模なものを江ノ島でやっています。今回のものは実証実験...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1260642798" />
       <updated>2009-12-12T18:33:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1260311164</id>
       <title>AutoPagerize for Chrome、Extensionsギャラリーで公開</title>
       <summary>Google Chrome Extensions: AutoPagerize for Chrome https://chrome.google.com/extensions/detail/igiofj...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1260311164" />
       <updated>2009-12-08T22:26:04.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1257620517</id>
       <title>2009-11-08 04:01:57</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1257620517" />
       <updated>2009-11-07T19:01:57.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1257620415</id>
       <title>Firefox Developers Conference 2009 ライトニングトーク発表資料</title>
       <summary>「AutoPagerize on Firefox and Google Chrome」SlideShare: http://www.slideshare.net/swdyh/autopagerize-...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1257620415" />
       <updated>2009-11-07T19:00:15.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1256551038</id>
       <title>Firefox Developers Conference 2009 のライトニングトークに出ます</title>
       <summary>11/8に開催されるFirefox Developers Conference 2009のライトニングトーク(LT)に出ることになりました。拡張機能についてのLTということだったので、AutoPage...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1256551038" />
       <updated>2009-10-26T09:57:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1255189870</id>
       <title>2009-10-11 00:51:10</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1255189870" />
       <updated>2009-10-10T15:51:10.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1253381517</id>
       <title>AutoPagerize For Chrome 0.0.4</title>
       <summary>http://autopagerize.net/    content_scriptをGreasemonkey版を使うように変更 初期化処理をtoolchiptoolstripからbackgroud...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1253381517" />
       <updated>2009-09-19T17:31:57.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1253117343</id>
       <title>2009-09-17 01:09:03</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1253117343" />
       <updated>2009-09-16T16:09:03.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1253029583</id>
       <title>2009-09-16 00:46:23</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1253029583" />
       <updated>2009-09-15T15:46:23.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1250961923</id>
       <title>2009-08-23 02:25:23</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1250961923" />
       <updated>2009-08-22T17:25:23.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1250960832</id>
       <title>AquaSKKのショートカットキーの変更</title>
       <summary>ひさしぶりにAquaSKKをアップデートしたら、Emacsでコマンドのキャンセル(Ctrl-g)やUndo(Ctrl-/)ができなくなった。バージョンはAquaSKK 4.0RC5(2009-8-21...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1250960832" />
       <updated>2009-08-22T17:07:12.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1249002175</id>
       <title>AutoPagerize.net公開、Firefox拡張版公開</title>
       <summary>AutoPagerize http://autopagerize.net/ついでにFirefox拡張版も公開しました。ChromeのExtensionと同じで、まだ実験的な実装です。Greasemon...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1249002175" />
       <updated>2009-07-31T01:02:55.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1247463507</id>
       <title>2009-07-13 14:38:27</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1247463507" />
       <updated>2009-07-13T05:38:27.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1246443192</id>
       <title>AutoPagerize for Chrome 0.0.2</title>
       <summary>機能の変更はありません。パッケージングの方法が変って、古い方法でつくったパッケージだとインストールできなくなってしまったので、パッケージを作りなおしました。http://cloud.github.co...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1246443192" />
       <updated>2009-07-01T10:13:12.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1243232130</id>
       <title>AutoPagerize for Chrome</title>
       <summary>まだとりあえず動くというレベルですが、ChromeのExtension版のAutoPagerizeをつくりました。  --enable-extensionsをつけて起動してる状態で、 下のURLからイ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1243232130" />
       <updated>2009-05-25T06:15:30.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1243089638</id>
       <title>2009-05-23 23:40:38</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1243089638" />
       <updated>2009-05-23T14:40:38.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1241676327</id>
       <title>AutoPagerizeTwitterFilter</title>
       <summary>少し前からTwitterでAutoPagerizeが動かなくなっています。2ページ目以降のHTMLが取得できなくなってしまったためです。それをなんとかするユーザスクリプトを書きました。AutoPage...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1241676327" />
       <updated>2009-05-07T06:05:27.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1241676080</id>
       <title>AutoPagerize 0.0.37</title>
       <summary>AutoPagerize 0.0.37 http://userscripts.org/scripts/show/8551変更点   requestFilterとresponseFilterの追加 メモ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1241676080" />
       <updated>2009-05-07T06:01:20.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1240347500</id>
       <title>Chromeのextension</title>
       <summary>最近までChromeには全然興味がなかったんだけど、ここにきて急に興味が湧いてきてる。自分にとってブラウザは、自分にどれだけ最適化できるかどうかが一番重要で、そういう意味で今のChromeは興味がなく...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1240347500" />
       <updated>2009-04-21T20:58:20.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1240347088</id>
       <title>MacでChromiumをビルド</title>
       <summary>MacBuildInstructions - chromium - Build instructions for Chromium on Mac OS X - Google Code http://c...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1240347088" />
       <updated>2009-04-21T20:51:28.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1236810154</id>
       <title>2009-03-12 07:22:34</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1236810154" />
       <updated>2009-03-11T22:22:34.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1236684989</id>
       <title>AutoPagerize 0.0.36</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551    「サードパーティのCookieも保存する」がオフの...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1236684989" />
       <updated>2009-03-10T11:36:29.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1234690038</id>
       <title>2009-02-15 18:27:18</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1234690038" />
       <updated>2009-02-15T09:27:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1232801287</id>
       <title>tabndle0.0.7 + tabundle_states.user.js</title>
       <summary>tabndle0.0.7 http://www.relucks.org/tabundle/tabundle.xpi    htmlファイルの保存先を設定できるようにした 一覧ページもhtmlとして出力...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1232801287" />
       <updated>2009-01-24T12:48:07.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1232800254</id>
       <title>2009-01-24 21:30:54</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1232800254" />
       <updated>2009-01-24T12:30:54.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1232201891</id>
       <title>2009-01-17 23:18:11</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1232201891" />
       <updated>2009-01-17T14:18:11.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1231603863</id>
       <title>rails2.2のi18nでAccept-Languageを見て振り分けをする</title>
       <summary>ruby-gettextだとAccept-Language見て、それに応じた表示をしてくれるようになっていたんだけど、今のとこi18nだとそこまでやってくれないっぽい。どうしようかなと思って調べていた...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1231603863" />
       <updated>2009-01-10T16:11:03.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1230995312</id>
       <title>tabundle</title>
       <summary>開いているタブのページの情報をまとめたHTMLを生成する、というFirefoxの拡張機能をつくりました。JSActionsのスクリプトとして書いてあったんですが、拡張機能を作る練習としていいかなと思っ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1230995312" />
       <updated>2009-01-03T15:08:32.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1230827777</id>
       <title>gisty0.0.10</title>
       <summary>swdyh's gisty at master ― GitHub http://github.com/swdyh/gisty/tree/masterスクレイピングしてる部分のHTMLが変っていて、古い...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1230827777" />
       <updated>2009-01-01T16:36:17.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1230826887</id>
       <title>あけましておめでとうございます</title>
       <summary>具体的なことはなんにも考えてないけど、今年はお金を稼ぎたいですね。 今年もよろしくお願いします。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1230826887" />
       <updated>2009-01-01T16:21:27.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1230089253</id>
       <title>AutoPagerize0.0.34</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551    SITEINFOの取得先につながらない場合の処理を...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1230089253" />
       <updated>2008-12-24T03:27:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1229087900</id>
       <title>AutoPagerize0.0.32</title>
       <summary>かなり久しぶりのアップデートです。AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551    はてなブックマー...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1229087900" />
       <updated>2008-12-12T13:18:20.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1228672620</id>
       <title>2008-12-08 02:57:00</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1228672620" />
       <updated>2008-12-07T17:57:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1228655198</id>
       <title>gistコマンドよりちょっと便利なgisty</title>
       <summary>メモやちょっとしたスクリプトなどをペーストするとgitのリポジトリとして管理してくれるgistというサービスがあります。そのgistにコマンドラインから投稿するツールがあって、それは前に少し紹介したん...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1228655198" />
       <updated>2008-12-07T13:06:38.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1227359683</id>
       <title>usericonsリニューアルとソース公開</title>
       <summary>usericons.relucks.org http://usericons.relucks.org/ とく機能は増えていないんですが、主に裏側をいろいろ改善しました。   cgi.rbからsinat...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1227359683" />
       <updated>2008-11-22T13:14:43.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1227351759</id>
       <title>2008-11-22 20:02:39</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1227351759" />
       <updated>2008-11-22T11:02:39.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1227042161</id>
       <title>firefox dev conf</title>
       <summary>Ubiquityの話、「1000+ to 10000000+」、コマンドを書くひとを増やしたい。書くひとが増えることは、とてもインパクトがある、というようなことを言っていて、それが印象に残った。A...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1227042161" />
       <updated>2008-11-18T21:02:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1226072524</id>
       <title>make</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1226072524" />
       <updated>2008-11-07T15:42:04.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1225381995</id>
       <title>nokogiriをインストールしてみた</title>
       <summary>tenderlove's nokogiri at master ― GitHub http://github.com/tenderlove/nokogiri/tree/master XPathやCSS...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1225381995" />
       <updated>2008-10-30T15:53:15.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1225038671</id>
       <title>Twitterをアイコンをへんな顔にするGreasemonkeyスクリプト</title>
       <summary>twitter faceiconize – Userscripts.org http://userscripts.org/scripts/show/36109 上の画像のような感じで、Twitterの...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1225038671" />
       <updated>2008-10-26T16:31:11.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1224888573</id>
       <title>コマンドラインからgistを使う</title>
       <summary>defunkt's gist at master ― GitHub http://github.com/defunkt/gist/tree/mastergistコマンドラインツール - ロックスターに...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1224888573" />
       <updated>2008-10-24T22:49:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1224257252</id>
       <title>shimanto</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1224257252" />
       <updated>2008-10-17T15:27:32.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1223751500</id>
       <title>usericons</title>
       <summary>http://usericons.relucks.org/いろんなWebサービスのユーザーアイコンを手軽に取得できるサービスをつくりました。         使い方     例えば、Twitterのア...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1223751500" />
       <updated>2008-10-11T18:58:20.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1223632036</id>
       <title>2008-10-10 18:47:16</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1223632036" />
       <updated>2008-10-10T09:47:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1223115144</id>
       <title>2008-10-04 19:12:24</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1223115144" />
       <updated>2008-10-04T10:12:24.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1222543660</id>
       <title>sanma</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1222543660" />
       <updated>2008-09-27T19:27:40.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1221750832</id>
       <title>quilt-0.0.3</title>
       <summary>quilt(identiconを生成するライブラリ)の描画処理がおかしかったので修正しました。 左：修正前、右：修正後。 swdyh's quilt at master ― GitHub http:/...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1221750832" />
       <updated>2008-09-18T15:13:52.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1221741274</id>
       <title>kyoto</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1221741274" />
       <updated>2008-09-18T12:34:34.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1216375906</id>
       <title>takoyaki</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1216375906" />
       <updated>2008-07-18T10:11:46.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1214588310</id>
       <title>AutoPagerize0.0.30</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 機能追加はありません。細かい修正です。   ドメインチェ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1214588310" />
       <updated>2008-06-27T17:38:30.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1214163439</id>
       <title>RejectRejectKaigi 2008</title>
       <summary>RubyKaigi終了後に開催されたRejectKaigiにエントリしたんですが、 無事Rejectされ、RejectKaigiと同時進行で開催されたRejectRejectKaigiでIdentic...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1214163439" />
       <updated>2008-06-22T19:37:19.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1214161084</id>
       <title>TwitterのアイコンをidenticonにするGreasemonkeyスクリプト</title>
       <summary>twitter identiconize – Userscripts.org http://userscripts.org/scripts/show/28936 http://identicon.re...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1214161084" />
       <updated>2008-06-22T18:58:04.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1214160021</id>
       <title>Identiconを生成するサービスをつくりました</title>
       <summary>http://identicon.relucks.org/使い方は単純でURLのスラッシュの後に元になる文字を入れてください。 例 http://identicon.relucks.org/hogeh...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1214160021" />
       <updated>2008-06-22T18:40:21.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1213803148</id>
       <title>RubyKaigi2008いく</title>
       <summary>金、土、日とRubyKaigi2008行ってきます。 通うには遠すぎるので宿も予約しました。ちょっとした旅行というか合宿気分。 IdenticonのやつでRejectKaigiエントリーしてみようかな...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1213803148" />
       <updated>2008-06-18T15:32:28.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1213355615</id>
       <title>2008-06-13 20:13:35</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1213355615" />
       <updated>2008-06-13T11:13:35.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1209839097</id>
       <title>AutoPagerizeをgithubに入れた</title>
       <summary>swdyh's autopagerize at master ― GitHub http://github.com/swdyh/autopagerize/tree/master AutoPageri...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1209839097" />
       <updated>2008-05-03T18:24:57.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1209213692</id>
       <title>AutoPagerize0.0.29</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 思いつきというか実験的なものですが、継ぎ足し回数を記録...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1209213692" />
       <updated>2008-04-26T12:41:32.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1208333008</id>
       <title>wedata.net公開</title>
       <summary>wedataというサービスを作りました。 wedataはSITEINFOなど、誰でも書換えられるデータを保存して利用するためのシステムです。 AutoPagarizeのSITEINFOやそれ系のデータ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1208333008" />
       <updated>2008-04-16T08:03:28.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1208333007</id>
       <title>AutoPagerize0.0.27</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 SITEINFOの置き場所をinfogamiからweda...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1208333007" />
       <updated>2008-04-16T08:03:27.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1207304361</id>
       <title>2008-04-04 19:19:21</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1207304361" />
       <updated>2008-04-04T10:19:21.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1206718451</id>
       <title>AutoPagerize0.0.26</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 アップデートしました。   Firefox3beta4の...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1206718451" />
       <updated>2008-03-28T15:34:11.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1206697102</id>
       <title>GoogleグループにAutoPagerizeグループを作った</title>
       <summary>AutoPagerize | Google グループ http://groups.google.co.jp/group/autopagerize 「AutoPagerizeとか、なんとかAutoPag...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1206697102" />
       <updated>2008-03-28T09:38:22.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1205431530</id>
       <title>AutoPagerize0.0.25</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 開いているページと次ページのドメインが違っている場合は継...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1205431530" />
       <updated>2008-03-13T18:05:30.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1204964929</id>
       <title>2008-03-08 17:28:49</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1204964929" />
       <updated>2008-03-08T08:28:49.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1204304602</id>
       <title>LDRの左の部分を消したり戻したりする</title>
       <summary>livedoor Reader をより快適にするかもしれない、ちょい「不良(ワル)」 greasemonkey スクリプト - antipop http://d.hatena.ne.jp/antipo...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1204304602" />
       <updated>2008-02-29T17:03:22.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1203852119</id>
       <title>AutoPagerize0.0.24</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 bugfixです。SITEINFOのチェックあたりを修正...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1203852119" />
       <updated>2008-02-24T11:21:59.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1203252993</id>
       <title>2008-02-17 21:56:33</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1203252993" />
       <updated>2008-02-17T12:56:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1203074519</id>
       <title>AutoPagerize0.0.23</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 Firefox3 ベータで動かなくなってたのを直しました...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1203074519" />
       <updated>2008-02-15T11:21:59.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1202574453</id>
       <title>AutoPagerize0.0.22</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551まずいバグがあったので、できるだけすぐアップデートしてくだ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1202574453" />
       <updated>2008-02-09T16:27:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1201944923</id>
       <title>2008-02-02 18:35:23</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1201944923" />
       <updated>2008-02-02T09:35:23.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1201944627</id>
       <title>2008-02-02 18:30:27</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1201944627" />
       <updated>2008-02-02T09:30:27.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1201867125</id>
       <title>Direcory Index Image Viewer で徐々に画像を開くようにする実験</title>
       <summary>Direcory Index Image Viewer – Userscripts.org http://userscripts.org/scripts/show/9601 Directory Ind...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1201867125" />
       <updated>2008-02-01T11:58:45.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1201537653</id>
       <title>AutoPagerize0.0.21</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 アップデートしました。 主にbugfixです。 0.0....</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1201537653" />
       <updated>2008-01-28T16:27:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1200323242</id>
       <title>2008-01-15 00:07:22</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1200323242" />
       <updated>2008-01-14T15:07:22.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1200273218</id>
       <title>2008-01-14 10:13:38</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1200273218" />
       <updated>2008-01-14T01:13:38.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1200273217</id>
       <title>あけましておめでとうございます</title>
       <summary>もう2週間もたってますが、まあいちおう今年最初の記事なので軽く挨拶を。 去年はだいたい無職やらフリーランスっぽいことやらをしていたんですが、 その生活も11月で終わりにして12月から働きはじめました。...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1200273217" />
       <updated>2008-01-14T01:13:37.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1198945773</id>
       <title>12/29</title>
       <summary>昼   自由が丘のブックオフ、ABC、ビレバン プンプンの2巻を買う 写真を撮りながらぶらぶら歩く 都立大学方面、目黒通りへ トイレついでにダイエーに寄って、窓から写真を撮ったりする 最近、何を撮っ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1198945773" />
       <updated>2007-12-29T16:29:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1198856458</id>
       <title>photo</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1198856458" />
       <updated>2007-12-28T15:40:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1198061334</id>
       <title>AutoPagerizeをFirefox3で動かそうとしたときにつまったポイント</title>
       <summary>Greasemonkeyスクリプトを書くひとはこのへんを注意するといいと思います。 ほとんどDOM関連なのでGreasemonkeyに限った話じゃないかも。     異るドキュメントのノードをappe...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1198061334" />
       <updated>2007-12-19T10:48:54.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1198057046</id>
       <title>AutoPagerize0.0.19</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 Firefox3対応をしてみました。 まだとりあえず動く...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1198057046" />
       <updated>2007-12-19T09:37:26.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1196922989</id>
       <title>AutoPagerize0.0.18</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 siteinfoにinsertBeforeがなくてもいい...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1196922989" />
       <updated>2007-12-06T06:36:29.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1196154527</id>
       <title>2007-11-27 18:08:47</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1196154527" />
       <updated>2007-11-27T09:08:47.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1193868448</id>
       <title>2007-11-01 07:07:28</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1193868448" />
       <updated>2007-10-31T22:07:28.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1193605987</id>
       <title>六本木クロッシングに行ってきた</title>
       <summary>MORI ART MUSEUM [六本木クロッシング2007] http://www.mori.art.museum/contents/roppongix02/ youpy、itkz、mala、自分...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1193605987" />
       <updated>2007-10-28T21:13:07.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1192626672</id>
       <title>AutoPagerize0.0.17</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 1ページ目にフィルターを適用するのはやめました。 ころこ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1192626672" />
       <updated>2007-10-17T13:11:12.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1192600814</id>
       <title>AutoPagerize0.0.16</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 ちょっとした修正です。     1ページ目にフィルターを...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1192600814" />
       <updated>2007-10-17T06:00:14.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1192533668</id>
       <title>AutoPagerize0.0.15</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551   全体を括っていたfunctionをなくした ifra...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1192533668" />
       <updated>2007-10-16T11:21:08.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1192513906</id>
       <title>アイデアを参考にするということ</title>
       <summary>なにかものを作るときに参考にしたアイデアがあったとして、 それを考えたひとにお伺いを立てなければいけないというのは窮屈すぎると思う またそのアイデアを考えたひとの名前を出したからといって、批判されると...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1192513906" />
       <updated>2007-10-16T05:51:46.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1192171247</id>
       <title>activesupport1.4.3でinclude Rackするとrequireできなくなる</title>
       <summary>railsをアップデートしたら、自分用つくってたアプリが急に動かなくなった。 そのアプリはrailsを使っていなくて、rackとactiverecordを使ってる。 いろいろ削ってみると、これだけでエ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1192171247" />
       <updated>2007-10-12T06:40:47.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1192027450</id>
       <title>2007-10-10 23:44:10</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1192027450" />
       <updated>2007-10-10T14:44:10.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1191990415</id>
       <title>2007-10-10 13:26:55</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1191990415" />
       <updated>2007-10-10T04:26:55.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1190816626</id>
       <title>2007-09-26 23:23:46</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1190816626" />
       <updated>2007-09-26T14:23:46.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1190418314</id>
       <title>[ruby] MacでTwitterのページを一気にひらく適当スクリプト</title>
       <summary>if ARGV.size == 2   s = ARGV[0].to_i   n = ARGV[1].to_i   n.times do |i|     u = "http://twitter.com...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1190418314" />
       <updated>2007-09-21T23:45:14.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1190256496</id>
       <title>AutoPagerize0.0.14</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 主にバグ修正です。     onscrollイベントの解...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1190256496" />
       <updated>2007-09-20T02:48:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1190158049</id>
       <title>AutoPagerize0.0.13</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 久しぶりにアップデートしました。 わりと細かい部分の修正...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1190158049" />
       <updated>2007-09-18T23:27:29.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1189874677</id>
       <title>出張 Shibuya.js 24 AutoPagerize 発表資料</title>
       <summary>http://www.slideshare.net/swdyh/autopagerize-shinuyajs-2007-915/download http://www.slideshare.net/s...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1189874677" />
       <updated>2007-09-15T16:44:37.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1189757030</id>
       <title>出張 Shibuya.js 24</title>
       <summary>出張 Shibuya.js 24 http://shibuyajs.org/articles/2007/08/24/Shibuya-js-24 書くの忘れてた。 明日、Mozilla24というイベント...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1189757030" />
       <updated>2007-09-14T08:03:50.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1189350602</id>
       <title>2007-09-10 00:10:02</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1189350602" />
       <updated>2007-09-09T15:10:02.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1188095416</id>
       <title>2007-08-26 11:30:16</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1188095416" />
       <updated>2007-08-26T02:30:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1187635227</id>
       <title>2007-08-21 03:40:27</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1187635227" />
       <updated>2007-08-20T18:40:27.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1187119450</id>
       <title>2007-08-15 04:24:10</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1187119450" />
       <updated>2007-08-14T19:24:10.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1186469272</id>
       <title>2007-08-07 15:47:52</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1186469272" />
       <updated>2007-08-07T06:47:52.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1185750499</id>
       <title>Webはもっとみんなが自由に使っていい</title>
       <summary>Stylishで文字を見やすく、AutoPagerizeで次のページを自動で継ぎ足し、 IJKでさくさく移動、とういうふうにして、あるサイト(http://slyr.exblog.jp/)を一気に全部...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1185750499" />
       <updated>2007-07-29T23:08:19.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184840089</id>
       <title>2007-07-19 19:14:49</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184840089" />
       <updated>2007-07-19T10:14:49.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184766488</id>
       <title>2007-07-18 22:48:08</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184766488" />
       <updated>2007-07-18T13:48:08.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184718996</id>
       <title>twkkyd</title>
       <summary>twkkyd – Userscripts.org http://userscripts.org/scripts/show/10744 Twitter用のGreasemonkeyのスクリプトを書きました...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184718996" />
       <updated>2007-07-18T00:36:36.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184685022</id>
       <title>2007-07-18 00:10:22</title>
       <summary>http://d.hatena.ne.jp/CCG/20070718#p1</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184685022" />
       <updated>2007-07-17T15:10:22.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184679275</id>
       <title>2007-07-17 22:34:35</title>
       <summary>http://megalodon.jp/</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184679275" />
       <updated>2007-07-17T13:34:35.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184455101</id>
       <title>MacBook出火、13日(金)のこと</title>
       <summary>アップルさまの希望により記事を削除いたします。 僕自身は、あったことと感じたことをそのまま書いただけであって、 削除すべき内容ではないと思っています。 ※ 追記 1点、補足します。 アップルさまの担当...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184455101" />
       <updated>2007-07-14T23:18:21.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184308232</id>
       <title>2007-07-13 15:30:32</title>
       <summary>アップルさまの希望により記事を削除いたします。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184308232" />
       <updated>2007-07-13T06:30:32.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184079641</id>
       <title>2007-07-11 00:00:41</title>
       <summary>.hatena-star-comment-container, .hatena-star-star-container {   display:none; }</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184079641" />
       <updated>2007-07-10T15:00:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184019191</id>
       <title>Wikiのスパム</title>
       <summary>最近、スパムがひどいとよく言われるので、一時的にinfogamiユーザのみ編集可能にしました。 ユーザーでない場合、ユーザーになるかコメント欄に書いてください。 コメント欄はタグが使えないっぽいので、...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184019191" />
       <updated>2007-07-09T22:13:11.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1184017579</id>
       <title>AutoPagerize0.0.12</title>
       <summary>変更点   バグ修正  typo、@relが@refになってた スクロール位置の取得を修正  他のGMスクリプトからの処理をはさめるように window.xxxとやれば他のGMスクリプトから 参照でき...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1184017579" />
       <updated>2007-07-09T21:46:19.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1183239979</id>
       <title>AutoPagerize0.0.11</title>
       <summary>変更点   バグ修正  DEBUG_MODEのときにエラーがおきる DEFAULT_STATUS = ’disable’にしたときに表示がでない スクロールしなくて済むときにロードが起きない  Mic...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1183239979" />
       <updated>2007-06-30T21:46:19.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1183111130</id>
       <title>2007-06-29 18:58:50</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1183111130" />
       <updated>2007-06-29T09:58:50.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1182875521</id>
       <title>2007-06-27 01:32:01</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1182875521" />
       <updated>2007-06-26T16:32:01.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1182688216</id>
       <title>2007-06-24 21:30:16</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1182688216" />
       <updated>2007-06-24T12:30:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1182426823</id>
       <title>2007-06-21 20:53:43</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1182426823" />
       <updated>2007-06-21T11:53:43.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1181768130</id>
       <title>SITEINFOの数をグラフにしてみた</title>
       <summary>open-uriとHpricotでデータを取ってきておいて、 それを適当に日付で整理、あとはGruffで出力 けっこうすごいペースで増えてるなあ</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1181768130" />
       <updated>2007-06-13T20:55:30.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1181223003</id>
       <title>2007-06-07 22:30:03</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1181223003" />
       <updated>2007-06-07T13:30:03.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1180874355</id>
       <title>2007-06-03 21:39:15</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1180874355" />
       <updated>2007-06-03T12:39:15.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1180857946</id>
       <title>AutoPagerize0.0.10</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551   SITEINFO取得時のエラー処理を追加 googl...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1180857946" />
       <updated>2007-06-03T08:05:46.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1180788641</id>
       <title>2007-06-02 21:50:41</title>
       <summary>いい天気すぎ、おかげでうちのXiaostyleが使いものにならない なので携帯で撮ってみた、705NK 操作感が気にいらない フォーカスをあわせるたびにいちいち「ピッ」っ鳴ったり、暗いとフラッシ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1180788641" />
       <updated>2007-06-02T12:50:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1180526674</id>
       <title>深澤直人 * 原研哉</title>
       <summary>『NAOTO FUKASAWA』(PHAIDON)刊行記念対談 深澤直人 × 原研哉　─ デザイン漬け ─ http://www.aoyamabc.co.jp/10/10_200705/_07526....</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1180526674" />
       <updated>2007-05-30T12:04:34.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1180347079</id>
       <title>2007-05-28 19:11:19</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1180347079" />
       <updated>2007-05-28T10:11:19.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1180065736</id>
       <title>2007-05-25 13:02:16</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1180065736" />
       <updated>2007-05-25T04:02:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1179996435</id>
       <title>irbで値の表示/非表示</title>
       <summary>すぐ忘れすのでメモ % irb  &gt;&gt; a = 100 =&gt; 100 &gt;&gt; conf.echo = false &gt;&gt; a &gt;&gt; conf.echo = true =&gt; true &gt;&gt; a =&gt; 100...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1179996435" />
       <updated>2007-05-24T08:47:15.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1179902208</id>
       <title>2007-05-23 15:36:48</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1179902208" />
       <updated>2007-05-23T06:36:48.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1179758283</id>
       <title>2007-05-21 23:38:03</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1179758283" />
       <updated>2007-05-21T14:38:03.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1179512333</id>
       <title>2007-05-19 03:18:53</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1179512333" />
       <updated>2007-05-18T18:18:53.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1179404757</id>
       <title>2007-05-17 21:25:57</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1179404757" />
       <updated>2007-05-17T12:25:57.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1179319832</id>
       <title>2007-05-16 21:50:32</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1179319832" />
       <updated>2007-05-16T12:50:32.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178965377</id>
       <title>2007-05-12 19:22:57</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178965377" />
       <updated>2007-05-12T10:22:57.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178905803</id>
       <title>AutoPagerize0.0.9</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 細かい修正がメインです     SITEINFOのrem...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178905803" />
       <updated>2007-05-11T17:50:03.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178706406</id>
       <title>2007-05-09 19:26:46</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178706406" />
       <updated>2007-05-09T10:26:46.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178527365</id>
       <title>2007-05-07 17:42:45</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178527365" />
       <updated>2007-05-07T08:42:45.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178423074</id>
       <title>はてなキーワードリンク削除Greasemonkey</title>
       <summary>だれかつくってるだろうでけど、てきとうに書いてみた。 辞書のような意味でのはてなキーワードは価値があると思うけど、 日記が自動でマークアップされるのはけっこう不快。 手動のリンクと自動のリンクが区別し...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178423074" />
       <updated>2007-05-06T03:44:34.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178375435</id>
       <title>AutoPagerize0.0.8</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551   右上に出るやつを変更 複数URLからのimportを...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178375435" />
       <updated>2007-05-05T14:30:35.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178255707</id>
       <title>2007-05-04 14:15:07</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178255707" />
       <updated>2007-05-04T05:15:07.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178102621</id>
       <title>2007-05-02 19:43:41</title>
       <summary>http://www.dainipponjin.com</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178102621" />
       <updated>2007-05-02T10:43:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178063129</id>
       <title>uniq_by</title>
       <summary>def uniq_by #:yield:   h = {}; inject([]) {|a,x| h[yield(x)] ||= a &lt;&lt; x} end http://facets.rubyforge...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178063129" />
       <updated>2007-05-01T23:45:29.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1178011798</id>
       <title>2007-05-01 18:29:58</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1178011798" />
       <updated>2007-05-01T09:29:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1177641763</id>
       <title>2007-04-27 11:42:43</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1177641763" />
       <updated>2007-04-27T02:42:43.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1177499753</id>
       <title>AutoPagerize0.0.7</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551   pageElementの対象を複数にした ページを継...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1177499753" />
       <updated>2007-04-25T11:15:53.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1177378071</id>
       <title>2007-04-24 10:27:51</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1177378071" />
       <updated>2007-04-24T01:27:51.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1177250076</id>
       <title>2007-04-22 22:54:36</title>
       <summary>100s「ももとせ」買った DVDを見てる ああ、百演祭なんてやってたのか                 キャノンボール バーストレイン（ロングホーントレインw) ラッタッタ セブンスター 新曲 A...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1177250076" />
       <updated>2007-04-22T13:54:36.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1177245620</id>
       <title>2007-04-22 21:40:20</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1177245620" />
       <updated>2007-04-22T12:40:20.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1177085452</id>
       <title>2007-04-21 01:10:52</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1177085452" />
       <updated>2007-04-20T16:10:52.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1177082014</id>
       <title>写経</title>
       <summary>&lt;html&gt; &lt;head&gt; &lt;title&gt;「読むプログラム/実行する文章」&lt;/title&gt; &lt;/head&gt; &lt;body style="line-height:16px; font-family:Hel...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1177082014" />
       <updated>2007-04-20T15:13:34.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176814748</id>
       <title>Gravatar登録した</title>
       <summary>Gravatar - Globally Recognized Avatars http://site.gravatar.com/ 画像の読み込って、メアドのMD5をわたすだけなのかあ 思ってたより単純...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176814748" />
       <updated>2007-04-17T12:59:08.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176812459</id>
       <title>AutoPagerizeをuserscripts.orgにアップしてみた</title>
       <summary>AutoPagerize – Userscripts.org http://userscripts.org/scripts/show/8551 英語は適当。だれか教えて。 userscript.org...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176812459" />
       <updated>2007-04-17T12:20:59.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176692707</id>
       <title>2007-04-16 12:05:07</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176692707" />
       <updated>2007-04-16T03:05:07.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176650478</id>
       <title>2007-04-16 00:21:18</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176650478" />
       <updated>2007-04-15T15:21:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176641966</id>
       <title>2007-04-15 21:59:26</title>
       <summary>Rails勉強会行ってきた 細かい話とか雑談が多めだったので、印象に残ったことを少しだけ     assert_selectは便利だけど、けっこうくせがある gyreはコンソールだけ良さそう mong...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176641966" />
       <updated>2007-04-15T12:59:26.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176571056</id>
       <title>PagerizationとAutoPagerize</title>
       <summary>AutoPagerizeを参考にしてくれるのは嬉しいことなんだけど、 意識しすぎない方がいいんじゃないかと思う。 それからオープンソースの世界には、 コードでも、データでも、アイデアでも 盗用というこ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176571056" />
       <updated>2007-04-14T17:17:36.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176529678</id>
       <title>そろそろ</title>
       <summary>http://twitter.com/swdyh よくわからないけど、超でかいチャットみたいなもんかな そういえばGmailも画像を登録できるうようになってるし、 自分はこれっていうプロフィール画像が...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176529678" />
       <updated>2007-04-14T05:47:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176508836</id>
       <title>AutoPagerize0.0.6</title>
       <summary>http://swdyh.yu.to/autopagerize006.user.js   サイト情報にmimeType属性を追加 最後のページがでないバグの修正  これは僕がやったのではなくて、bra...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176508836" />
       <updated>2007-04-14T00:00:36.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176381597</id>
       <title>色</title>
       <summary>青を感じる感覚と緑を感じる感覚が 他のひとと逆さまだったとしたら 自分感じている緑は、Y女史さんの感じるフェンス色で、 他のひとが感じている緑は、草の緑だったとしたら そのことに気がつくことができるん...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176381597" />
       <updated>2007-04-12T12:39:57.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176376843</id>
       <title>2007-04-12 20:20:43</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176376843" />
       <updated>2007-04-12T11:20:43.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176262514</id>
       <title>Rails Graphviz用のER図を生成するプラグイン</title>
       <summary>GraphvizでER図を書く方法(その2) http://d.hatena.ne.jp/T-ABYSS/20070302/1172815082 どうもしっくりくるER図を書くツールがないので、 ここ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176262514" />
       <updated>2007-04-11T03:35:14.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176253415</id>
       <title>2007-04-11 10:03:35</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176253415" />
       <updated>2007-04-11T01:03:35.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1176075716</id>
       <title>風邪</title>
       <summary>体がだるい なかなか起きれなくて、そのまま寝まくったら選挙が終わってた こっちに来て初の投票だったのに del.icio.usの編集のとこのボタンって 左がsaveで右がcancelなんだなあ、押し間...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1176075716" />
       <updated>2007-04-08T23:41:56.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175657567</id>
       <title>rails-modeのキーバインドとテキストメニュー化</title>
       <summary>rails-modeを使うとcontrollerとviewの切り替えがすぐできる。 ふつうEmacs使いはカーソルキー使わないと思うんだけど、 デフォルトだとC-c upとかC-c downになってる...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175657567" />
       <updated>2007-04-04T03:32:47.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175629487</id>
       <title>なんちゃってNaked</title>
       <summary>&lt;link media="all" type="text/css" href="/css/base.css" rel="stylesheet"&gt; &lt;link media="all" type="tex...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175629487" />
       <updated>2007-04-03T19:44:47.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175560594</id>
       <title>[hatena] 有料オプションにした</title>
       <summary>http://hatenadiary.g.hatena.ne.jp/keyword/キーワード自動リンクの設定を変える               特定のカテゴリーのキーワードのみ自動リンクされるよう...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175560594" />
       <updated>2007-04-03T00:36:34.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175537434</id>
       <title>Wingdings 3</title>
       <summary>右上の方にある矢印。 最初はcssでfont指定したんだけれど、あー、できたと思ってたら、 ブラウザとかOSが違うと全然違う文字が出てくる。 http://www.relief.jp/itnote/a...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175537434" />
       <updated>2007-04-02T18:10:34.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175461361</id>
       <title>redesign</title>
       <summary>verdana tapupe http://www.colordic.org/colorsample/4282.html carmine http://www.colordic.org/col...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175461361" />
       <updated>2007-04-01T21:02:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175340053</id>
       <title>2007-03-31 20:20:53</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175340053" />
       <updated>2007-03-31T11:20:53.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175338751</id>
       <title>2007-03-31 19:59:11</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175338751" />
       <updated>2007-03-31T10:59:11.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1175069057</id>
       <title>rubygems</title>
       <summary>% gem help commands   GEM commands are:      build            Build a gem from a gemspec     cert...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1175069057" />
       <updated>2007-03-28T08:04:17.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174905256</id>
       <title>[rails]Railsの実行環境選択オプション</title>
       <summary>% ./script/server -e production   % ./script/console production    % rake db:migrate RAILS_ENV=produ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174905256" />
       <updated>2007-03-26T10:34:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174844297</id>
       <title>灯</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174844297" />
       <updated>2007-03-25T17:38:17.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174639968</id>
       <title>夕方</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174639968" />
       <updated>2007-03-23T08:52:48.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174638198</id>
       <title>さっぱりCNET</title>
       <summary>もう少しさっぱりさせました  CNET Japan(japan.cnet.com) clean up http://userstyles.org/style/show/1985 今気がついたんだけど、...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174638198" />
       <updated>2007-03-23T08:23:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174478956</id>
       <title>近所と松本</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174478956" />
       <updated>2007-03-21T12:09:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174476464</id>
       <title>Synergyをいれてみた</title>
       <summary>MacBookをメインに使っているのだけれど、 右隣にテレビ兼、MacMiniのモニタがあって、 左隣にMacBookを買うまでメインに使っていたVaioZがある。 MacBookから他のをリモートで...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174476464" />
       <updated>2007-03-21T11:27:44.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174219216</id>
       <title>新宿-松本</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174219216" />
       <updated>2007-03-18T12:00:16.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174048011</id>
       <title>小杉</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174048011" />
       <updated>2007-03-16T12:26:51.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1174012697</id>
       <title>Webシンプル化計画</title>
       <summary>brasil | userstyles.org http://userstyles.org/user/show/2087 CENT Japanのやつをつくってみた http://userstyles....</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1174012697" />
       <updated>2007-03-16T02:38:17.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173905152</id>
       <title>BRAZIL</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173905152" />
       <updated>2007-03-14T20:45:52.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173860456</id>
       <title>白飛び</title>
       <summary>書類を出すだけで、数駅離れたところまで行くのは ちょっともったいない気がしたので、 ぶらぶらしながら写真を取撮って帰ってきた。 使っているカメラはXiaostyleというちょっと変ったやつなんだけど、...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173860456" />
       <updated>2007-03-14T08:20:56.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173860455</id>
       <title>はじめての確定申告</title>
       <summary>してきた。 郵送でもいいかと思ったけれど、 税務署行ったことないし、はじめてなので直接出しに行ってみた。 めちゃくちゃ混んでいたけれど、 書類は用意していたので、それを渡してさくっと終了。 用意しとい...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173860455" />
       <updated>2007-03-14T08:20:55.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173640195</id>
       <title>メモ Podcast</title>
       <summary>Wikipedia ポッドキャスティング http://ja.wikipedia.org/wiki/Podcastオーディオのウェブログ RSS2のenclosure要素にオーディオファイルのURL書...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173640195" />
       <updated>2007-03-11T19:09:55.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173468797</id>
       <title>子どもであることの価値</title>
       <summary>ちょっと変わっていて、偏屈で、でも瞬間のキラキラに満ちていて、 とてもすごいスピードで変わり続けていて、 大人たちや社会の思惑などには簡単には従わない。 だけど、春になって芽を出す草...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173468797" />
       <updated>2007-03-09T19:33:17.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173332985</id>
       <title>ackの対象に.rakeを追加</title>
       <summary>.rakeのファイルにマッチしなくて、少しはまった。  -aを付ければ済む話なんだけど、Ack.pmに追加しておいた。Ack.pm 50行目くらい         ruby        =&gt; [qw...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173332985" />
       <updated>2007-03-08T05:49:45.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173099929</id>
       <title>横井昭裕 × 茂木健一郎トークショー メモ</title>
       <summary>http://www.aoyamabc.co.jp/10/10150/#000288 http://kenmogi.cocolog-nifty.com/professional/2007/03/pos...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173099929" />
       <updated>2007-03-05T13:05:29.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1173099928</id>
       <title>渋谷</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1173099928" />
       <updated>2007-03-05T13:05:28.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1172934374</id>
       <title>イチロー × 阿川佐和子</title>
       <summary>スタメン、途中からみた イチローのやんちゃっぷりがよかった 阿川さんはあのとき、もーっ！っていうふうに 何回もなっていたと思うけど、 結果としてああいうのが撮れたっていうことは、 勝ってる感じがするな...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1172934374" />
       <updated>2007-03-03T15:06:14.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1172737196</id>
       <title>ポストイットの貼るところみたいになるのりがほしい</title>
       <summary>と思ったら、いろいろあるみたい http://q.hatena.ne.jp/1143788234 ちょっと文房具屋行ってくる</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1172737196" />
       <updated>2007-03-01T08:19:56.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1172721889</id>
       <title>まるごとJ</title>
       <summary>ざっと目を通した JavaScript2はなんか好きになれなそうだ 追加されるそれぞれの機能をみると便利になると思うんだけど、 ああいうのが全部入ったJavaScriptの姿を想像するとなえる Jav...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1172721889" />
       <updated>2007-03-01T04:04:49.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1172465675</id>
       <title>メモ</title>
       <summary>capistranoの標準タスクの中身 http://dev.rubyonrails.org/browser/tools/capistrano/lib/capistrano/recipes/stand...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1172465675" />
       <updated>2007-02-26T04:54:35.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1172432818</id>
       <title>Capistranoメモ</title>
       <summary>Capistrano/Rake integration is deprecated. Please invoke the 'cap' command directly: そうなのかあ。少しだけど、ラッ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1172432818" />
       <updated>2007-02-25T19:46:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171798440</id>
       <title>Rails勉強会＠東京第15回</title>
       <summary>行ってきた前半 Capistrano Yuguiさん   インストールするとcapコマンドができる % cap --apply-to dirname または cap -A dirname % cap...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171798440" />
       <updated>2007-02-18T11:34:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171755111</id>
       <title>Railsのでのフィード生成</title>
       <summary>まだ良い結論に達していない とりあえず、現状のメモ   FeedToolsというライブラリがある  これを使うとフィードの読み出しや生成ができる 日本語とかが数値参照になってしまう  activesu...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171755111" />
       <updated>2007-02-17T23:31:51.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171706102</id>
       <title>市民権獲得</title>
       <summary>メール来た 〜あなたは本日よりはてなダイアリー市民です〜  いつもはてなをご利用いただき、ありがとうございます。  本日より、swdyhさんは「はてなダイアリー市民」になられましたのでお知らせい たし...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171706102" />
       <updated>2007-02-17T09:55:02.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171705634</id>
       <title>ソーシャルブックマーク</title>
       <summary>はてブではなくてdel.icio.usをつかってます http://del.icio.us/youhei すこしややこしいですが、 yoheiさんはRESTとかXMLのひとで、違う人です</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171705634" />
       <updated>2007-02-17T09:47:14.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171482108</id>
       <title>日本未来科学館</title>
       <summary>あさデブサミにいったら、 brazilさんに会っていっしょに行ってきた とくに印象深かったのは プラネタリウム、視覚とか聴覚とかのやつ、あとVRかなあ 人間の感覚っていうのはホントに不思議だ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171482108" />
       <updated>2007-02-14T19:41:48.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171387247</id>
       <title>デブサミ</title>
       <summary>すごすぎた 衝撃 いや、デブサミじゃなくて、そのあとの飲み会</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171387247" />
       <updated>2007-02-13T17:20:47.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171235988</id>
       <title>茂木健一郎さんのmp3データpodcast用フィード</title>
       <summary>茂木さんのブログをざっとスクレイプしてつくってみました 過去分をまとめるためにつくったので、更新はしませんhttp://swdyh.yu.to/mogi_mp3_archives.xml注意   今の...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171235988" />
       <updated>2007-02-11T23:19:48.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171014426</id>
       <title>require_gemからgemへ</title>
       <summary>こないだrubygemsをアップデータした sudo gem update --systemアップデートしてから、このWarningがよく出る  Warning: require_gem is obs...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171014426" />
       <updated>2007-02-09T09:47:06.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1171004558</id>
       <title>AutoPgarizeがデフォルトでオンの件</title>
       <summary>http://d.hatena.ne.jp/brazil/20070209/1170972519brazilさんのいうように、GoogleAutoPagerはダブルクリックで起動するようになっている。...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1171004558" />
       <updated>2007-02-09T07:02:38.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170849720</id>
       <title>MacOSXのzshで日本語を使う</title>
       <summary>zshで日本語を使えるようにしてみた 参考にしたのはこのへん http://www.hasta-pronto.org/archives/2006/10/03-0158.php http://d.hat...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170849720" />
       <updated>2007-02-07T12:02:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170613051</id>
       <title>スーパーエンターテイナー</title>
       <summary>永井先生の五目並べ http://www.nicovideo.jp/?p=search&amp;s=%E6%B0%B8%E4%BA%95%E5%85%88%E7%94%9F%E3%81%AE%E4%BA%94...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170613051" />
       <updated>2007-02-04T18:17:31.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170255059</id>
       <title>無題</title>
       <summary>男前豆腐のちっこいやつがコンビニで売っていたので買ってみた 味が濃くて、大豆っぽい味がする。けど、ふつうの豆腐よりうまいかっていうと、そうでもない気がする とろより赤身のが好き、そんな感じ デザイニン...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170255059" />
       <updated>2007-01-31T14:50:59.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170249714</id>
       <title>YouTubeの動画ページへのリンクを全てニコニコ動画のページのURLに書き換えるGreasemonkey</title>
       <summary>つくりました。http://swdyh.infogami.com/youyubeurl2nicovideourl_greasemonkey @include * だから、ちょっと豪快すぎるかもしれない...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170249714" />
       <updated>2007-01-31T13:21:54.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170176898</id>
       <title>[greasemonkey]YouTubeの動画ページへのリンクを全てニコニコ動画のページのURLに書き換えるGreasemonkey ちょっとアップデート</title>
       <summary>アップデートしました。 wwwがついていない場合もあったので、それの対応とXPathをhref付きに変更。 スクリプト http://swdyh.yu.to/youtubeurl2nicovide...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170176898" />
       <updated>2007-01-30T17:08:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170164126</id>
       <title>ブックマークレットをアップデート</title>
       <summary>del.icio.usとはてブ用のブックマークレットをアップデートしましたhttp://swdyh.infogami.com/layered_del.icio.us_bookmarklet docum...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170164126" />
       <updated>2007-01-30T13:35:26.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170090303</id>
       <title>YouTubeからニコニコ動画に移動するブックマークレット</title>
       <summary>もうあるのかも。まあいいや、つくってみました。 http://swdyh.infogami.com/youtube2nicovideo_bookmarklet ニコニコ動画に慣れると、YouTubeで...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170090303" />
       <updated>2007-01-29T17:05:03.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1170055010</id>
       <title>relax</title>
       <summary>きのう見かけたrelax(雑誌）に触発されて、家にあるのを整理した 思ったより少なかったし、やっぱり64はなかった。あー、なんで買わなかったんだろう。 ずっとまえからrelaxなサイトというかWiki...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1170055010" />
       <updated>2007-01-29T07:16:50.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169996220</id>
       <title>無題</title>
       <summary>今日はひさしぶりに買い物に行った   DELFONICSのとなりの店に2002年のrelax 64があって、すごいいい感じだった。  このrelaxはサンプルで売り物じゃない。ほしすぎる。  渋谷から...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169996220" />
       <updated>2007-01-28T14:57:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169980446</id>
       <title>はてブ用のブックマークレット</title>
       <summary>こないだ作ったdel.icio.usブックマークレットのはてブ版です。 ふだんは自分が使うものしか作らないんだけど、 こっちのが需要がありそうなので、ちょっとつくってみました。 というかurlを差し替...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169980446" />
       <updated>2007-01-28T10:34:06.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169908533</id>
       <title>layered del.icio.us bookmarklet</title>
       <summary>このあいだdel.icio.usにポストするブックマークレットを改良して、 しばらく使っていたんだけれど、なかなか便利なのでまとめました。 はてなダイアリーではjavascript:のリンクが作れない...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169908533" />
       <updated>2007-01-27T14:35:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169896277</id>
       <title>mosquito</title>
       <summary>mosquito http://mosquito.the.tool.googlepages.com/ っていうのを試そうとして、gem searchしたら、 mosquitoってあったからインストール...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169896277" />
       <updated>2007-01-27T11:11:17.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169891692</id>
       <title>ブログのコメント</title>
       <summary>最近はスパムのせいとかもあって、管理者がOKをするまで表示されなかったりする。 それは、それで全然良いんだけど、こういう仕組みを使っている場合、 コメントを書き込んだ人にその旨を通知すべきだと思う。...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169891692" />
       <updated>2007-01-27T09:54:52.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169693754</id>
       <title>polaroize使ってみた</title>
       <summary>polaroize http://lab.rails2u.com/polaroize/写真は去年多摩川で撮ったやつ。 Rmagickは前使ったことあるけど、けっこう楽しい。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169693754" />
       <updated>2007-01-25T02:55:54.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169653734</id>
       <title>無題</title>
       <summary>ヒューマン2.0にへこまされた。 エンジニアの給料は900万から2000万とかで、さらにストックオプションもあるよとか、 有名な大学の修士や博士はごろごろいて、ノーベル賞のひとだってそのへんにいるよと...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169653734" />
       <updated>2007-01-24T15:48:54.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169621442</id>
       <title>ページを見ながらdel.icio.usにブックマーク</title>
       <summary>del.icio.usのブックマークレットは実行するとページが変わってしまうので、 もとページがみられなくなってしまう。 コメントを必ず書くようにしているので、もとページをみながらブックマークをしたい...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169621442" />
       <updated>2007-01-24T06:50:42.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169609560</id>
       <title>AutoPagerize0.0.5リリース</title>
       <summary>AutoPagerize0.0.5 http://swdyh.yu.to/autopagerize005.user.js   サイト用データを外部から取得するようしました。  取得先は復活していたin...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169609560" />
       <updated>2007-01-24T03:32:40.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169520590</id>
       <title>infogamiがアカウントごと消されたっぽい。</title>
       <summary>http://swdyh.infogami.com/まいった。 こまった。 せっかくAutoPagerizeをバージョンアップして、 Wikiからデータとるようにしたのに、 リリースしようとしたら、...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169520590" />
       <updated>2007-01-23T02:49:50.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169487854</id>
       <title>継続渡しスタイルのfact</title>
       <summary>関数プログラミングの勉強 http://p0t.jp/mt/archives/2007/01/post_545.html を見て、ふと思いたって考えてみた。 継続(continuation)って未だに...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169487854" />
       <updated>2007-01-22T17:44:14.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169483377</id>
       <title>infogami復活してた</title>
       <summary>よかった。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169483377" />
       <updated>2007-01-22T16:29:37.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169440731</id>
       <title>Rails勉強会 東京</title>
       <summary>http://wiki.fdiary.net/rails/?RailsMeetingTokyo-0014 なんかドタキャンが多かった。べつにいいんだけど、ちょっとひどい。         前半 テーブ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169440731" />
       <updated>2007-01-22T04:38:51.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169434509</id>
       <title>Greasemonkeyメモ</title>
       <summary>GM_setValue/GM_getValue     データを保存して、それを使うことができる。 データはスクリプト名、ネームスペース別に保存される。 だからそのスクリプトからしか保存でき...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169434509" />
       <updated>2007-01-22T02:55:09.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169070697</id>
       <title>メモ</title>
       <summary>乗り換えるとか、回収モードだとか、ホントどうでもいいよね。 @namespace url(http://www.w3.org/1999/xhtml);  @-moz-document domain("...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169070697" />
       <updated>2007-01-17T21:51:37.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1169069953</id>
       <title>無題</title>
       <summary>Lipsのひとは言う、「あの言語のあれやこれは、ずっと前からLispにはあるし、 Lispならもっと簡単にできるし、もっと凄いこともできる」 Lispのことをあまり知らないんだけど、たぶん本当のなんだ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1169069953" />
       <updated>2007-01-17T21:39:13.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168992461</id>
       <title>FireBugのassertが減った？</title>
       <summary>Greasemonkeyでもテストがほしいなあと思ったらbrazilさんが書いてた。 Greasemonkey内でのテストコード、ok/is、Firebugコンソールへの出力(log/info/err...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168992461" />
       <updated>2007-01-17T00:07:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168901534</id>
       <title>AutoPagerize0.0.4</title>
       <summary>AutoPagerize 0.0.4 http://swdyh.yu.to/autopagerize004.user.js    デバッグモードを追加  マッチしたXPathの要素のボーダーを赤くして...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168901534" />
       <updated>2007-01-15T22:52:14.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168877675</id>
       <title>AutoPagerize0.0.3</title>
       <summary>AutoPagerize 0.0.3 http://swdyh.yu.to/autopagerize003.user.js このあいだ、Wikiからデータを取るようにしたと書いたのだけど、 ひとまずそ...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168877675" />
       <updated>2007-01-15T16:14:35.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168871733</id>
       <title>結果を待って実行</title>
       <summary>Deferrdはまだ見てないんだけど、適当に作ってみた。 function execWhen(cond, proc, opt) {     var opt = opt ? opt: {}     va...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168871733" />
       <updated>2007-01-15T14:35:33.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168689846</id>
       <title>GM_xmlhttpRequstは非同期のみ</title>
       <summary>asynchronous:falseを付けてもなにも変わらないって思ったら、 GM_xmlhttpRequstは非同期しかできないらしい。 http://diveintogreasemonkey.or...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168689846" />
       <updated>2007-01-13T12:04:06.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168631665</id>
       <title>アップできない</title>
       <summary>せっかくAutoPagerizeをバージョンアップしたのに、yu.toが繋がらない。 メンテかなあ。 バージョンアップの内容は、サイト用のデータ（次のページのリンクとか）を 別のページに書いておい...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168631665" />
       <updated>2007-01-12T19:54:25.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168548590</id>
       <title>AutoPagerize 0.0.1 Release.</title>
       <summary>AutoPagerize 0.0.1 http://swdyh.yu.to/autopagerize.user.js ダブルクリックで起動するので、あとはスクロールするだけです。 ライセンスはGPLで...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168548590" />
       <updated>2007-01-11T20:49:50.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168517600</id>
       <title>AutoPagerize</title>
       <summary>GreasemonkeyのスクリプトにGoogleAutoPagerとかなんとかAutoPagerというのがあって、 とても便利なのだけど、こういうのってもっと汎用化できるんじゃないかと考えてみた。複...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168517600" />
       <updated>2007-01-11T12:13:20.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168462732</id>
       <title>文字列のHTMLに対してXPathを使う</title>
       <summary>XHRで取ってきた文字列としてのHTMLに対して、XPath使ってデータを取るのがなんとかできた。 Firefox以外では動かないと思うけど、今回はGreasemonkey用なので気にしない。   d...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168462732" />
       <updated>2007-01-10T20:58:52.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168323480</id>
       <title>href</title>
       <summary>hrefというrubyのrefeみたいなリファレンスツールがあるみたいなのでインストールしてみた。 http://i.loveruby.net/ja/projects/href/ hugsというHas...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168323480" />
       <updated>2007-01-09T06:18:00.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168275101</id>
       <title>Wiki小話行ってきた。</title>
       <summary>Wiki小話/Vol.7 http://wikibana.socoda.net/wiki.cgi?Wiki%BE%AE%CF%C3%2FVol.7brazilさんの発表がやっぱり印象的だったなあ。 F...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168275101" />
       <updated>2007-01-08T16:51:41.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168272962</id>
       <title>日記の順番</title>
       <summary>今気がついたけど、書く順番間違えてたかも。 同じ日に何個も書く場合は、新しいのを上に書かないと記事の順番が時間順にならない。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168272962" />
       <updated>2007-01-08T16:16:02.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168191520</id>
       <title>MacPorts(旧DarwinPorts)でGHCをインストールする。(Intel版)</title>
       <summary>前に試したときは、Intel版はまだないよ、と言われたのだけれど、 ここによると、もうMacPortsでインストールできるようになったらしい。 http://hackage.haskell.org/t...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168191520" />
       <updated>2007-01-07T17:38:40.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1168189430</id>
       <title>絶対あるべきだと思うけど</title>
       <summary>はてなアイデアの使い方がよくわからないから、ここに書いとくことにする。はてなアイデア はてなダイアリー コメント/trackbackの一括管理画面を設けてほしい http://i.hatena.ne....</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1168189430" />
       <updated>2007-01-07T17:03:50.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167902943</id>
       <title>「infogami、他のページに書かれたコードをロードする」を試してみた</title>
       <summary>infogami、他のページに書かれたコードをロードする http://d.hatena.ne.jp/brazil/20070104/1167884382トラックバックをもらったので早速試してみました...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167902943" />
       <updated>2007-01-04T09:29:03.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167833377</id>
       <title>Effectのデモ</title>
       <summary>こないだつくったEffect.SlideAppearとSlideFade、あとその切り替えとかに使うEffect.Switchのデモをinfogami上に作ってみた。http://swdyh.info...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167833377" />
       <updated>2007-01-03T14:09:37.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167824658</id>
       <title>はてなダイアリーのコメントとか</title>
       <summary>管理画面にコメント一覧とかトラックバック一覧とかが見当たらない。 どうやって管理するんだろう。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167824658" />
       <updated>2007-01-03T11:44:18.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167760602</id>
       <title>リンクの訪問・未訪問の判別の話</title>
       <summary>「既読を非表示」というのがBONSAGOOLにあって思い出した。 まえにHatebu Addictionというのがあってちょっと話題になったけれど、 a:visitedというセレクタでCSSを変えてお...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167760602" />
       <updated>2007-01-02T17:56:42.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167725871</id>
       <title>JSAN.jsからMochiKitをつかってみる</title>
       <summary>JSAN.use('MochiKit.MochiKit') JSAN.exporter(MochiKit.Base, MochiKit.Base.EXPORT) JSAN.exporter(Moc...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167725871" />
       <updated>2007-01-02T08:17:51.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167723126</id>
       <title>Firefoxを2にしてみた。</title>
       <summary>ブックマークとか拡張とか、何もしないでそのまま残ってた。macだからかな。Operaにあるの"URLへ移動"がほしいんだけど、それっぽい拡張とかuserChrome.jsとかが見つからない。※追記 T...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167723126" />
       <updated>2007-01-02T07:32:06.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167723125</id>
       <title>MochiKitのインタープリターの文字が小さいから</title>
       <summary>@namespace url(http://www.w3.org/1999/xhtml);  @-moz-document url("http://mochikit.com/examples/inte...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167723125" />
       <updated>2007-01-02T07:32:05.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167353649</id>
       <title>Korho</title>
       <summary>WEB+DB 36で咳さんが紹介しているToDo管理用のWebアプリ。公開はされてないっぽい、というか情報がほとんどない。。 タイムとラベル機能が良さそうなんだけどなあ。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167353649" />
       <updated>2006-12-29T00:54:09.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167352520</id>
       <title>WEB+DB vol.36のMochiKitのへんを読んだ。</title>
       <summary>思ってたよりずっと関数型っぽさがあって面白そう。 とくにイテレターで無限リストとか作れて、遅延評価されるとことか。 でもupdateとか破壊関数になってるのが、あれって思ったりする。 あとheadとか...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167352520" />
       <updated>2006-12-29T00:35:20.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167201327</id>
       <title>cssを書き換えた。</title>
       <summary>公開されてたデザインをベースに少しcssをいじる。 css変更するときによくinternal server errorがでたりする。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167201327" />
       <updated>2006-12-27T06:35:27.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167198705</id>
       <title>はてなダイアリーのCSSでは子供セレクタが使えない</title>
       <summary>エスケープされるから。</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167198705" />
       <updated>2006-12-27T05:51:45.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167195598</id>
       <title>rb-memcacheのインストールでこける</title>
       <summary>% sudo port install rb-memcache       ---&gt;  Staging rb-memcache into destrootError:  Targe...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167195598" />
       <updated>2006-12-27T04:59:58.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167195597</id>
       <title>なんとなくはてなはじめました。</title>
-      
+      <summary>-</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167195597" />
       <updated>2006-12-27T04:59:57.000Z</updated>
     </entry>
     <entry>
-      <id>tag:swdyh.github.io,2016:blog/{id}</id>
+      <id>tag:swdyh.github.io,2016:blog/1167148104</id>
       <title>effects.js(script.aculo.us)のAppearとFadeをちょっとカッコ良く</title>
       <summary>ここではJSを動かせないので、あとでデモをどこかに置く。※追記 デモはここ。 http://swdyh.infogami.com/slideapepar_and_slidefade  Effect.S...</summary>
       <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1167148104" />
