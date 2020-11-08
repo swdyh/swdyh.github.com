@@ -29,7 +29,17 @@ body {
   font-family: sans-serif;
 }
 footer {
-  margin: 5vh 0 0 0;
+  margin: 12vh 0 0 0;
+  display: inline-flex;
+}
+footer img {
+  display: block;
+  width: 90px;
+  height: auto;
+}
+footer p {
+  margin: 0;
+  padding: 0 2vh;
 }
 
 pre.code,
