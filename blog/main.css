@@ -23,6 +23,10 @@ h2 {
 img {
   max-width: 100%;
 }
+body img {
+  max-width: 120%;
+  margin: 0 -10% 1em -10%;
+}
 .content {
   margin-bottom: 7vh;
 }
@@ -67,5 +71,9 @@ code {
   }
   body {
     width: 70%;
+  }
+  body img {
+    max-width: 100%;
+    margin: 0 0 1em 0;
   }
 }
