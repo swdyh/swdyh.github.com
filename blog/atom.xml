@@ -7,6 +7,13 @@
   <link rel="alternate" type='text/html' href="https://swdyh.github.io/blog/" />
   <link rel="self" type="application/atom+xml" href="https://swdyh.github.io/blog/atom.xml" />
       <entry>
+      <id>tag:swdyh.github.io,2016:blog/1401837323</id>
+      <title>Bump mime from 1.0.0 to 1.0.2</title>
+      <summary>Bumps mime from 1.0.0 to 1.0.2.  Changelog Sourced from mime's changelog.  1.0.2  Add audio/x-aiff m...</summary>
+      <link rel="alternate" type="text/html" href="https://swdyh.github.io/blog/1401837323" />
+      <updated>2022-10-08T06:08:24.000Z</updated>
+    </entry>
+    <entry>
       <id>tag:swdyh.github.io,2016:blog/740656605</id>
       <title>過去のブログの整理と移動</title>
       <summary>はてなダイアリー(今はてなブログ)で書いていた記事と、そのあとTumblrで書いていた記事をエクスポートしてきて、Github Pageのなかに移動しました。 最近の個人ブログブームに触発されたのと、...</summary>
